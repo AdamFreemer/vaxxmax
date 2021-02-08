@@ -5,14 +5,15 @@
 <table class="table table-striped table-bordered">
   <thead class="thead-dark">
     <tr>
-      <th>store_number</th>
+      <th>ID</th>
+      <th>Store Number</th>
       <th>Shot 1 Avail</th>      
       <th>Shot 2 Avail</th>
-      <th>address</th>
-      <th>city</th>
-      <th>state</th>
-      <th>zip</th>
-      <th>status</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Fetch Data Attempt</th>
       <th colspan="3">
         <div id="loading" style="display:none">
           <div class="spinner-border" role="status">
@@ -27,6 +28,7 @@
   <tbody>
     <% @locations.each do |location| %>
       <tr>
+        <td><%= location.id %>
         <td><%= location.store_number %></td>
         <td><%= location.slot_1 %></td>
         <td><%= location.slot_2 %></td>
