@@ -60,15 +60,19 @@ class LocationsController < ApplicationController
     @locations = Location.all
     @locations.each do |location|
       uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
-      response = Net::HTTP::Persistent.get_response(uri)
+      @http = Net::HTTP::Persistent.new
+      response = @http.request uri
       data = JSON.parse(response.body)
-      puts "#{location.id} - id: #{location.store_number} #{data}"
+      puts "-- Location: #{location.id} - id: #{location.store_number} #{data}"
+
       location.status = data['Status']
       location.slot_1 = !(data['Data']['slots']['1'] == false)
       location.slot_2 = !(data['Data']['slots']['2'] == false)
       location.save
       response.body
     end
+    @http.shutdown
+    redirect_to locations_url
   end
 
   private

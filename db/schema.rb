@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2021_02_07_202310) do
     t.string "city"
     t.string "state"
     t.string "zip"
+    t.datetime "last_updated"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
