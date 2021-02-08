@@ -60,7 +60,7 @@ class LocationsController < ApplicationController
     @locations = Location.all
     @locations.each do |location|
       uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
-      response = Net::HTTP.get_response(uri)
+      response = Net::HTTP::Persistent.get_response(uri)
       data = JSON.parse(response.body)
       puts "#{location.id} - id: #{location.store_number} #{data}"
       location.status = data['Status']
