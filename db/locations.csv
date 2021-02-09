@@ -1,519 +1,441 @@
-store_number,address,city,state,zip
-927,231 West Street,Gettysburg,PA,17325
-3602,5675 York Road,New Oxford,PA,17350
-4419,1529 Freeport Road,Natrona Heights,PA,15065
-10910,4927 Homeville Road,West Mifflin,PA,15122
-10926,1222 Brownsville Rd,Pittsburgh,PA,15210
-10904,4960 William Flynn Hwy Ste 10,Allison Park,PA,15101
-11916,4770 Mcknight Road Ste A,Pittsburgh,PA,15237
-10950,568 Caste Village,Pittsburgh,PA,15236
-10945,3434 William Penn Highway,Pittsburgh,PA,15235
-274,1700 Murray Avenue,Pittsburgh,PA,15217
-10924,5633 Baum Boulevard,Pittsburgh,PA,15206
-7825,201 Devine Drive,Wexford,PA,15090
-10915,109 Allegheny River Blvd,Oakmont,PA,15139
-10953,1130 Perry Highway Ste 35,Pittsburgh,PA,15237
-3459,802 Pennsylvania Avenue,Pittsburgh,PA,15233
-3404,4934 Second Avenue,Pittsburgh,PA,15207
-7843,3700 Walnut Street,Mckeesport,PA,15132
-10949,5410 Keeport Drive,Pittsburgh,PA,15236
-10941,1000 Airport Blvd,Coraopolis,PA,15108
-10931,2501 Banksville Road,Pittsburgh,PA,15216
-10955,1804 Golden Mile Highway,Pittsburgh,PA,15239
-3527,155 Chartiers Avenue,Mc Kees Rocks,PA,15136
-1944,900 Mount Royal Blvd,Pittsburgh,PA,15223
-10938,880 Butler Street,Pittsburgh,PA,15223
-10947,7345 Saltsburg Road,Pittsburgh,PA,15235
-10933,1956 Greentree Road,Pittsburgh,PA,15220
-4965,201 Grace Street,Pittsburgh,PA,15211
-10936,519 Penn Avenue,Pittsburgh,PA,15222
-2798,3939 Butler Street,Pittsburgh,PA,15201
-10914,1700 Pine Hollow Road,Mc Kees Rocks,PA,15136
-10917,4111 William Penn Hwy,Monroeville,PA,15146
-4682,100 William Marks Drive,Homestead,PA,15120
-10905,1701 Duncan Avenue,Allison Park,PA,15101
-10893,1200 Pittsburgh Street,Cheswick,PA,15024
-3200,623 Saint Clair Avenue,Clairton,PA,15025
-2482,300 Market Street,Elizabeth,PA,15037
-10937,623 Smithfield Street,Pittsburgh,PA,15222
-10935,331 Penn Avenue,Pittsburgh,PA,15221
-1925,210 9th Street,Glassport,PA,15045
-10925,2150 Brownsville Rd Ste 120,Pittsburgh,PA,15210
-10919,4534 Broadway Blvd,Monroeville,PA,15146
-268,5504 Walnut Street,Pittsburgh,PA,15232
-10928,623-625 East Ohio Street,Pittsburgh,PA,15212
-10930,3700 Forbes Avenue,Pittsburgh,PA,15213
-3412,1800-1814 Morningside Avenue,Pittsburgh,PA,15206
-10906,5235 Library Road,Bethel Park,PA,15102
-1094,3210 Banksville Road,Pittsburgh,PA,15216
-10892,417 Chartiers Street,Bridgeville,PA,15017
-272,209 Atwood Street,Pittsburgh,PA,15213
-10921,1915-1921 East Carson Street,Pittsburgh,PA,15203
-6712,100 Forbes Avenue Ste 100,Pittsburgh,PA,15222
-10942,410 Cooke Lane,Pittsburgh,PA,15234
-10954,1125 Freeport Road,Pittsburgh,PA,15238
-10920,535 Lincoln Avenue,Pittsburgh,PA,15202
-10946,6200 Saltsburg Road,Pittsburgh,PA,15235
-10934,2336 Ardmore Boulevard,Pittsburgh,PA,15221
-273,2300 Jane Street,Pittsburgh,PA,15203
-10943,2501 Saw MIll Run Blvd,Pittsburgh,PA,15234
-10939,4411 Howley Street,Pittsburgh,PA,15224
-3571,103 West Allegheny Road,Imperial,PA,15126
-10956,1121 Bower Hill Road,Pittsburgh,PA,15243
-10922,200 Crafton Ingram S/C,Pittsburgh,PA,15205
-269,230 Hays Avenue,Pittsburgh,PA,15210
-10907,2100 Washington Pike,Carnegie,PA,15106
-10916,517 Beaver Street,Sewickley,PA,15143
-10911,1236 Long Run Road,Mckeesport,PA,15131
-7832,4155 Ewalt Road,Gibsonia,PA,15044
-10909,1710 Mount Royal Blvd,Glenshaw,PA,15116
-10940,513 Perry Highway,Pittsburgh,PA,15229
-1370,725 Lysle Boulevard,Mckeesport,PA,15132
-7924,2270 Noblestown Road,Pittsburgh,PA,15205
-1589,6375 Library Road,South Park,PA,15129
-1448,412 Broadway Street,Coraopolis,PA,15108
-6733,503 Clifton Road,Bethel Park,PA,15102
-4783,5100 Library Road,Bethel Park,PA,15102
-10929,3730 Brighton Road,Pittsburgh,PA,15212
-10908,5990 University Blvd Ste 30,Coraopolis,PA,15108
-2685,838 Fifth Avenue,Ford City,PA,16226
-10998,165 Butler Road,Kittanning,PA,16201
-10894,1021 First Avenue,Conway,PA,15027
-10890,1505 7th Avenue,Beaver Falls,PA,15010
-10901,351 Brighton Avenue,Rochester,PA,15074
-2480,847 Midland Avenue,Midland,PA,15059
-10888,2302 Sheffield Road,Aliquippa,PA,15001
-10889,925 Merchant Street,Ambridge,PA,15003
-2277,1799 Third Street,Beaver,PA,15009
-2433,813 Third Avenue,New Brighton,PA,15066
-1429,211 East Main Street,Everett,PA,15537
-7861,3145 Main Street,Morgantown,PA,19543
-3400,420 North 3rd Street,Womelsdorf,PA,19567
-290,500 East Lancaster Avenue,Reading,PA,19607
-1581,524 North 6th Street,Reading,PA,19601
-11169,23 North Elm Street,Kutztown,PA,19530
-11173,2962 St Lawrence Avenue,Reading,PA,19606
-11172,4630 Perkiomen Avenue,Reading,PA,19606
-447,1205 Ben Franklin Highway West,Douglassville,PA,19518
-3425,807 South 4th Street,Hamburg,PA,19526
-11171,3215 5th Street Highway,Reading,PA,19605
-11174,2210 State Hill Road,Reading,PA,19610
-467,525 Penn Avenue,Reading,PA,19611
-11170,418 Penn Street,Reading,PA,19602
-1975,4810 Penn Avenue,Reading,PA,19608
-2591,670 Philadelphia Avenue,Reading,PA,19607
-6742,94 June Drive,Roaring Spring,PA,16673
-11011,600 Chestnut Avenue,Altoona,PA,16601
-6741,1600 9th Ave Ste 35,Altoona,PA,16602
-6740,3106 E Pleasant Valley,Altoona,PA,16601
-11012,3331 Pleasant Valley Blvd,Altoona,PA,16602
-6739,1365 Logan Avenue,Tyrone,PA,16686
-6738,1201 Blair St,Hollidaysburg,PA,16648
-561,2968 Elmira Street,Sayre,PA,18840
-11083,1593 Elmira Street,Sayre,PA,18840
-1830,77 Reuters Boulevard,Towanda,PA,18848
-11084,148 Ennis Lane,Towanda,PA,18848
-11115,547 West Trenton Avenue,Morrisville,PA,19067
-11088,6542 H Logan Square,New Hope,PA,18938
-2267,452 Pond Street,Bristol,PA,19007
-11087,5176 Cold Springs Creamery Rd,Doylestown,PA,18902
-11109,1 Summit Square Ste A,Langhorne,PA,19047
-186,306 Town Center,Doylestown,PA,18901
-11093,1039 2nd Street Pike,Richboro,PA,18954
-850,8716 New Falls Road,Levittown,PA,19054
-11091,5707 Easton Road,Pipersville,PA,18947
-11092,1465-15 West Broad Street,Quakertown,PA,18951
-11089,1 Ice Cream Alley,Newtown,PA,18940
-291,345 West Broad Street,Quakertown,PA,18951
-11106,600 Lincoln Highway,Fairless Hills,PA,19030
-11114,696 Stoney Hill Road,Morrisville,PA,19067
-11100,244 Commerce Circle,Bristol,PA,19007
-11085,472 N Main Street,Doylestown,PA,18901
-1704,657 Heacock Road,Morrisville,PA,19067
-11090,519 Constitution Avenue,Perkasie,PA,18944
-293,599 York Road,Warminster,PA,18974
-11110,96 North Flowers MIll Road,Langhorne,PA,19047
-7827,1080 S West End Blvd,Quakertown,PA,18951
-11097,642 Easton Road,Warrington,PA,18976
-1672,6912 New Falls Road,Levittown,PA,19057
-923,1860 Brownsville Road,Feasterville Trevose,PA,19053
-10984,178 Point Plaza,Butler,PA,16001
-7781,20480 Route 19,Cranberry Township,PA,16066
-10986,115 Perry Hwy Ste 146,Harmony,PA,16037
-754,139 South Main Street,Butler,PA,16001
-10987,100 Seven Fields Blvd,Mars,PA,16046
-1698,221 Grove City Road,Slippery Rock,PA,16057
-10983,200 Greater Butler Mart,Butler,PA,16001
-10982,1520 N Main Street Ext,Butler,PA,16001
-10988,129 Grand Ave,Mars,PA,16046
-10980,1759 Goucher Street,Johnstown,PA,15905
-1494,1120 Philadelphia Avenue,Northern Cambria,PA,15714
-1549,630 Main St,Portage,PA,15946
-4676,407 Central Avenue,Johnstown,PA,15902
-10979,1501 Scalp Avenue,Johnstown,PA,15904
-803,300 Market Street,Johnstown,PA,15901
-4960,2470 Bedford Street,Johnstown,PA,15904
-3364,1303 Shoemaker Street,Nanty Glo,PA,15943
-1543,1212 Second Street,Cresson,PA,16630
-756,4606 Admiral Peary Highway,Ebensburg,PA,15931
-7850,620 E Allegheny Avenue,Emporium,PA,15834
-1450,601 Delaware Avenue,Palmerton,PA,18071
-11058,241 North First Street,Lehighton,PA,18235
-2422,480 West Bertsch Street,Lansford,PA,18232
-11059,1241 Blakeslee Blvd Dr Ste 2,Lehighton,PA,18235
-11013,510 Westerly Parkway,State College,PA,16801
-11015,821 East Bishop Street,Bellefonte,PA,16823
-793,1927 Atherton Street,State College,PA,16801
-11014,1536 North Atherton Street,State College,PA,16803
-1415,929 South High Street,West Chester,PA,19382
-995,237 East Lancaster Avenue,Wayne,PA,19087
-11165,200 Kimberton Road,Phoenixville,PA,19460
-7831,1307 Phoenixville Pike,West Chester,PA,19380
-11144,101 Wallace Avenue,Downingtown,PA,19335
-11155,1249 West Chester Pike,West Chester,PA,19382
-1929,118 Eagleview Boulevard,Exton,PA,19341
-992,320 East Lincoln Highway,Coatesville,PA,19320
-11143,3807 Lincoln Highway,Downingtown,PA,19335
-11148,120 South MIll Road,Kennett Square,PA,19348
-1144,500 Chesterbrook Blvd Ste 2,Wayne,PA,19087
-11119,644 West Lancaster Ave,Wayne,PA,19087
-3768,1249 Horseshoe Pike,Downingtown,PA,19335
-321,455 North 3rd Street,Oxford,PA,19363
-11154,13 East Gay Street,West Chester,PA,19380
-11151,1395 East Boot Road,West Chester,PA,19380
-11142,128 Airport Road,Coatesville,PA,19320
-11153,1535 West Chester Pike,West Chester,PA,19382
-11166,1140 Town Square Rd,Pottstown,PA,19465
-11152,927 Paoli Pike,West Chester,PA,19380
-1548,610 Broad Street,New Bethlehem,PA,16242
-10976,431 Commons Drive,Du Bois,PA,15801
-740,8878 Clearfield Curwensville,Clearfield,PA,16830
-11038,2411 Columbia Blvd,Bloomsburg,PA,17815
-11073,400 West Second Street,Berwick,PA,18603
-4616,208 East Central Avenue,Titusville,PA,16354
-2380,975 Market Street,Meadville,PA,16335
-10999,100 South Third Street,Conneaut Lake,PA,16316
-4818,4965 Carlisle Pike,Mechanicsburg,PA,17050
-418,105 Old York Road,New Cumberland,PA,17070
-17783,7036 Wertzville Road,Mechanicsburg,PA,17050
-7884,320 York Road,Carlisle,PA,17013
-3607,1814 Spring Road,Carlisle,PA,17013
-11018,429 South Hanover Street,Carlisle,PA,17013
-3611,455-K North Enola Road,Enola,PA,17025
-3613,5277 Simpson Ferry Road,Mechanicsburg,PA,17050
-1074,1137 Market Street,Lemoyne,PA,17043
-2000,330 Cumberland Parkway,Mechanicsburg,PA,17055
-11017,3200 Market Street,Camp Hill,PA,17011
-11023,300 S Fayette Street,Shippensburg,PA,17257
-4288,3773 Peters Mountain Rd,Halifax,PA,17032
-721,304 Market Street,Harrisburg,PA,17101
-246,337 West Chocolate Avenue,Hershey,PA,17033
-1981,2604 Linglestown Road,Harrisburg,PA,17110
-4260,4299 Union Deposit Road,Harrisburg,PA,17111
-1304,124 South Front Street,Harrisburg,PA,17113
-4287,360 East Main Street,Middletown,PA,17057
-1887,2103 N Third Street,Harrisburg,PA,17110
-3608,1941 Derry Street,Harrisburg,PA,17104
-866,501 South 29th St Ste A,Harrisburg,PA,17104
-4284,3601 Walnut Street,Harrisburg,PA,17109
-7894,4999 Jonestown Rd,Harrisburg,PA,17109
-11101,705 W Lancaster Avenue,Bryn Mawr,PA,19010
-1081,710 Burmont Road,Drexel Hill,PA,19026
-1758,113 East Baltimore Avenue,Clifton Heights,PA,19018
-11116,3599 West Chester Pike,Newtown Square,PA,19073
-679,123 South 69th Street,Upper Darby,PA,19082
-1566,327 North Chester Pike,Glenolden,PA,19036
-2631,170 Saxer Avenue,Springfield,PA,19064
-856,762 Chester Pike,Prospect Park,PA,19076
-2442,950 East Baltimore Pike,Lansdowne,PA,19050
-11105,832 North Lansdowne Ave,Drexel Hill,PA,19026
-1274,4400 Pennell Road,Aston,PA,19014
-2264,2722 West 9th Street,Chester,PA,19013
-790,1305 West Chester Pike Ste 8,Havertown,PA,19083
-11117,1500 Garrett Road,Upper Darby,PA,19082
-11112,3120 Chichester Avenue,Marcus Hook,PA,19061
-1567,2901 Springfield Road,Broomall,PA,19008
-11113,510 East Baltimore Pike,Media,PA,19063
-2476,101 Main Street,Ridgway,PA,15853
-7853,901 S Saint Marys Street,Saint Marys,PA,15857
-2375,925 West Erie Plaza,Erie,PA,16505
-11010,4145 Buffalo Road,Erie,PA,16510
-11008,353 East 6th Street,Erie,PA,16507
-11006,105 West Main Street,North East,PA,16428
-1854,1709 Liberty Street,Erie,PA,16502
-11009,5430 Peach Street,Erie,PA,16509
-1699,9141 Ridge Road,Girard,PA,16417
-596,827 N Center Street,Corry,PA,16407
-213,2715 Parade Street,Erie,PA,16504
-11007,1338 East Grandview Blvd,Erie,PA,16504
-1376,916 State Street,Erie,PA,16501
-2382,163 West 26th Street,Erie,PA,16508
-1398,1 East High Street,Union City,PA,16438
-3443,6039 National Pike,Grindstone,PA,15442
-10964,200 Memorial Blvd,Connellsville,PA,15425
-10962,575 Morgantown Road,Uniontown,PA,15401
-1963,262 Connellsville Street,Uniontown,PA,15401
-230,200 North Antrim Way,Greencastle,PA,17225
-11024,1513 East Main Street,Waynesboro,PA,17268
-232,5035 Lincoln Way East,Fayetteville,PA,17222
-3609,415 East Queen Street,Chambersburg,PA,17201
-926,1440 East High Street,Waynesburg,PA,15370
-1495,101 East Shirley Street,Mount Union,PA,17066
-233,9635 William Penn Highway,Huntingdon,PA,16652
-1014,200 Resort Plaza Drive,Blairsville,PA,15717
-264,375 Philadelphia Street,Indiana,PA,15701
-10975,201 West Mahoning Street,Punxsutawney,PA,15767
-3470,580 Carbondale Road,Olyphant,PA,18447
-11068,609 Luzerne Street,Scranton,PA,18504
-7878,1050 Northern Blvd,Clarks Summit,PA,18411
-501,201 North Washington Avenue,Scranton,PA,18503
-11064,791 Scranton Carbondale Hwy,Archbald,PA,18403
-216,6 Bochicchio Boulevard,Moscow,PA,18444
-2768,54 North Main Street,Carbondale,PA,18407
-1426,1650 Main Street,Olyphant,PA,18447
-1021,401-403 South Main Street,Old Forge,PA,18518
-1180,217 South Blakely Street,Scranton,PA,18512
-726,1080 S Washington Avenue,Scranton,PA,18505
-11069,1777 North Keyser Avenue,Scranton,PA,18508
-3775,500 North Main Avenue,Scranton,PA,18504
-3620,1550 Columbia Avenue,Lancaster,PA,17603
-4684,825a East Chestnut Street,Lancaster,PA,17602
-11034,2600 N Willow Street Pike,Willow Street,PA,17584
-1922,315 West Fourth Street,Quarryville,PA,17566
-729,59 North Queen Street,Lancaster,PA,17603
-3610,1786-I Columbia Avenue,Columbia,PA,17512
-10991,1730 Wilmington Road,New Castle,PA,16105
-10992,115 Fifth Street,Ellwood City,PA,16117
-10990,31 North Jefferson Street,New Castle,PA,16101
-10994,135 South Market Street,New Wilmington,PA,16142
-1662,980 East Main Street,Palmyra,PA,17078
-11020,415 South 9th Street,Lebanon,PA,17042
-11021,469 West Penn Avenue,Lebanon,PA,17042
-245,2 Cumberland Street,Lebanon,PA,17042
-200,1130 Cumberland Street,Lebanon,PA,17042
-11056,6822 Hamilton Boulevard,Allentown,PA,18106
-11053,1628 South Fourth Street,Allentown,PA,18103
-6778,27 N 7th Street Ste 100,Allentown,PA,18101
-11047,7719 Main Street,Fogelsville,PA,18051
-4004,2108 Macarthur Road,Whitehall,PA,18052
-11046,1328 Chestnut Street,Emmaus,PA,18049
-11055,1650 North Cedar Crest Blvd,Allentown,PA,18104
-7836,1401 W Tilghman Street,Allentown,PA,18102
-11054,361 S Cedar Crest Blvd,Allentown,PA,18103
-11042,2178 W Union Blvd,Bethlehem,PA,18018
-1314,501 Main Street Ste 2,White Haven,PA,18661
-11077,920 Wilkes-Barre Township Blvd,Wilkes Barre,PA,18702
-1371,102 North Main Street,Pittston,PA,18640
-1413,155 East Northampton Street,Wilkes Barre,PA,18701
-4840,1000 North Church Street,Hazleton,PA,18201
-1685,801 Wyoming Avenue Ste 9,Pittston,PA,18643
-4990,2 Kirby Avenue,Mountain Top,PA,18707
-218,5 East Main Street,Nanticoke,PA,18634
-11081,556 Union Street,Luzerne,PA,18709
-415,33 Public Square,Wilkes Barre,PA,18701
-2568,2810 Memorial Highway,Shavertown,PA,18708
-1632,20 South River Street,Wilkes Barre,PA,18705
-11075,120 Laurel Plaza,Pittston,PA,18640
-2426,39 West Side Mall,Kingston,PA,18704
-11037,760 Broad Street,Montoursville,PA,17754
-11036,1913 East 3rd Street,Williamsport,PA,17701
-4791,2023 Lycoming Creek Road,Williamsport,PA,17701
-4415,14 Fifth Street,Williamsport,PA,17701
-1406,521 North Fraley Street,Kane,PA,16735
-2474,59 North Main Street,Port Allegany,PA,16743
-1668,700 Sharon New Castle Rd,Farrell,PA,16121
-1071,60 South Water Street,Sharon,PA,16146
-10996,64 North Mercer Ave,Sharpsville,PA,16150
-3447,126 W Main Street,Grove City,PA,16127
-3449,335 Main Street,Greenville,PA,16125
-10995,1851 East State Street,Hermitage,PA,16148
-3972,811 East State Street,Sharon,PA,16146
-2769,100 Franklin Street,Mercer,PA,16137
-1955,674 Route 196 Ste 14,Tobyhanna,PA,18466
-11063,228 Main Street,Stroudsburg,PA,18360
-1800,4551 Milford Road,East Stroudsburg,PA,18302
-11062,3382 Route 940,Mount Pocono,PA,18344
-1355,1707 Route 209,Brodheadsville,PA,18322
-170,128 N Courtland Street,East Stroudsburg,PA,18301
-7833,1390 S Valley Forge Road,Lansdale,PA,19446
-11095,780 Route 113,Souderton,PA,18964
-2797,1401 West Cheltenham Avenue,Elkins Park,PA,19027
-1733,1400 West Main Street,Norristown,PA,19403
-558,1441 Old York Road,Abington,PA,19001
-11158,160 North Gulph Road Ste 1088,King Of Prussia,PA,19406
-185,741 Route 113,Souderton,PA,18964
-7772,33 W Ridge Ste 101,Royersford,PA,19468
-1320,640 Montgomery Avenue,Narberth,PA,19072
-11122,284 East Lancaster Avenue,Wynnewood,PA,19096
-11162,1856 North Broad Street,Lansdale,PA,19446
-11104,1650 Limekiln Pike,Dresher,PA,19025
-3273,1201 South Bethlehem Pike,Ambler,PA,19002
-443,350 Main Street,Pennsburg,PA,18073
-7880,277 Dekalb Pike,North Wales,PA,19454
-857,169 West Lancaster Avenue,Ardmore,PA,19003
-3389,2674 Egypt Road,Norristown,PA,19403
-819,340 East High Street,Pottstown,PA,19464
-183,10 West Main Street,Lansdale,PA,19446
-11099,2182 County Line Road,Huntingdon Valley,PA,19006
-11096,1035 County Line Road,Huntingdon Valley,PA,19006
-4256,1321 Easton Road,Abington,PA,19001
-11160,200 W Ridge Avenue Ste 112,Conshohocken,PA,19428
-2017,762 East Johnson Highway,Norristown,PA,19401
-1292,270 Main Street,Harleysville,PA,19438
-188,805 Huntingdon Pike,Huntingdon Valley,PA,19006
-3495,820 Main Street,Royersford,PA,19468
-11048,110 Main Street,Hellertown,PA,18055
-11043,901 Northampton Street,Easton,PA,18042
-11045,601 South 25th Street,Easton,PA,18045
-813,104 E Third Street,Bethlehem,PA,18015
-11049,200 South Best Avenue,Walnutport,PA,18088
-1768,1620 Main Street,Northampton,PA,18067
-1983,102 Easton Road,Nazareth,PA,18064
-11040,2269 Schoenersville Road,Bethlehem,PA,18017
-1384,450 Blue Valley Drive,Bangor,PA,18013
-836,1781 Stefko Boulevard,Bethlehem,PA,18017
-205,26 West Independence Street,Shamokin,PA,17872
-4293,5 Friendly Drive,Duncannon,PA,17020
-4286,5201 Spring Road Ste 6,Shermans Dale,PA,17090
-3804,10 Newport Plaza,Newport,PA,17074
-1089,3200-92 Red Lion Road,Philadelphia,PA,19114
-3637,6363 Frankford Avenue,Philadelphia,PA,19135
-822,5911-5933 Ridge Avenue,Philadelphia,PA,19128
-11126,9910 Frankford Avenue Suite 250,Philadelphia,PA,19114
-1299,2503-05 Welsh Road,Philadelphia,PA,19114
-11124,4055-89 Market Street,Philadelphia,PA,19104
-2790,1528 North Broad Street,Philadelphia,PA,19121
-3876,1500 W Moyamensing Avenue,Philadelphia,PA,19145
-1767,2801 W Dauphin Street,Philadelphia,PA,19132
-2578,2121 W Lehigh Avenue Ste 5,Philadelphia,PA,19132
-3461,5301 Chew Avenue,Philadelphia,PA,19138
-2698,339 Spring Garden Street,Philadelphia,PA,19123
-226,338 East Allegheny Avenue,Philadelphia,PA,19134
-2451,5214-30 Baltimore Avenue,Philadelphia,PA,19143
-1016,8130 Roosevelt Boulevard,Philadelphia,PA,19152
-1365,215 South Broad Street,Philadelphia,PA,19107
-3434,1924 Fairmount Avenue,Philadelphia,PA,19130
-2709,8235 Stenton Avenue,Philadelphia,PA,19150
-3227,3000-02 Reed Street,Philadelphia,PA,19146
-2793,1201-43 West Girard Ave,Philadelphia,PA,19123
-1127,2131-59 North Broad Street,Philadelphia,PA,19122
-1563,6201 Germantown Avenue,Philadelphia,PA,19144
-11140,2512 Island Avenue,Philadelphia,PA,19153
-4611,5040 City Line Avenue,Philadelphia,PA,19131
-3688,4616-4650 North Broad Street,Philadelphia,PA,19140
-3523,1105-09 N 63rd Street,Philadelphia,PA,19151
-3213,4641-51 Chestnut Street,Philadelphia,PA,19139
-2564,113-131 West Wyoming Avenue,Philadelphia,PA,19140
-6777,1900 Arch Street,Philadelphia,PA,19103
-3251,3601 Midvale Avenue,Philadelphia,PA,19129
-2587,3260 North Broad Street,Philadelphia,PA,19140
-554,9280 Krewstown Road,Philadelphia,PA,19115
-242,730-32 Market Street,Philadelphia,PA,19106
-4932,260 West Lehigh Avenue Ste 80,Philadelphia,PA,19133
-3783,810 S Broad Street,Philadelphia,PA,19146
-3325,1443 South 7th Street,Philadelphia,PA,19147
-11127,9773 Roosevelt Blvd,Philadelphia,PA,19114
-552,6401 Oxford Avenue,Philadelphia,PA,19111
-11136,1334 Windrim Avenue,Philadelphia,PA,19141
-3225,2201 West Allegheny Ave,Philadelphia,PA,19132
-11131,2545 Aramingo Avenue,Philadelphia,PA,19125
-7834,9200 Frankford Avenue,Philadelphia,PA,19114
-11130,7700 Crittenden Street Suite 101c,Philadelphia,PA,19118
-1766,10 Snyder Avenue,Philadelphia,PA,19148
-3394,4530 North 5th Street,Philadelphia,PA,19140
-3959,2301 Walnut Street,Philadelphia,PA,19103
-478,5400 Rising Sun Avenue,Philadelphia,PA,19120
-3457,136 North 63rd Street,Philadelphia,PA,19139
-3801,704-20 East Passyunk Avenue,Philadelphia,PA,19147
-872,164 West Chelten Avenue,Philadelphia,PA,19144
-3681,5440 Lansdowne Avenue,Philadelphia,PA,19131
-1956,12311 Academy Road,Philadelphia,PA,19154
-1754,4390 Richmond Street,Philadelphia,PA,19137
-2252,5272 Torresdale Avenue,Philadelphia,PA,19124
-852,11750 Bustleton Avenue,Philadelphia,PA,19116
-821,6744-46 North Fifth Street,Philadelphia,PA,19126
-3825,801 South 9th Street,Philadelphia,PA,19147
-225,5612 N Fifth Street,Philadelphia,PA,19120
-553,4011 Cottman Avenue,Philadelphia,PA,19135
-1936,2017-2023 South Broad St,Philadelphia,PA,19148
-11139,6515 Castor Avenue,Philadelphia,PA,19149
-3377,7941 Oxford Avenue,Philadelphia,PA,19111
-11134,2401 East Venango Street,Philadelphia,PA,19134
-4938,7972 Castor Avenue,Philadelphia,PA,19152
-1288,1315 East Washington Lane,Philadelphia,PA,19138
-11125,7418-32 Oxford Avenue,Philadelphia,PA,19111
-479,7615 Lindbergh Boulevard,Philadelphia,PA,19153
-895,3900 Castor Avenue,Philadelphia,PA,19124
-11135,6327-43 Torresdale Avenue,Philadelphia,PA,19135
-1764,5627-99 Chestnut Street,Philadelphia,PA,19139
-174,1628-36 Chestnut Street,Philadelphia,PA,19103
-11141,4000 Woodhaven Road,Philadelphia,PA,19154
-3770,1000-1008 Market Street,Philadelphia,PA,19107
-145,5694 Rising Sun Avenue Ste 11,Philadelphia,PA,19120
-2604,6101 North Broad Street,Philadelphia,PA,19141
-4554,6731 Woodland Avenue,Philadelphia,PA,19142
-11133,2000 Hamilton Street,Philadelphia,PA,19130
-1941,7401 Ogontz Avenue,Philadelphia,PA,19138
-1976,207 Route 6 West,Coudersport,PA,16915
-11060,205 Center Street,Tamaqua,PA,18252
-208,15 South Main Street,Shenandoah,PA,17976
-696,15 West Centre Street,Mahanoy City,PA,17948
-507,10 South Center Street,Pottsville,PA,17901
-873,500 N Claude Lord Boulevard,Pottsville,PA,17901
-2478,129 East Centre Street,Ashland,PA,17921
-223,452 South Lehigh Avenue,Frackville,PA,17931
-2693,44 Kings Village,Minersville,PA,17954
-1780,1516 Jefferson Avenue,Windber,PA,15963
-11082,801 Grow Avenue,Montrose,PA,18801
-11016,24 East Avenue,Wellsboro,PA,16901
-1496,508 East Second Street,Oil City,PA,16301
-11002,1020 Liberty Street,Franklin,PA,16323
-1147,175 Wilson Road,Bentleyville,PA,15314
-10961,4185 Washington Road,Canonsburg,PA,15317
-1353,25 East Pike Street,Canonsburg,PA,15317
-2545,1001 Jefferson Avenue,Washington,PA,15301
-1514,404 Third Street,California,PA,15419
-4083,101 5th Street,Charleroi,PA,15022
-10958,1396 West Chestnut St,Washington,PA,15301
-1197,446 West Main Street,Monongahela,PA,15063
-10960,601 West Pike Street,Canonsburg,PA,15317
-3508,1340 Main Street,Burgettstown,PA,15021
-2248,639 Hamlin Highway,Lake Ariel,PA,18436
-229,1184 Texas Palmyra Highway,Honesdale,PA,18431
-10900,700 Stevenson Blvd,New Kensington,PA,15068
-3857,304 Depot Street,Latrobe,PA,15650
-3586,111 North Plaza,Apollo,PA,15613
-10973,120 Country Side Plaza,Mount Pleasant,PA,15666
-1726,6531 Route 22,Delmont,PA,15626
-1709,15 Centennial Way,Scottdale,PA,15683
-2466,10 Donner Avenue,Monessen,PA,15062
-10966,314 East Pittsburgh Street,Greensburg,PA,15601
-1628,222 Y Street,Derry,PA,15627
-10899,3200 Oregon Drive,New Kensington,PA,15068
-210,621 Clay Avenue,Jeannette,PA,15644
-10974,4830 William Penn Highway,Export,PA,15632
-10970,3550 Route 130,Irwin,PA,15642
-1814,113 West Main Street,West Newton,PA,15089
-10891,843 Rostraver Road,Belle Vernon,PA,15012
-10968,8775 Norwin Avenue,Irwin,PA,15642
-10969,10 Clay Pike,Irwin,PA,15642
-10967,6090 Route 30,Greensburg,PA,15601
-10972,1008 Latrobe Thirty Plaza,Latrobe,PA,15650
-263,685 North Main Street,Greensburg,PA,15601
-11076,420 Tioga West Plz Ste 110,Tunkhannock,PA,18657
-517,40-42 West Market Street,York,PA,17401
-12999,301 Eisenhower Drive,Hanover,PA,17331
-11027,1430 Baltimore Street,Hanover,PA,17331
-11019,818 Us Route 15 North,Dillsburg,PA,17019
-11033,3300 East Market Street,York,PA,17402
-1902,2067 Route 116,Spring Grove,PA,17362
-1640,910 West Broadway,Red Lion,PA,17356
-11031,4 Ballast Lane,Stewartstown,PA,17363
-2510,43-47 Baltimore Street,Hanover,PA,17331
-1894,2901 Carlisle Road,Dover,PA,17315
-11030,577 South Main Street,Shrewsbury,PA,17361
-7886,115 Leader Heights Road,York,PA,17403
-2271,4135 North George Street Ext,Manchester,PA,17345
-451,1200 West Market Street,York,PA,17404
-11029,3205 Cape Horn Road,Red Lion,PA,17356
-11025,65 Newberry Parkway,Etters,PA,17319
+store_number,latitude,longitude,full_address,address,city,state,zip,phone
+558,40.1236072,-75.115917,"1441 Old York Road, Abington, PA, 19001",1441 Old York Road,Abington,PA,19001,Montgomery,215-886-0472
+4256,40.1267024,-75.130902,"1321 Easton Road, Abington, PA, 19001",1321 Easton Road,Abington,PA,19001,Montgomery,215-886-8509
+10888,40.6069456,-80.2815542,"2302 Sheffield Road, Aliquippa, PA, 15001",2302 Sheffield Road,Aliquippa,PA,15001,Beaver,724-375-5558
+11056,40.5524704,-75.5905031,"6822 Hamilton Boulevard, Allentown, PA, 18106",6822 Hamilton Boulevard,Allentown,PA,18106,Lehigh,610-398-1351
+11053,40.5841737,-75.4610371,"1628 South Fourth Street, Allentown, PA, 18103",1628 South Fourth Street,Allentown,PA,18103,Lehigh,610-797-1063
+6778,40.60355029,-75.47209315,"27 N 7th Street Ste 100, Allentown, PA, 18101",27 N 7th Street Ste 100,Allentown,PA,18101,Lehigh,610-437-7261
+11055,40.61439224,-75.53449005,"1650 North Cedar Crest Blvd, Allentown, PA, 18104",1650 North Cedar Crest Blvd,Allentown,PA,18104,Lehigh,610-395-3671
+7836,40.6081214,-75.4910134,"1401 W Tilghman Street, Allentown, PA, 18102",1401 W Tilghman Street,Allentown,PA,18102,Lehigh,610-434-2874
+11054,40.58334694,-75.5204916,"361 S Cedar Crest Blvd, Allentown, PA, 18103",361 S Cedar Crest Blvd,Allentown,PA,18103,Lehigh,610-821-7999
+10904,40.60183,-79.945437,"4960 William Flynn Hwy Ste 10, Allison Park, PA, 15101",4960 William Flynn Hwy Ste 10,Allison Park,PA,15101,Allegheny,724-443-5455
+10905,40.5674509,-79.9988049,"1701 Duncan Avenue, Allison Park, PA, 15101",1701 Duncan Avenue,Allison Park,PA,15101,Allegheny,412-364-0588
+11011,40.5208425,-78.3964195,"600 Chestnut Avenue, Altoona, PA, 16601",600 Chestnut Avenue,Altoona,PA,16601,Blair,814-943-0545
+6741,40.510893,-78.4022037,"1600 9th Ave Ste 35, Altoona, PA, 16602",1600 9th Ave Ste 35,Altoona,PA,16602,Blair,814-941-2406
+6740,40.5972419,-78.3219515,"3106 E Pleasant Valley, Altoona, PA, 16601",3106 E Pleasant Valley,Altoona,PA,16601,Blair,814-742-8429
+11012,40.482165,-78.40079,"3331 Pleasant Valley Blvd, Altoona, PA, 16602",3331 Pleasant Valley Blvd,Altoona,PA,16602,Blair,814-942-1081
+3273,40.157943,-75.213516,"1201 South Bethlehem Pike, Ambler, PA, 19002",1201 South Bethlehem Pike,Ambler,PA,19002,Montgomery,215-646-8351
+10889,40.591014,-80.230149,"925 Merchant Street, Ambridge, PA, 15003",925 Merchant Street,Ambridge,PA,15003,Beaver,724-266-7664
+3586,40.5819939,-79.5662574,"111 North Plaza, Apollo, PA, 15613",111 North Plaza,Apollo,PA,15613,Westmoreland,724-478-2500
+11064,41.507457,-75.5788,"791 Scranton Carbondale Hwy, Archbald, PA, 18403",791 Scranton Carbondale Hwy,Archbald,PA,18403,Lackawanna,570-876-3788
+857,40.00999,-75.2944713,"169 West Lancaster Avenue, Ardmore, PA, 19003",169 West Lancaster Avenue,Ardmore,PA,19003,Montgomery,610-649-7150
+2478,40.7839986,-76.3318312,"129 East Centre Street, Ashland, PA, 17921",129 East Centre Street,Ashland,PA,17921,Schuylkill,570-875-2475
+1274,39.8568701,-75.426533,"4400 Pennell Road, Aston, PA, 19014",4400 Pennell Road,Aston,PA,19014,Delaware,610-494-2055
+1384,40.8717553,-75.2345559,"450 Blue Valley Drive, Bangor, PA, 18013",450 Blue Valley Drive,Bangor,PA,18013,Northampton,610-863-6101
+2277,40.688079,-80.320533,"1799 Third Street, Beaver, PA, 15009",1799 Third Street,Beaver,PA,15009,Beaver,724-774-2210
+10890,40.7563034,-80.3201129,"1505 7th Avenue, Beaver Falls, PA, 15010",1505 7th Avenue,Beaver Falls,PA,15010,Beaver,724-843-6774
+10891,40.13651,-79.843602,"843 Rostraver Road, Belle Vernon, PA, 15012",843 Rostraver Road,Belle Vernon,PA,15012,Westmoreland,724-929-8311
+11015,40.914303,-77.763239,"821 East Bishop Street, Bellefonte, PA, 16823",821 East Bishop Street,Bellefonte,PA,16823,Centre,814-355-1548
+1147,40.129916,-80.00221,"175 Wilson Road, Bentleyville, PA, 15314",175 Wilson Road,Bentleyville,PA,15314,Washington,724-239-3400
+11073,41.0522909,-76.2393862,"400 West Second Street, Berwick, PA, 18603",400 West Second Street,Berwick,PA,18603,Columbia,570-752-5200
+10906,40.3328161,-80.0224769,"5235 Library Road, Bethel Park, PA, 15102",5235 Library Road,Bethel Park,PA,15102,Allegheny,412-833-1175
+6733,40.3123347,-80.0651541,"503 Clifton Road, Bethel Park, PA, 15102",503 Clifton Road,Bethel Park,PA,15102,Allegheny,412-854-8260
+4783,40.3380557,-80.0267071,"5100 Library Road, Bethel Park, PA, 15102",5100 Library Road,Bethel Park,PA,15102,Allegheny,412-854-1207
+11042,40.628256,-75.4165956,"2178 W Union Blvd, Bethlehem, PA, 18018",2178 W Union Blvd,Bethlehem,PA,18018,Lehigh,610-867-1004
+813,40.61163685,-75.37690843,"104 E Third Street, Bethlehem, PA, 18015",104 E Third Street,Bethlehem,PA,18015,Northampton,610-867-3981
+11040,40.6405344,-75.4014212,"2269 Schoenersville Road, Bethlehem, PA, 18017",2269 Schoenersville Road,Bethlehem,PA,18017,Northampton,610-865-1362
+836,40.637967,-75.349722,"1781 Stefko Boulevard, Bethlehem, PA, 18017",1781 Stefko Boulevard,Bethlehem,PA,18017,Northampton,610-865-0761
+1014,40.442404,-79.228506,"200 Resort Plaza Drive, Blairsville, PA, 15717",200 Resort Plaza Drive,Blairsville,PA,15717,Indiana,724-459-5938
+11038,41.01177049,-76.41368598,"2411 Columbia Blvd, Bloomsburg, PA, 17815",2411 Columbia Blvd,Bloomsburg,PA,17815,Columbia,570-387-1900
+10892,40.3558594,-80.1132547,"417 Chartiers Street, Bridgeville, PA, 15017",417 Chartiers Street,Bridgeville,PA,15017,Allegheny,412-221-8184
+2267,40.0994935,-74.8544362,"452 Pond Street, Bristol, PA, 19007",452 Pond Street,Bristol,PA,19007,Bucks,215-785-1553
+11100,40.1023976,-74.8709532,"244 Commerce Circle, Bristol, PA, 19007",244 Commerce Circle,Bristol,PA,19007,Bucks,215-781-9788
+1355,40.92317025,-75.39946228,"1707 Route 209, Brodheadsville, PA, 18322",1707 Route 209,Brodheadsville,PA,18322,Monroe,570-992-2373
+1567,39.982428,-75.372496,"2901 Springfield Road, Broomall, PA, 19008",2901 Springfield Road,Broomall,PA,19008,Delaware,610-356-8800
+11101,40.01940687,-75.31349347,"705 W Lancaster Avenue, Bryn Mawr, PA, 19010",705 W Lancaster Avenue,Bryn Mawr,PA,19010,Delaware,610-527-3603
+3508,40.378596,-80.392066,"1340 Main Street, Burgettstown, PA, 15021",1340 Main Street,Burgettstown,PA,15021,Washington,724-947-4722
+10984,40.8689542,-79.9304316,"178 Point Plaza, Butler, PA, 16001",178 Point Plaza,Butler,PA,16001,Butler,724-285-5800
+754,40.8604791,-79.8954396,"139 South Main Street, Butler, PA, 16001",139 South Main Street,Butler,PA,16001,Butler,724-287-6751
+10983,40.8434847,-79.9185336,"200 Greater Butler Mart, Butler, PA, 16001",200 Greater Butler Mart,Butler,PA,16001,Butler,724-282-7808
+10982,40.8965663,-79.9084693,"1520 N Main Street Ext, Butler, PA, 16001",1520 N Main Street Ext,Butler,PA,16001,Butler,724-282-8113
+1514,40.066757,-79.889648,"404 Third Street, California, PA, 15419",404 Third Street,California,PA,15419,Washington,724-938-3515
+11017,40.2401756,-76.9353966,"3200 Market Street, Camp Hill, PA, 17011",3200 Market Street,Camp Hill,PA,17011,Cumberland,717-763-1181
+10961,40.2625756,-80.1330309,"4185 Washington Road, Canonsburg, PA, 15317",4185 Washington Road,Canonsburg,PA,15317,Washington,724-942-9111
+1353,40.2593876,-80.1856203,"25 East Pike Street, Canonsburg, PA, 15317",25 East Pike Street,Canonsburg,PA,15317,Washington,724-745-4418
+10960,40.2569602,-80.2037945,"601 West Pike Street, Canonsburg, PA, 15317",601 West Pike Street,Canonsburg,PA,15317,Washington,724-745-5016
+2768,41.5737827,-75.5013744,"54 North Main Street, Carbondale, PA, 18407",54 North Main Street,Carbondale,PA,18407,Lackawanna,570-282-3431
+7884,40.191323,-77.161398,"320 York Road, Carlisle, PA, 17013",320 York Road,Carlisle,PA,17013,Cumberland,717-245-0116
+3607,40.226211,-77.180228,"1814 Spring Road, Carlisle, PA, 17013",1814 Spring Road,Carlisle,PA,17013,Cumberland,717-249-7697
+11018,40.1952034,-77.1893952,"429 South Hanover Street, Carlisle, PA, 17013",429 South Hanover Street,Carlisle,PA,17013,Cumberland,717-258-4800
+10907,40.388136,-80.093457,"2100 Washington Pike, Carnegie, PA, 15106",2100 Washington Pike,Carnegie,PA,15106,Allegheny,412-276-7077
+3609,39.935115,-77.6536096,"415 East Queen Street, Chambersburg, PA, 17201",415 East Queen Street,Chambersburg,PA,17201,Franklin,717-263-8040
+4083,40.1383994,-79.8972976,"101 5th Street, Charleroi, PA, 15022",101 5th Street,Charleroi,PA,15022,Washington,724-489-9334
+2264,39.836815,-75.395289,"2722 West 9th Street, Chester, PA, 19013",2722 West 9th Street,Chester,PA,19013,Delaware,610-494-3910
+10893,40.5408051,-79.8037775,"1200 Pittsburgh Street, Cheswick, PA, 15024",1200 Pittsburgh Street,Cheswick,PA,15024,Allegheny,724-274-7111
+3200,40.2936069,-79.8881603,"623 Saint Clair Avenue, Clairton, PA, 15025",623 Saint Clair Avenue,Clairton,PA,15025,Allegheny,412-233-2703
+7878,41.4852274,-75.6927376,"1050 Northern Blvd, Clarks Summit, PA, 18411",1050 Northern Blvd,Clarks Summit,PA,18411,Lackawanna,570-587-4508
+740,40.988203,-78.474168,"8878 Clearfield Curwensville, Clearfield, PA, 16830",8878 Clearfield Curwensville,Clearfield,PA,16830,Clearfield,814-765-2753
+1758,39.9303897,-75.2951098,"113 East Baltimore Avenue, Clifton Heights, PA, 19018",113 East Baltimore Avenue,Clifton Heights,PA,19018,Delaware,610-622-3225
+992,39.9837222,-75.8191035,"320 East Lincoln Highway, Coatesville, PA, 19320",320 East Lincoln Highway,Coatesville,PA,19320,Chester,610-384-7022
+11142,39.984442,-75.8698842,"128 Airport Road, Coatesville, PA, 19320",128 Airport Road,Coatesville,PA,19320,Chester,610-384-2011
+3610,40.0306626,-76.4757435,"1786-I Columbia Avenue, Columbia, PA, 17512",1786-I Columbia Avenue,Columbia,PA,17512,Lancaster,717-684-0025
+10999,41.6029134,-80.3037691,"100 South Third Street, Conneaut Lake, PA, 16316",100 South Third Street,Conneaut Lake,PA,16316,Crawford,814-382-2380
+10964,40.023936,-79.5951695,"200 Memorial Blvd, Connellsville, PA, 15425",200 Memorial Blvd,Connellsville,PA,15425,Fayette,724-628-8460
+11160,40.095897,-75.288031,"200 W Ridge Avenue Ste 112, Conshohocken, PA, 19428",200 W Ridge Avenue Ste 112,Conshohocken,PA,19428,Montgomery,610-828-1274
+10894,40.6598826,-80.2386511,"1021 First Avenue, Conway, PA, 15027",1021 First Avenue,Conway,PA,15027,Beaver,724-869-2369
+10941,40.49628732,-80.24657178,"1000 Airport Blvd, Coraopolis, PA, 15108",1000 Airport Blvd,Coraopolis,PA,15108,Allegheny,412-472-5040
+1448,40.5166802,-80.1614432,"412 Broadway Street, Coraopolis, PA, 15108",412 Broadway Street,Coraopolis,PA,15108,Allegheny,412-264-0810
+10908,40.52020585,-80.21909416,"5990 University Blvd Ste 30, Coraopolis, PA, 15108",5990 University Blvd Ste 30,Coraopolis,PA,15108,Allegheny,412-262-2161
+596,41.930105,-79.6419,"827 N Center Street, Corry, PA, 16407",827 N Center Street,Corry,PA,16407,Erie,814-665-3764
+1976,41.766822,-78.029691,"207 Route 6 West, Coudersport, PA, 16915",207 Route 6 West,Coudersport,PA,16915,Potter,814-274-0439
+7781,40.6988087,-80.1034059,"20480 Route 19, Cranberry Township, PA, 16066",20480 Route 19,Cranberry Township,PA,16066,Butler,724-778-8989
+1543,40.4597621,-78.5918868,"1212 Second Street, Cresson, PA, 16630",1212 Second Street,Cresson,PA,16630,Cambria,814-886-2677
+1726,40.4000634,-79.585179,"6531 Route 22, Delmont, PA, 15626",6531 Route 22,Delmont,PA,15626,Westmoreland,724-468-6282
+1628,40.3313909,-79.300093,"222 Y Street, Derry, PA, 15627",222 Y Street,Derry,PA,15627,Westmoreland,724-694-9811
+11019,40.128513,-77.020382,"818 Us Route 15 North, Dillsburg, PA, 17019",818 Us Route 15 North,Dillsburg,PA,17019,York,717-432-0490
+447,40.25986174,-75.72681043,"1205 Ben Franklin Highway West, Douglassville, PA, 19518",1205 Ben Franklin Highway West,Douglassville,PA,19518,Berks,610-385-6643
+1894,39.982394,-76.815045,"2901 Carlisle Road, Dover, PA, 17315",2901 Carlisle Road,Dover,PA,17315,York,717-764-9831
+11144,40.00971064,-75.70291132,"101 Wallace Avenue, Downingtown, PA, 19335",101 Wallace Avenue,Downingtown,PA,19335,Chester,610-873-4725
+11143,39.996669,-75.745365,"3807 Lincoln Highway, Downingtown, PA, 19335",3807 Lincoln Highway,Downingtown,PA,19335,Chester,610-269-0226
+3768,40.0375472,-75.7680519,"1249 Horseshoe Pike, Downingtown, PA, 19335",1249 Horseshoe Pike,Downingtown,PA,19335,Chester,610-873-3720
+11087,40.35872,-75.08778,"5176 Cold Springs Creamery Rd, Doylestown, PA, 18902",5176 Cold Springs Creamery Rd,Doylestown,PA,18902,Bucks,215-489-5481
+186,40.2967204,-75.1906295,"306 Town Center, Doylestown, PA, 18901",306 Town Center,Doylestown,PA,18901,Bucks,215-348-3200
+11085,40.32195987,-75.13295531,"472 N Main Street, Doylestown, PA, 18901",472 N Main Street,Doylestown,PA,18901,Bucks,215-345-1020
+11104,40.145934,-75.166973,"1650 Limekiln Pike, Dresher, PA, 19025",1650 Limekiln Pike,Dresher,PA,19025,Montgomery,215-628-4404
+1081,39.9497438,-75.3085571,"710 Burmont Road, Drexel Hill, PA, 19026",710 Burmont Road,Drexel Hill,PA,19026,Delaware,610-626-4350
+11105,39.9607451,-75.2890023,"832 North Lansdowne Ave, Drexel Hill, PA, 19026",832 North Lansdowne Ave,Drexel Hill,PA,19026,Delaware,610-449-7188
+10976,41.1236154,-78.733138,"431 Commons Drive, Du Bois, PA, 15801",431 Commons Drive,Du Bois,PA,15801,Clearfield,814-371-4491
+4293,40.3901287,-77.0438467,"5 Friendly Drive, Duncannon, PA, 17020",5 Friendly Drive,Duncannon,PA,17020,Perry,717-834-6303
+1800,41.0501648,-75.1102119,"4551 Milford Road, East Stroudsburg, PA, 18302",4551 Milford Road,East Stroudsburg,PA,18302,Monroe,570-223-8062
+170,41.002377,-75.1824801,"128 N Courtland Street, East Stroudsburg, PA, 18301",128 N Courtland Street,East Stroudsburg,PA,18301,Monroe,570-421-8665
+11043,40.691043,-75.221413,"901 Northampton Street, Easton, PA, 18042",901 Northampton Street,Easton,PA,18042,Northampton,610-258-2353
+11045,40.6812787,-75.2483283,"601 South 25th Street, Easton, PA, 18045",601 South 25th Street,Easton,PA,18045,Northampton,610-252-7405
+756,40.4731435,-78.7488654,"4606 Admiral Peary Highway, Ebensburg, PA, 15931",4606 Admiral Peary Highway,Ebensburg,PA,15931,Cambria,814-472-5312
+2482,40.27254,-79.885575,"300 Market Street, Elizabeth, PA, 15037",300 Market Street,Elizabeth,PA,15037,Allegheny,412-384-2890
+2797,40.0637162,-75.1395466,"1401 West Cheltenham Avenue, Elkins Park, PA, 19027",1401 West Cheltenham Avenue,Elkins Park,PA,19027,Montgomery,215-782-8950
+10992,40.8610688,-80.2869164,"115 Fifth Street, Ellwood City, PA, 16117",115 Fifth Street,Ellwood City,PA,16117,Lawrence,724-758-3294
+11046,40.526331,-75.510158,"1328 Chestnut Street, Emmaus, PA, 18049",1328 Chestnut Street,Emmaus,PA,18049,Lehigh,610-967-6440
+7850,41.509341,-78.223646,"620 E Allegheny Avenue, Emporium, PA, 15834",620 E Allegheny Avenue,Emporium,PA,15834,Cameron,814-486-2007
+3611,40.300878,-76.929113,"455-K North Enola Road, Enola, PA, 17025",455-K North Enola Road,Enola,PA,17025,Cumberland,717-732-3666
+2375,42.107356,-80.1329225,"925 West Erie Plaza, Erie, PA, 16505",925 West Erie Plaza,Erie,PA,16505,Erie,814-454-7800
+11010,42.144002,-80.006192,"4145 Buffalo Road, Erie, PA, 16510",4145 Buffalo Road,Erie,PA,16510,Erie,814-899-6924
+11008,42.1319791,-80.0769041,"353 East 6th Street, Erie, PA, 16507",353 East 6th Street,Erie,PA,16507,Erie,814-455-2910
+1854,42.113022,-80.095023,"1709 Liberty Street, Erie, PA, 16502",1709 Liberty Street,Erie,PA,16502,Erie,814-452-2596
+11009,42.07495083,-80.09408511,"5430 Peach Street, Erie, PA, 16509",5430 Peach Street,Erie,PA,16509,Erie,814-868-4624
+213,42.114178,-80.06388,"2715 Parade Street, Erie, PA, 16504",2715 Parade Street,Erie,PA,16504,Erie,814-454-5148
+11007,42.108224,-80.032165,"1338 East Grandview Blvd, Erie, PA, 16504",1338 East Grandview Blvd,Erie,PA,16504,Erie,814-825-2333
+1376,42.125887,-80.083316,"916 State Street, Erie, PA, 16501",916 State Street,Erie,PA,16501,Erie,814-456-0560
+2382,42.1103894,-80.0767524,"163 West 26th Street, Erie, PA, 16508",163 West 26th Street,Erie,PA,16508,Erie,814-452-4012
+11025,40.147785,-76.8143847,"65 Newberry Parkway, Etters, PA, 17319",65 Newberry Parkway,Etters,PA,17319,York,717-938-3655
+1429,40.0124312,-78.3700471,"211 East Main Street, Everett, PA, 15537",211 East Main Street,Everett,PA,15537,Bedford,814-652-2052
+10974,40.4229595,-79.6618315,"4830 William Penn Highway, Export, PA, 15632",4830 William Penn Highway,Export,PA,15632,Westmoreland,724-327-8233
+1929,40.0487956,-75.6624938,"118 Eagleview Boulevard, Exton, PA, 19341",118 Eagleview Boulevard,Exton,PA,19341,Chester,610-363-0554
+11106,40.1902,-74.831022,"600 Lincoln Highway, Fairless Hills, PA, 19030",600 Lincoln Highway,Fairless Hills,PA,19030,Bucks,215-295-0150
+1668,41.2125696,-80.4803545,"700 Sharon New Castle Rd, Farrell, PA, 16121",700 Sharon New Castle Rd,Farrell,PA,16121,Mercer,724-983-1645
+232,39.908324,-77.550753,"5035 Lincoln Way East, Fayetteville, PA, 17222",5035 Lincoln Way East,Fayetteville,PA,17222,Franklin,717-352-3850
+923,40.1535774,-74.9740586,"1860 Brownsville Road, Feasterville Trevose, PA, 19053",1860 Brownsville Road,Feasterville Trevose,PA,19053,Bucks,215-322-4107
+11047,40.58525,-75.6276,"7719 Main Street, Fogelsville, PA, 18051",7719 Main Street,Fogelsville,PA,18051,Lehigh,610-391-0922
+2685,40.769086,-79.530586,"838 Fifth Avenue, Ford City, PA, 16226",838 Fifth Avenue,Ford City,PA,16226,Armstrong,724-763-4260
+223,40.778098,-76.228856,"452 South Lehigh Avenue, Frackville, PA, 17931",452 South Lehigh Avenue,Frackville,PA,17931,Schuylkill,570-874-1587
+11002,41.3941056,-79.8248784,"1020 Liberty Street, Franklin, PA, 16323",1020 Liberty Street,Franklin,PA,16323,Venango,814-432-4824
+927,39.828097,-77.237298,"231 West Street, Gettysburg, PA, 17325",231 West Street,Gettysburg,PA,17325,Adams,717-334-6447
+7832,40.626308,-79.942565,"4155 Ewalt Road, Gibsonia, PA, 15044",4155 Ewalt Road,Gibsonia,PA,15044,Allegheny,724-449-8080
+1699,42.0092025,-80.3023425,"9141 Ridge Road, Girard, PA, 16417",9141 Ridge Road,Girard,PA,16417,Erie,814-774-8880
+1925,40.3206774,-79.8917231,"210 9th Street, Glassport, PA, 15045",210 9th Street,Glassport,PA,15045,Allegheny,412-678-5109
+1566,39.902963,-75.283616,"327 North Chester Pike, Glenolden, PA, 19036",327 North Chester Pike,Glenolden,PA,19036,Delaware,610-583-8600
+10909,40.525665,-79.961969,"1710 Mount Royal Blvd, Glenshaw, PA, 15116",1710 Mount Royal Blvd,Glenshaw,PA,15116,Allegheny,412-487-8767
+230,39.794632,-77.729192,"200 North Antrim Way, Greencastle, PA, 17225",200 North Antrim Way,Greencastle,PA,17225,Franklin,717-597-4617
+10966,40.3030792,-79.5374465,"314 East Pittsburgh Street, Greensburg, PA, 15601",314 East Pittsburgh Street,Greensburg,PA,15601,Westmoreland,724-834-0960
+10967,40.304301,-79.5820647,"6090 Route 30, Greensburg, PA, 15601",6090 Route 30,Greensburg,PA,15601,Westmoreland,724-837-4180
+263,40.315768,-79.547769,"685 North Main Street, Greensburg, PA, 15601",685 North Main Street,Greensburg,PA,15601,Westmoreland,724-837-4164
+3449,41.4079285,-80.3789886,"335 Main Street, Greenville, PA, 16125",335 Main Street,Greenville,PA,16125,Mercer,724-588-3398
+3443,40.007472,-79.86659,"6039 National Pike, Grindstone, PA, 15442",6039 National Pike,Grindstone,PA,15442,Fayette,724-785-4522
+3447,41.1573033,-80.0884798,"126 W Main Street, Grove City, PA, 16127",126 W Main Street,Grove City,PA,16127,Mercer,724-458-0944
+4288,40.454906,-76.924973,"3773 Peters Mountain Rd, Halifax, PA, 17032",3773 Peters Mountain Rd,Halifax,PA,17032,Dauphin,717-896-9084
+3425,40.542509,-75.977424,"807 South 4th Street, Hamburg, PA, 19526",807 South 4th Street,Hamburg,PA,19526,Berks,610-562-9454
+12999,39.8248458,-76.9880017,"301 Eisenhower Drive, Hanover, PA, 17331",301 Eisenhower Drive,Hanover,PA,17331,York,717-637-3744
+11027,39.7719536,-76.9574386,"1430 Baltimore Street, Hanover, PA, 17331",1430 Baltimore Street,Hanover,PA,17331,York,717-632-8833
+2510,39.7995855,-76.9824604,"43-47 Baltimore Street, Hanover, PA, 17331",43-47 Baltimore Street,Hanover,PA,17331,York,717-632-5490
+1292,40.265803,-75.37697,"270 Main Street, Harleysville, PA, 19438",270 Main Street,Harleysville,PA,19438,Montgomery,215-256-4749
+10986,40.8037775,-80.1368986,"115 Perry Hwy Ste 146, Harmony, PA, 16037",115 Perry Hwy Ste 146,Harmony,PA,16037,Butler,724-452-6851
+721,40.26125465,-76.88073812,"304 Market Street, Harrisburg, PA, 17101",304 Market Street,Harrisburg,PA,17101,Dauphin,717-234-6149
+1981,40.330455,-76.855974,"2604 Linglestown Road, Harrisburg, PA, 17110",2604 Linglestown Road,Harrisburg,PA,17110,Dauphin,717-540-4310
+4260,40.2785475,-76.8142938,"4299 Union Deposit Road, Harrisburg, PA, 17111",4299 Union Deposit Road,Harrisburg,PA,17111,Dauphin,717-564-6750
+1304,40.2338605,-76.8386273,"124 South Front Street, Harrisburg, PA, 17113",124 South Front Street,Harrisburg,PA,17113,Dauphin,717-939-7235
+1887,40.2793046,-76.8952548,"2103 N Third Street, Harrisburg, PA, 17110",2103 N Third Street,Harrisburg,PA,17110,Dauphin,717-236-4208
+3608,40.2610777,-76.8559517,"1941 Derry Street, Harrisburg, PA, 17104",1941 Derry Street,Harrisburg,PA,17104,Dauphin,717-234-3350
+866,40.2672814,-76.8404332,"501 South 29th St Ste A, Harrisburg, PA, 17104",501 South 29th St Ste A,Harrisburg,PA,17104,Dauphin,717-233-5344
+4284,40.2881797,-76.8365938,"3601 Walnut Street, Harrisburg, PA, 17109",3601 Walnut Street,Harrisburg,PA,17109,Dauphin,717-545-8183
+7894,40.3060706,-76.8051035,"4999 Jonestown Rd, Harrisburg, PA, 17109",4999 Jonestown Rd,Harrisburg,PA,17109,Dauphin,717-540-5413
+790,39.9741859,-75.3208205,"1305 West Chester Pike Ste 8, Havertown, PA, 19083",1305 West Chester Pike Ste 8,Havertown,PA,19083,Delaware,610-446-2795
+4840,40.973025,-75.97856,"1000 North Church Street, Hazleton, PA, 18201",1000 North Church Street,Hazleton,PA,18201,Luzerne,570-450-7272
+11048,40.5730195,-75.341496,"110 Main Street, Hellertown, PA, 18055",110 Main Street,Hellertown,PA,18055,Northampton,610-838-7371
+10995,41.2336071,-80.4757058,"1851 East State Street, Hermitage, PA, 16148",1851 East State Street,Hermitage,PA,16148,Mercer,724-981-2800
+246,40.2829877,-76.6576599,"337 West Chocolate Avenue, Hershey, PA, 17033",337 West Chocolate Avenue,Hershey,PA,17033,Dauphin,717-533-2941
+6738,40.430692,-78.3829425,"1201 Blair St, Hollidaysburg, PA, 16648",1201 Blair St,Hollidaysburg,PA,16648,Blair,814-696-0289
+4682,40.409625,-79.90263,"100 William Marks Drive, Homestead, PA, 15120",100 William Marks Drive,Homestead,PA,15120,Allegheny,412-461-4699
+229,41.5539256,-75.2250611,"1184 Texas Palmyra Highway, Honesdale, PA, 18431",1184 Texas Palmyra Highway,Honesdale,PA,18431,Wayne,570-253-0762
+233,40.4797553,-78.0141,"9635 William Penn Highway, Huntingdon, PA, 16652",9635 William Penn Highway,Huntingdon,PA,16652,Huntingdon,814-643-3661
+11099,40.171003,-75.072497,"2182 County Line Road, Huntingdon Valley, PA, 19006",2182 County Line Road,Huntingdon Valley,PA,19006,Montgomery,215-953-1655
+11096,40.1580407,-75.0475943,"1035 County Line Road, Huntingdon Valley, PA, 19006",1035 County Line Road,Huntingdon Valley,PA,19006,Montgomery,215-364-2980
+188,40.0890092,-75.0928059,"805 Huntingdon Pike, Huntingdon Valley, PA, 19006",805 Huntingdon Pike,Huntingdon Valley,PA,19006,Montgomery,215-379-2725
+3571,40.442506,-80.2391537,"103 West Allegheny Road, Imperial, PA, 15126",103 West Allegheny Road,Imperial,PA,15126,Allegheny,724-695-7317
+264,40.623276,-79.1449,"375 Philadelphia Street, Indiana, PA, 15701",375 Philadelphia Street,Indiana,PA,15701,Indiana,724-465-2243
+10970,40.3679872,-79.6772903,"3550 Route 130, Irwin, PA, 15642",3550 Route 130,Irwin,PA,15642,Westmoreland,724-744-7399
+10968,40.31970218,-79.69415635,"8775 Norwin Avenue, Irwin, PA, 15642",8775 Norwin Avenue,Irwin,PA,15642,Westmoreland,724-863-9074
+10969,40.3306554,-79.7403762,"10 Clay Pike, Irwin, PA, 15642",10 Clay Pike,Irwin,PA,15642,Westmoreland,724-863-2350
+210,40.3283978,-79.6197364,"621 Clay Avenue, Jeannette, PA, 15644",621 Clay Avenue,Jeannette,PA,15644,Westmoreland,724-527-3888
+10980,40.3230056,-78.9545181,"1759 Goucher Street, Johnstown, PA, 15905",1759 Goucher Street,Johnstown,PA,15905,Cambria,814-255-6601
+4676,40.3005011,-78.9113826,"407 Central Avenue, Johnstown, PA, 15902",407 Central Avenue,Johnstown,PA,15902,Cambria,814-536-7596
+10979,40.2695025,-78.8559989,"1501 Scalp Avenue, Johnstown, PA, 15904",1501 Scalp Avenue,Johnstown,PA,15904,Cambria,814-266-9631
+803,40.3244138,-78.9214223,"300 Market Street, Johnstown, PA, 15901",300 Market Street,Johnstown,PA,15901,Cambria,814-536-3544
+4960,40.294426,-78.870068,"2470 Bedford Street, Johnstown, PA, 15904",2470 Bedford Street,Johnstown,PA,15904,Cambria,814-266-5150
+1406,41.6700888,-78.8141987,"521 North Fraley Street, Kane, PA, 16735",521 North Fraley Street,Kane,PA,16735,McKean,814-837-6160
+11148,39.8451503,-75.7207354,"120 South MIll Road, Kennett Square, PA, 19348",120 South MIll Road,Kennett Square,PA,19348,Chester,610-444-5332
+11158,40.089308,-75.3916509,"160 North Gulph Road Ste 1088, King Of Prussia, PA, 19406",160 North Gulph Road Ste 1088,King Of Prussia,PA,19406,Montgomery,610-265-3044
+2426,41.2588653,-75.9008412,"39 West Side Mall, Kingston, PA, 18704",39 West Side Mall,Kingston,PA,18704,Luzerne,570-287-7350
+10998,40.8052577,-79.5261857,"165 Butler Road, Kittanning, PA, 16201",165 Butler Road,Kittanning,PA,16201,Armstrong,724-543-2265
+11169,40.526995,-75.768681,"23 North Elm Street, Kutztown, PA, 19530",23 North Elm Street,Kutztown,PA,19530,Berks,610-683-5520
+2248,41.4039687,-75.3987697,"639 Hamlin Highway, Lake Ariel, PA, 18436",639 Hamlin Highway,Lake Ariel,PA,18436,Wayne,570-689-4660
+3620,40.037588,-76.344443,"1550 Columbia Avenue, Lancaster, PA, 17603",1550 Columbia Avenue,Lancaster,PA,17603,Lancaster,717-394-2580
+4684,40.0430886,-76.289433,"825a East Chestnut Street, Lancaster, PA, 17602",825a East Chestnut Street,Lancaster,PA,17602,Lancaster,717-293-8001
+729,40.0393454,-76.3058376,"59 North Queen Street, Lancaster, PA, 17603",59 North Queen Street,Lancaster,PA,17603,Lancaster,717-397-6179
+11109,40.2175183,-74.9274685,"1 Summit Square Ste A, Langhorne, PA, 19047",1 Summit Square Ste A,Langhorne,PA,19047,Bucks,215-968-4656
+11110,40.180629,-74.905423,"96 North Flowers MIll Road, Langhorne, PA, 19047",96 North Flowers MIll Road,Langhorne,PA,19047,Bucks,215-741-1330
+7833,40.230591,-75.31435,"1390 S Valley Forge Road, Lansdale, PA, 19446",1390 S Valley Forge Road,Lansdale,PA,19446,Montgomery,215-361-1759
+11162,40.2588703,-75.2661179,"1856 North Broad Street, Lansdale, PA, 19446",1856 North Broad Street,Lansdale,PA,19446,Montgomery,215-412-9375
+183,40.241559,-75.28416,"10 West Main Street, Lansdale, PA, 19446",10 West Main Street,Lansdale,PA,19446,Montgomery,215-855-1100
+2442,39.940508,-75.256907,"950 East Baltimore Pike, Lansdowne, PA, 19050",950 East Baltimore Pike,Lansdowne,PA,19050,Delaware,610-622-3795
+2422,40.8269257,-75.8944229,"480 West Bertsch Street, Lansford, PA, 18232",480 West Bertsch Street,Lansford,PA,18232,Carbon,570-645-3179
+3857,40.317315,-79.3852698,"304 Depot Street, Latrobe, PA, 15650",304 Depot Street,Latrobe,PA,15650,Westmoreland,724-532-3219
+10972,40.287084,-79.383746,"1008 Latrobe Thirty Plaza, Latrobe, PA, 15650",1008 Latrobe Thirty Plaza,Latrobe,PA,15650,Westmoreland,724-539-3353
+11020,40.3329718,-76.4263672,"415 South 9th Street, Lebanon, PA, 17042",415 South 9th Street,Lebanon,PA,17042,Lebanon,717-273-7687
+11021,40.3376675,-76.4847994,"469 West Penn Avenue, Lebanon, PA, 17042",469 West Penn Avenue,Lebanon,PA,17042,Lebanon,717-228-2289
+245,40.340082,-76.4121742,"2 Cumberland Street, Lebanon, PA, 17042",2 Cumberland Street,Lebanon,PA,17042,Lebanon,717-272-4663
+200,40.338446,-76.430533,"1130 Cumberland Street, Lebanon, PA, 17042",1130 Cumberland Street,Lebanon,PA,17042,Lebanon,717-273-2281
+11058,40.836413,-75.708197,"241 North First Street, Lehighton, PA, 18235",241 North First Street,Lehighton,PA,18235,Carbon,610-377-4262
+11059,40.8143993,-75.732728,"1241 Blakeslee Blvd Dr Ste 2, Lehighton, PA, 18235",1241 Blakeslee Blvd Dr Ste 2,Lehighton,PA,18235,Carbon,570-386-5838
+1074,40.242439,-76.908255,"1137 Market Street, Lemoyne, PA, 17043",1137 Market Street,Lemoyne,PA,17043,Cumberland,717-737-3359
+850,40.1732866,-74.8316123,"8716 New Falls Road, Levittown, PA, 19054",8716 New Falls Road,Levittown,PA,19054,Bucks,215-945-1212
+1672,40.15283,-74.85665,"6912 New Falls Road, Levittown, PA, 19057",6912 New Falls Road,Levittown,PA,19057,Bucks,215-949-3052
+11081,41.2819859,-75.8978196,"556 Union Street, Luzerne, PA, 18709",556 Union Street,Luzerne,PA,18709,Luzerne,570-287-1700
+696,40.8128544,-76.1425802,"15 West Centre Street, Mahanoy City, PA, 17948",15 West Centre Street,Mahanoy City,PA,17948,Schuylkill,570-773-1455
+2271,40.043615,-76.7239057,"4135 North George Street Ext, Manchester, PA, 17345",4135 North George Street Ext,Manchester,PA,17345,York,717-266-6609
+11112,39.8345957,-75.4421521,"3120 Chichester Avenue, Marcus Hook, PA, 19061",3120 Chichester Avenue,Marcus Hook,PA,19061,Delaware,610-494-2770
+10987,40.6890912,-80.0564639,"100 Seven Fields Blvd, Mars, PA, 16046",100 Seven Fields Blvd,Mars,PA,16046,Butler,724-742-0909
+10988,40.6966534,-80.0101409,"129 Grand Ave, Mars, PA, 16046",129 Grand Ave,Mars,PA,16046,Butler,724-625-3196
+3527,40.46443157,-80.05684197,"155 Chartiers Avenue, Mc Kees Rocks, PA, 15136",155 Chartiers Avenue,Mc Kees Rocks,PA,15136,Allegheny,412-331-0106
+10914,40.4758089,-80.0966714,"1700 Pine Hollow Road, Mc Kees Rocks, PA, 15136",1700 Pine Hollow Road,Mc Kees Rocks,PA,15136,Allegheny,412-771-6366
+7843,40.3269052,-79.8405365,"3700 Walnut Street, Mckeesport, PA, 15132",3700 Walnut Street,Mckeesport,PA,15132,Allegheny,412-751-0132
+10911,40.336494,-79.809293,"1236 Long Run Road, Mckeesport, PA, 15131",1236 Long Run Road,Mckeesport,PA,15131,Allegheny,412-678-2755
+1370,40.352434,-79.8575822,"725 Lysle Boulevard, Mckeesport, PA, 15132",725 Lysle Boulevard,Mckeesport,PA,15132,Allegheny,412-672-3853
+2380,41.6366484,-80.1538338,"975 Market Street, Meadville, PA, 16335",975 Market Street,Meadville,PA,16335,Crawford,814-336-3773
+4818,40.2375552,-76.9710548,"4965 Carlisle Pike, Mechanicsburg, PA, 17050",4965 Carlisle Pike,Mechanicsburg,PA,17050,Cumberland,717-975-0117
+17783,40.2836993,-77.0494253,"7036 Wertzville Road, Mechanicsburg, PA, 17050",7036 Wertzville Road,Mechanicsburg,PA,17050,Cumberland,717-697-3450
+3613,40.2163194,-76.9918553,"5277 Simpson Ferry Road, Mechanicsburg, PA, 17050",5277 Simpson Ferry Road,Mechanicsburg,PA,17050,Cumberland,717-766-2533
+2000,40.193652,-76.980076,"330 Cumberland Parkway, Mechanicsburg, PA, 17055",330 Cumberland Parkway,Mechanicsburg,PA,17055,Cumberland,717-796-7685
+11113,39.9147364,-75.3793169,"510 East Baltimore Pike, Media, PA, 19063",510 East Baltimore Pike,Media,PA,19063,Delaware,610-566-3218
+2769,41.230321,-80.239344,"100 Franklin Street, Mercer, PA, 16137",100 Franklin Street,Mercer,PA,16137,Mercer,724-662-2009
+4287,40.2009854,-76.7246969,"360 East Main Street, Middletown, PA, 17057",360 East Main Street,Middletown,PA,17057,Dauphin,717-944-0262
+2480,40.63627,-80.4514474,"847 Midland Avenue, Midland, PA, 15059",847 Midland Avenue,Midland,PA,15059,Beaver,724-643-6520
+2693,40.681411,-76.254417,"44 Kings Village, Minersville, PA, 17954",44 Kings Village,Minersville,PA,17954,Schuylkill,570-544-8290
+2466,40.15987878,-79.87669744,"10 Donner Avenue, Monessen, PA, 15062",10 Donner Avenue,Monessen,PA,15062,Westmoreland,724-684-0153
+1197,40.203534,-79.928063,"446 West Main Street, Monongahela, PA, 15063",446 West Main Street,Monongahela,PA,15063,Washington,724-258-6161
+10917,40.439185,-79.76782,"4111 William Penn Hwy, Monroeville, PA, 15146",4111 William Penn Hwy,Monroeville,PA,15146,Allegheny,412-372-5288
+10919,40.389806,-79.7671934,"4534 Broadway Blvd, Monroeville, PA, 15146",4534 Broadway Blvd,Monroeville,PA,15146,Allegheny,412-373-5420
+11037,41.24744,-76.916085,"760 Broad Street, Montoursville, PA, 17754",760 Broad Street,Montoursville,PA,17754,Lycoming,570-368-2629
+11082,41.8398507,-75.8618549,"801 Grow Avenue, Montrose, PA, 18801",801 Grow Avenue,Montrose,PA,18801,Susquehanna,570-278-9602
+7861,40.155645,-75.890808,"3145 Main Street, Morgantown, PA, 19543",3145 Main Street,Morgantown,PA,19543,Berks,610-286-0920
+11115,40.205521,-74.8041556,"547 West Trenton Avenue, Morrisville, PA, 19067",547 West Trenton Avenue,Morrisville,PA,19067,Bucks,215-736-9501
+11114,40.2218817,-74.8732497,"696 Stoney Hill Road, Morrisville, PA, 19067",696 Stoney Hill Road,Morrisville,PA,19067,Bucks,215-321-9143
+1704,40.2213475,-74.8718582,"657 Heacock Road, Morrisville, PA, 19067",657 Heacock Road,Morrisville,PA,19067,Bucks,215-321-0105
+216,41.30734236,-75.51328853,"6 Bochicchio Boulevard, Moscow, PA, 18444",6 Bochicchio Boulevard,Moscow,PA,18444,Lackawanna,570-842-6766
+10973,40.1264173,-79.550905,"120 Country Side Plaza, Mount Pleasant, PA, 15666",120 Country Side Plaza,Mount Pleasant,PA,15666,Westmoreland,724-547-5590
+11062,41.1257583,-75.3608624,"3382 Route 940, Mount Pocono, PA, 18344",3382 Route 940,Mount Pocono,PA,18344,Monroe,570-839-3797
+1495,40.38302164,-77.87937239,"101 East Shirley Street, Mount Union, PA, 17066",101 East Shirley Street,Mount Union,PA,17066,Huntingdon,814-542-8003
+4990,41.1622595,-75.8852897,"2 Kirby Avenue, Mountain Top, PA, 18707",2 Kirby Avenue,Mountain Top,PA,18707,Luzerne,570-403-1132
+218,41.2049862,-76.0044811,"5 East Main Street, Nanticoke, PA, 18634",5 East Main Street,Nanticoke,PA,18634,Luzerne,570-735-4324
+3364,40.467621,-78.835723,"1303 Shoemaker Street, Nanty Glo, PA, 15943",1303 Shoemaker Street,Nanty Glo,PA,15943,Cambria,814-749-7872
+1320,40.0091688,-75.2545149,"640 Montgomery Avenue, Narberth, PA, 19072",640 Montgomery Avenue,Narberth,PA,19072,Montgomery,610-664-4010
+4419,40.621059,-79.7291384,"1529 Freeport Road, Natrona Heights, PA, 15065",1529 Freeport Road,Natrona Heights,PA,15065,Allegheny,724-226-4725
+1983,40.7328577,-75.313288,"102 Easton Road, Nazareth, PA, 18064",102 Easton Road,Nazareth,PA,18064,Northampton,610-759-6066
+1548,41.001948,-79.3262013,"610 Broad Street, New Bethlehem, PA, 16242",610 Broad Street,New Bethlehem,PA,16242,Clarion,814-275-4241
+2433,40.73497423,-80.31359106,"813 Third Avenue, New Brighton, PA, 15066",813 Third Avenue,New Brighton,PA,15066,Beaver,724-843-5440
+10991,41.0186481,-80.3539506,"1730 Wilmington Road, New Castle, PA, 16105",1730 Wilmington Road,New Castle,PA,16105,Lawrence,724-658-1515
+10990,41.000726,-80.347683,"31 North Jefferson Street, New Castle, PA, 16101",31 North Jefferson Street,New Castle,PA,16101,Lawrence,724-652-0981
+418,40.222847,-76.860358,"105 Old York Road, New Cumberland, PA, 17070",105 Old York Road,New Cumberland,PA,17070,Cumberland,717-774-0261
+11088,40.3573164,-74.9771967,"6542 H Logan Square, New Hope, PA, 18938",6542 H Logan Square,New Hope,PA,18938,Bucks,215-862-9228
+10900,40.5640185,-79.7547508,"700 Stevenson Blvd, New Kensington, PA, 15068",700 Stevenson Blvd,New Kensington,PA,15068,Westmoreland,724-335-4111
+10899,40.584301,-79.701852,"3200 Oregon Drive, New Kensington, PA, 15068",3200 Oregon Drive,New Kensington,PA,15068,Westmoreland,724-339-6686
+3602,39.8667871,-77.0421828,"5675 York Road, New Oxford, PA, 17350",5675 York Road,New Oxford,PA,17350,Adams,717-624-8080
+10994,41.121589,-80.332894,"135 South Market Street, New Wilmington, PA, 16142",135 South Market Street,New Wilmington,PA,16142,Lawrence,724-946-3531
+3804,40.4936803,-77.1131999,"10 Newport Plaza, Newport, PA, 17074",10 Newport Plaza,Newport,PA,17074,Perry,717-567-6670
+11089,40.2353237,-74.9386053,"1 Ice Cream Alley, Newtown, PA, 18940",1 Ice Cream Alley,Newtown,PA,18940,Bucks,215-579-0864
+11116,39.9871118,-75.3983243,"3599 West Chester Pike, Newtown Square, PA, 19073",3599 West Chester Pike,Newtown Square,PA,19073,Delaware,610-353-0294
+1733,40.1234849,-75.3632155,"1400 West Main Street, Norristown, PA, 19403",1400 West Main Street,Norristown,PA,19403,Montgomery,610-277-9812
+3389,40.129711,-75.40823,"2674 Egypt Road, Norristown, PA, 19403",2674 Egypt Road,Norristown,PA,19403,Montgomery,610-650-8490
+2017,40.1252446,-75.3180864,"762 East Johnson Highway, Norristown, PA, 19401",762 East Johnson Highway,Norristown,PA,19401,Montgomery,610-272-5401
+11006,42.213756,-79.841219,"105 West Main Street, North East, PA, 16428",105 West Main Street,North East,PA,16428,Erie,814-725-3076
+7880,40.222684,-75.249635,"277 Dekalb Pike, North Wales, PA, 19454",277 Dekalb Pike,North Wales,PA,19454,Montgomery,215-661-0141
+1768,40.68519,-75.496144,"1620 Main Street, Northampton, PA, 18067",1620 Main Street,Northampton,PA,18067,Northampton,610-262-2022
+1494,40.66348051,-78.78241181,"1120 Philadelphia Avenue, Northern Cambria, PA, 15714",1120 Philadelphia Avenue,Northern Cambria,PA,15714,Cambria,814-948-6102
+10915,40.5126387,-79.8430953,"109 Allegheny River Blvd, Oakmont, PA, 15139",109 Allegheny River Blvd,Oakmont,PA,15139,Allegheny,412-828-1530
+1496,41.427189,-79.704884,"508 East Second Street, Oil City, PA, 16301",508 East Second Street,Oil City,PA,16301,Venango,814-677-2215
+1021,41.369298,-75.73772,"401-403 South Main Street, Old Forge, PA, 18518",401-403 South Main Street,Old Forge,PA,18518,Lackawanna,570-457-0844
+3470,41.530588,-75.6490086,"580 Carbondale Road, Olyphant, PA, 18447",580 Carbondale Road,Olyphant,PA,18447,Lackawanna,570-586-2749
+1426,41.4709766,-75.6075467,"1650 Main Street, Olyphant, PA, 18447",1650 Main Street,Olyphant,PA,18447,Lackawanna,570-489-8834
+321,39.794166,-75.9754677,"455 North 3rd Street, Oxford, PA, 19363",455 North 3rd Street,Oxford,PA,19363,Chester,610-932-5200
+1450,40.805485,-75.601595,"601 Delaware Avenue, Palmerton, PA, 18071",601 Delaware Avenue,Palmerton,PA,18071,Carbon,610-826-2600
+1662,40.314012,-76.5808273,"980 East Main Street, Palmyra, PA, 17078",980 East Main Street,Palmyra,PA,17078,Lebanon,717-838-8878
+443,40.3989969,-75.4970123,"350 Main Street, Pennsburg, PA, 18073",350 Main Street,Pennsburg,PA,18073,Montgomery,215-679-4411
+11090,40.3639376,-75.2969879,"519 Constitution Avenue, Perkasie, PA, 18944",519 Constitution Avenue,Perkasie,PA,18944,Bucks,215-453-7540
+11165,40.1319521,-75.5358565,"200 Kimberton Road, Phoenixville, PA, 19460",200 Kimberton Road,Phoenixville,PA,19460,Chester,610-935-2020
+11091,40.3807385,-75.1451893,"5707 Easton Road, Pipersville, PA, 18947",5707 Easton Road,Pipersville,PA,18947,Bucks,215-766-7350
+10926,40.4031982,-79.9902376,"1222 Brownsville Rd, Pittsburgh, PA, 15210",1222 Brownsville Rd,Pittsburgh,PA,15210,Allegheny,412-884-3356
+11916,40.5203927,-80.0044332,"4770 Mcknight Road Ste A, Pittsburgh, PA, 15237",4770 Mcknight Road Ste A,Pittsburgh,PA,15237,Allegheny,412-364-8100
+10950,40.358977,-80.0009,"568 Caste Village, Pittsburgh, PA, 15236",568 Caste Village,Pittsburgh,PA,15236,Allegheny,412-881-5650
+10945,40.42916,-79.812505,"3434 William Penn Highway, Pittsburgh, PA, 15235",3434 William Penn Highway,Pittsburgh,PA,15235,Allegheny,412-824-8860
+274,40.4379195,-79.9231577,"1700 Murray Avenue, Pittsburgh, PA, 15217",1700 Murray Avenue,Pittsburgh,PA,15217,Allegheny,412-521-3900
+10924,40.4586104,-79.9344174,"5633 Baum Boulevard, Pittsburgh, PA, 15206",5633 Baum Boulevard,Pittsburgh,PA,15206,Allegheny,412-441-6991
+10953,40.548406,-80.035881,"1130 Perry Highway Ste 35, Pittsburgh, PA, 15237",1130 Perry Highway Ste 35,Pittsburgh,PA,15237,Allegheny,412-369-4267
+3459,40.4564317,-80.0155756,"802 Pennsylvania Avenue, Pittsburgh, PA, 15233",802 Pennsylvania Avenue,Pittsburgh,PA,15233,Allegheny,412-231-0868
+3404,40.4090999,-79.9440037,"4934 Second Avenue, Pittsburgh, PA, 15207",4934 Second Avenue,Pittsburgh,PA,15207,Allegheny,412-421-6948
+10949,40.336815,-79.979711,"5410 Keeport Drive, Pittsburgh, PA, 15236",5410 Keeport Drive,Pittsburgh,PA,15236,Allegheny,412-655-9455
+10931,40.4063679,-80.0343124,"2501 Banksville Road, Pittsburgh, PA, 15216",2501 Banksville Road,Pittsburgh,PA,15216,Allegheny,412-571-2550
+10955,40.446587,-79.713202,"1804 Golden Mile Highway, Pittsburgh, PA, 15239",1804 Golden Mile Highway,Pittsburgh,PA,15239,Allegheny,724-327-4850
+1944,40.515716,-79.958856,"900 Mount Royal Blvd, Pittsburgh, PA, 15223",900 Mount Royal Blvd,Pittsburgh,PA,15223,Allegheny,412-487-5706
+10938,40.51172,-79.944278,"880 Butler Street, Pittsburgh, PA, 15223",880 Butler Street,Pittsburgh,PA,15223,Allegheny,412-782-2466
+10947,40.478132,-79.785343,"7345 Saltsburg Road, Pittsburgh, PA, 15235",7345 Saltsburg Road,Pittsburgh,PA,15235,Allegheny,412-798-2344
+10933,40.3954668,-80.0670672,"1956 Greentree Road, Pittsburgh, PA, 15220",1956 Greentree Road,Pittsburgh,PA,15220,Allegheny,412-563-3933
+4965,40.4307609,-80.0100129,"201 Grace Street, Pittsburgh, PA, 15211",201 Grace Street,Pittsburgh,PA,15211,Allegheny,412-381-1464
+10936,40.4426073,-80.0034147,"519 Penn Avenue, Pittsburgh, PA, 15222",519 Penn Avenue,Pittsburgh,PA,15222,Allegheny,412-391-0969
+2798,40.469009,-79.96322,"3939 Butler Street, Pittsburgh, PA, 15201",3939 Butler Street,Pittsburgh,PA,15201,Allegheny,412-682-6970
+10937,40.4417255,-79.9978963,"623 Smithfield Street, Pittsburgh, PA, 15222",623 Smithfield Street,Pittsburgh,PA,15222,Allegheny,412-471-8882
+10935,40.44587135,-79.88957137,"331 Penn Avenue, Pittsburgh, PA, 15221",331 Penn Avenue,Pittsburgh,PA,15221,Allegheny,412-731-9822
+10925,40.3919025,-79.98736069,"2150 Brownsville Rd Ste 120, Pittsburgh, PA, 15210",2150 Brownsville Rd Ste 120,Pittsburgh,PA,15210,Allegheny,412-881-6439
+268,40.4511477,-79.9335434,"5504 Walnut Street, Pittsburgh, PA, 15232",5504 Walnut Street,Pittsburgh,PA,15232,Allegheny,412-681-5144
+10928,40.453696,-79.998353,"623-625 East Ohio Street, Pittsburgh, PA, 15212",623-625 East Ohio Street,Pittsburgh,PA,15212,Allegheny,412-322-1566
+10930,40.4411168,-79.9574226,"3700 Forbes Avenue, Pittsburgh, PA, 15213",3700 Forbes Avenue,Pittsburgh,PA,15213,Allegheny,412-681-1332
+3412,40.4865288,-79.9267404,"1800-1814 Morningside Avenue, Pittsburgh, PA, 15206",1800-1814 Morningside Avenue,Pittsburgh,PA,15206,Allegheny,412-362-6121
+1094,40.399493,-80.04523,"3210 Banksville Road, Pittsburgh, PA, 15216",3210 Banksville Road,Pittsburgh,PA,15216,Allegheny,412-388-1601
+272,40.4410665,-79.9572957,"209 Atwood Street, Pittsburgh, PA, 15213",209 Atwood Street,Pittsburgh,PA,15213,Allegheny,412-621-1920
+10921,40.4287549,-79.9783822,"1915-1921 East Carson Street, Pittsburgh, PA, 15203",1915-1921 East Carson Street,Pittsburgh,PA,15203,Allegheny,412-481-8818
+6712,40.44096629,-80.00384823,"100 Forbes Avenue Ste 100, Pittsburgh, PA, 15222",100 Forbes Avenue Ste 100,Pittsburgh,PA,15222,Allegheny,412-338-8614
+10942,40.370497,-80.032969,"410 Cooke Lane, Pittsburgh, PA, 15234",410 Cooke Lane,Pittsburgh,PA,15234,Allegheny,412-563-1505
+10954,40.4884437,-79.8813617,"1125 Freeport Road, Pittsburgh, PA, 15238",1125 Freeport Road,Pittsburgh,PA,15238,Allegheny,412-782-2277
+10920,40.4960908,-80.0568332,"535 Lincoln Avenue, Pittsburgh, PA, 15202",535 Lincoln Avenue,Pittsburgh,PA,15202,Allegheny,412-761-1890
+10946,40.484496,-79.817392,"6200 Saltsburg Road, Pittsburgh, PA, 15235",6200 Saltsburg Road,Pittsburgh,PA,15235,Allegheny,412-798-0490
+10934,40.415202,-79.849009,"2336 Ardmore Boulevard, Pittsburgh, PA, 15221",2336 Ardmore Boulevard,Pittsburgh,PA,15221,Allegheny,412-273-3487
+273,40.425747,-79.972958,"2300 Jane Street, Pittsburgh, PA, 15203",2300 Jane Street,Pittsburgh,PA,15203,Allegheny,412-431-6773
+10943,40.3815959,-79.9951732,"2501 Saw MIll Run Blvd, Pittsburgh, PA, 15234",2501 Saw MIll Run Blvd,Pittsburgh,PA,15234,Allegheny,412-882-0500
+10939,40.464548,-79.952611,"4411 Howley Street, Pittsburgh, PA, 15224",4411 Howley Street,Pittsburgh,PA,15224,Allegheny,412-621-9987
+10956,40.3752374,-80.0691016,"1121 Bower Hill Road, Pittsburgh, PA, 15243",1121 Bower Hill Road,Pittsburgh,PA,15243,Allegheny,412-923-1550
+10922,40.4419245,-80.0700945,"200 Crafton Ingram S/C, Pittsburgh, PA, 15205",200 Crafton Ingram S/C,Pittsburgh,PA,15205,Allegheny,412-921-5755
+269,40.4145109,-79.9877398,"230 Hays Avenue, Pittsburgh, PA, 15210",230 Hays Avenue,Pittsburgh,PA,15210,Allegheny,412-431-8282
+10940,40.5215982,-80.0345412,"513 Perry Highway, Pittsburgh, PA, 15229",513 Perry Highway,Pittsburgh,PA,15229,Allegheny,412-931-7751
+7924,40.428432,-80.054255,"2270 Noblestown Road, Pittsburgh, PA, 15205",2270 Noblestown Road,Pittsburgh,PA,15205,Allegheny,412-920-6190
+10929,40.4841575,-80.0353968,"3730 Brighton Road, Pittsburgh, PA, 15212",3730 Brighton Road,Pittsburgh,PA,15212,Allegheny,412-761-3363
+1371,41.324556,-75.7897166,"102 North Main Street, Pittston, PA, 18640",102 North Main Street,Pittston,PA,18640,Luzerne,570-655-4030
+1685,41.32480262,-75.80648885,"801 Wyoming Avenue Ste 9, Pittston, PA, 18643",801 Wyoming Avenue Ste 9,Pittston,PA,18643,Luzerne,570-654-6689
+11075,41.320716,-75.771908,"120 Laurel Plaza, Pittston, PA, 18640",120 Laurel Plaza,Pittston,PA,18640,Luzerne,570-655-9920
+2474,41.811835,-78.28117,"59 North Main Street, Port Allegany, PA, 16743",59 North Main Street,Port Allegany,PA,16743,McKean,814-642-5021
+1549,40.38693,-78.673362,"630 Main St, Portage, PA, 15946",630 Main St,Portage,PA,15946,Cambria,814-736-4323
+11166,40.2234412,-75.6594477,"1140 Town Square Rd, Pottstown, PA, 19465",1140 Town Square Rd,Pottstown,PA,19465,Chester,610-323-4080
+819,40.2447964,-75.6464189,"340 East High Street, Pottstown, PA, 19464",340 East High Street,Pottstown,PA,19464,Montgomery,610-326-1255
+507,40.684906,-76.194625,"10 South Center Street, Pottsville, PA, 17901",10 South Center Street,Pottsville,PA,17901,Schuylkill,570-628-2537
+873,40.6970206,-76.1876773,"500 N Claude Lord Boulevard, Pottsville, PA, 17901",500 N Claude Lord Boulevard,Pottsville,PA,17901,Schuylkill,570-622-2224
+856,39.882333,-75.305364,"762 Chester Pike, Prospect Park, PA, 19076",762 Chester Pike,Prospect Park,PA,19076,Delaware,610-461-8852
+10975,40.9427119,-78.9725505,"201 West Mahoning Street, Punxsutawney, PA, 15767",201 West Mahoning Street,Punxsutawney,PA,15767,Jefferson,814-938-9161
+11092,40.4456609,-75.3567127,"1465-15 West Broad Street, Quakertown, PA, 18951",1465-15 West Broad Street,Quakertown,PA,18951,Bucks,215-536-7651
+291,40.442604,-75.337785,"345 West Broad Street, Quakertown, PA, 18951",345 West Broad Street,Quakertown,PA,18951,Bucks,215-536-1800
+7827,40.4176593,-75.3447941,"1080 S West End Blvd, Quakertown, PA, 18951",1080 S West End Blvd,Quakertown,PA,18951,Bucks,215-529-4190
+1922,39.893542,-76.170021,"315 West Fourth Street, Quarryville, PA, 17566",315 West Fourth Street,Quarryville,PA,17566,Lancaster,717-786-9091
+290,40.3069791,-75.9580762,"500 East Lancaster Avenue, Reading, PA, 19607",500 East Lancaster Avenue,Reading,PA,19607,Berks,610-775-0307
+1581,40.3439892,-75.926081,"524 North 6th Street, Reading, PA, 19601",524 North 6th Street,Reading,PA,19601,Berks,610-374-6282
+11173,40.3281228,-75.8765212,"2962 St Lawrence Avenue, Reading, PA, 19606",2962 St Lawrence Avenue,Reading,PA,19606,Berks,610-779-3120
+11172,40.3056823,-75.8605878,"4630 Perkiomen Avenue, Reading, PA, 19606",4630 Perkiomen Avenue,Reading,PA,19606,Berks,610-779-3266
+11171,40.381776,-75.92557,"3215 5th Street Highway, Reading, PA, 19605",3215 5th Street Highway,Reading,PA,19605,Berks,610-929-9775
+11174,40.339658,-75.9810542,"2210 State Hill Road, Reading, PA, 19610",2210 State Hill Road,Reading,PA,19610,Berks,610-378-1465
+467,40.3364839,-75.9481172,"525 Penn Avenue, Reading, PA, 19611",525 Penn Avenue,Reading,PA,19611,Berks,610-373-5241
+11170,40.3350983,-75.9291983,"418 Penn Street, Reading, PA, 19602",418 Penn Street,Reading,PA,19602,Berks,610-373-4511
+1975,40.3263819,-76.049691,"4810 Penn Avenue, Reading, PA, 19608",4810 Penn Avenue,Reading,PA,19608,Berks,610-670-9986
+2591,40.2974016,-75.9492051,"670 Philadelphia Avenue, Reading, PA, 19607",670 Philadelphia Avenue,Reading,PA,19607,Berks,610-777-8278
+1640,39.8962856,-76.622809,"910 West Broadway, Red Lion, PA, 17356",910 West Broadway,Red Lion,PA,17356,York,717-244-2919
+11029,39.9158877,-76.6286147,"3205 Cape Horn Road, Red Lion, PA, 17356",3205 Cape Horn Road,Red Lion,PA,17356,York,717-246-1322
+11093,40.216957,-75.0095065,"1039 2nd Street Pike, Richboro, PA, 18954",1039 2nd Street Pike,Richboro,PA,18954,Bucks,215-355-7177
+2476,41.4210548,-78.7334722,"101 Main Street, Ridgway, PA, 15853",101 Main Street,Ridgway,PA,15853,Elk,814-776-1428
+6742,40.33718,-78.388963,"94 June Drive, Roaring Spring, PA, 16673",94 June Drive,Roaring Spring,PA,16673,Blair,814-224-5553
+10901,40.7027688,-80.2866125,"351 Brighton Avenue, Rochester, PA, 15074",351 Brighton Avenue,Rochester,PA,15074,Beaver,724-774-3360
+7772,40.2148805,-75.5005698,"33 W Ridge Ste 101, Royersford, PA, 19468",33 W Ridge Ste 101,Royersford,PA,19468,Montgomery,484-902-0881
+3495,40.1908877,-75.5313836,"820 Main Street, Royersford, PA, 19468",820 Main Street,Royersford,PA,19468,Montgomery,610-948-0838
+7853,41.408076,-78.559763,"901 S Saint Marys Street, Saint Marys, PA, 15857",901 S Saint Marys Street,Saint Marys,PA,15857,Elk,814-834-4515
+561,41.9903107,-76.5456207,"2968 Elmira Street, Sayre, PA, 18840",2968 Elmira Street,Sayre,PA,18840,Bradford,570-888-7516
+11083,41.9716055,-76.5399322,"1593 Elmira Street, Sayre, PA, 18840",1593 Elmira Street,Sayre,PA,18840,Bradford,570-888-2369
+1709,40.1012989,-79.5872511,"15 Centennial Way, Scottdale, PA, 15683",15 Centennial Way,Scottdale,PA,15683,Westmoreland,724-887-4727
+11068,41.404603,-75.678927,"609 Luzerne Street, Scranton, PA, 18504",609 Luzerne Street,Scranton,PA,18504,Lackawanna,570-344-4404
+501,41.4081626,-75.6636765,"201 North Washington Avenue, Scranton, PA, 18503",201 North Washington Avenue,Scranton,PA,18503,Lackawanna,570-343-7301
+1180,41.4197468,-75.6318884,"217 South Blakely Street, Scranton, PA, 18512",217 South Blakely Street,Scranton,PA,18512,Lackawanna,570-343-5525
+726,41.39905284,-75.6752041,"1080 S Washington Avenue, Scranton, PA, 18505",1080 S Washington Avenue,Scranton,PA,18505,Lackawanna,570-346-5924
+11069,41.4459527,-75.6680976,"1777 North Keyser Avenue, Scranton, PA, 18508",1777 North Keyser Avenue,Scranton,PA,18508,Lackawanna,570-346-2087
+3775,41.416295,-75.675659,"500 North Main Avenue, Scranton, PA, 18504",500 North Main Avenue,Scranton,PA,18504,Lackawanna,570-342-6411
+10916,40.5399472,-80.1797562,"517 Beaver Street, Sewickley, PA, 15143",517 Beaver Street,Sewickley,PA,15143,Allegheny,412-741-9250
+205,40.7906726,-76.5573743,"26 West Independence Street, Shamokin, PA, 17872",26 West Independence Street,Shamokin,PA,17872,Northumberland,570-648-1021
+1071,41.2319683,-80.5120141,"60 South Water Street, Sharon, PA, 16146",60 South Water Street,Sharon,PA,16146,Mercer,724-981-4072
+3972,41.2333436,-80.4941973,"811 East State Street, Sharon, PA, 16146",811 East State Street,Sharon,PA,16146,Mercer,724-342-4680
+10996,41.26579563,-80.47473818,"64 North Mercer Ave, Sharpsville, PA, 16150",64 North Mercer Ave,Sharpsville,PA,16150,Mercer,724-962-5771
+2568,41.3232112,-75.9434659,"2810 Memorial Highway, Shavertown, PA, 18708",2810 Memorial Highway,Shavertown,PA,18708,Luzerne,570-675-2383
+208,40.8200436,-76.2008991,"15 South Main Street, Shenandoah, PA, 17976",15 South Main Street,Shenandoah,PA,17976,Schuylkill,570-462-1924
+4286,40.321143,-77.164985,"5201 Spring Road Ste 6, Shermans Dale, PA, 17090",5201 Spring Road Ste 6,Shermans Dale,PA,17090,Perry,717-582-7781
+11023,40.043466,-77.521963,"300 S Fayette Street, Shippensburg, PA, 17257",300 S Fayette Street,Shippensburg,PA,17257,Cumberland,717-530-9111
+11030,39.75336,-76.675854,"577 South Main Street, Shrewsbury, PA, 17361",577 South Main Street,Shrewsbury,PA,17361,York,717-235-6854
+1698,41.0708538,-80.0524817,"221 Grove City Road, Slippery Rock, PA, 16057",221 Grove City Road,Slippery Rock,PA,16057,Butler,724-794-6365
+11095,40.3203349,-75.3069543,"780 Route 113, Souderton, PA, 18964",780 Route 113,Souderton,PA,18964,Montgomery,215-723-0953
+185,40.315833,-75.308066,"741 Route 113, Souderton, PA, 18964",741 Route 113,Souderton,PA,18964,Montgomery,215-723-5553
+1589,40.2898123,-80.0272581,"6375 Library Road, South Park, PA, 15129",6375 Library Road,South Park,PA,15129,Allegheny,412-831-8350
+1902,39.8852738,-76.8609444,"2067 Route 116, Spring Grove, PA, 17362",2067 Route 116,Spring Grove,PA,17362,York,717-225-5227
+2631,39.927456,-75.333754,"170 Saxer Avenue, Springfield, PA, 19064",170 Saxer Avenue,Springfield,PA,19064,Delaware,610-543-1153
+11013,40.7821727,-77.8529014,"510 Westerly Parkway, State College, PA, 16801",510 Westerly Parkway,State College,PA,16801,Centre,814-238-1862
+793,40.786251,-77.832602,"1927 Atherton Street, State College, PA, 16801",1927 Atherton Street,State College,PA,16801,Centre,814-237-1625
+11014,40.8065793,-77.8916463,"1536 North Atherton Street, State College, PA, 16803",1536 North Atherton Street,State College,PA,16803,Centre,814-237-4133
+11031,39.7601639,-76.5899252,"4 Ballast Lane, Stewartstown, PA, 17363",4 Ballast Lane,Stewartstown,PA,17363,York,717-993-2557
+11063,40.98959969,-75.18834561,"228 Main Street, Stroudsburg, PA, 18360",228 Main Street,Stroudsburg,PA,18360,Monroe,570-424-9096
+11060,40.7951421,-75.9677351,"205 Center Street, Tamaqua, PA, 18252",205 Center Street,Tamaqua,PA,18252,Schuylkill,570-668-6989
+4616,41.62747684,-79.67073262,"208 East Central Avenue, Titusville, PA, 16354",208 East Central Avenue,Titusville,PA,16354,Crawford,814-827-7083
+1955,41.1707549,-75.3578682,"674 Route 196 Ste 14, Tobyhanna, PA, 18466",674 Route 196 Ste 14,Tobyhanna,PA,18466,Monroe,570-894-0571
+1830,41.78249,-76.450986,"77 Reuters Boulevard, Towanda, PA, 18848",77 Reuters Boulevard,Towanda,PA,18848,Bradford,570-265-7882
+11084,41.7670627,-76.4227847,"148 Ennis Lane, Towanda, PA, 18848",148 Ennis Lane,Towanda,PA,18848,Bradford,570-265-4769
+11076,41.5427425,-75.9625747,"420 Tioga West Plz Ste 110, Tunkhannock, PA, 18657",420 Tioga West Plz Ste 110,Tunkhannock,PA,18657,Wyoming,570-836-2812
+6739,40.6757069,-78.238213,"1365 Logan Avenue, Tyrone, PA, 16686",1365 Logan Avenue,Tyrone,PA,16686,Blair,814-684-5000
+1398,41.9000832,-79.8449659,"1 East High Street, Union City, PA, 16438",1 East High Street,Union City,PA,16438,Erie,814-438-3112
+10962,39.884052,-79.733687,"575 Morgantown Road, Uniontown, PA, 15401",575 Morgantown Road,Uniontown,PA,15401,Fayette,724-437-2140
+1963,39.900525,-79.706903,"262 Connellsville Street, Uniontown, PA, 15401",262 Connellsville Street,Uniontown,PA,15401,Fayette,724-438-9799
+679,39.9580778,-75.2575095,"123 South 69th Street, Upper Darby, PA, 19082",123 South 69th Street,Upper Darby,PA,19082,Delaware,610-352-5300
+11117,39.9543267,-75.2741241,"1500 Garrett Road, Upper Darby, PA, 19082",1500 Garrett Road,Upper Darby,PA,19082,Delaware,610-284-3232
+11049,40.7559096,-75.59462625,"200 South Best Avenue, Walnutport, PA, 18088",200 South Best Avenue,Walnutport,PA,18088,Northampton,610-767-9595
+293,40.205599,-75.099342,"599 York Road, Warminster, PA, 18974",599 York Road,Warminster,PA,18974,Bucks,215-674-0122
+11097,40.231198,-75.140176,"642 Easton Road, Warrington, PA, 18976",642 Easton Road,Warrington,PA,18976,Bucks,215-343-2490
+2545,40.18224243,-80.26529387,"1001 Jefferson Avenue, Washington, PA, 15301",1001 Jefferson Avenue,Washington,PA,15301,Washington,724-223-4971
+10958,40.1642506,-80.2734262,"1396 West Chestnut St, Washington, PA, 15301",1396 West Chestnut St,Washington,PA,15301,Washington,724-228-0059
+995,40.0439862,-75.3820592,"237 East Lancaster Avenue, Wayne, PA, 19087",237 East Lancaster Avenue,Wayne,PA,19087,Chester,610-293-1496
+1144,40.0737293,-75.4568085,"500 Chesterbrook Blvd Ste 2, Wayne, PA, 19087",500 Chesterbrook Blvd Ste 2,Wayne,PA,19087,Chester,610-647-4490
+11119,40.04595515,-75.40627644,"644 West Lancaster Ave, Wayne, PA, 19087",644 West Lancaster Ave,Wayne,PA,19087,Chester,610-964-8981
+11024,39.745786,-77.553313,"1513 East Main Street, Waynesboro, PA, 17268",1513 East Main Street,Waynesboro,PA,17268,Franklin,717-762-9676
+926,39.895747,-80.168525,"1440 East High Street, Waynesburg, PA, 15370",1440 East High Street,Waynesburg,PA,15370,Greene,724-627-9849
+11016,41.74800058,-77.29640633,"24 East Avenue, Wellsboro, PA, 16901",24 East Avenue,Wellsboro,PA,16901,Tioga,570-724-4461
+1415,39.941814,-75.590341,"929 South High Street, West Chester, PA, 19382",929 South High Street,West Chester,PA,19382,Chester,610-436-6767
+7831,40.008988,-75.590331,"1307 Phoenixville Pike, West Chester, PA, 19380",1307 Phoenixville Pike,West Chester,PA,19380,Chester,484-356-9330
+11155,39.96878729,-75.55592988,"1249 West Chester Pike, West Chester, PA, 19382",1249 West Chester Pike,West Chester,PA,19382,Chester,610-692-9244
+11154,39.9609318,-75.6051439,"13 East Gay Street, West Chester, PA, 19380",13 East Gay Street,West Chester,PA,19380,Chester,610-696-0409
+11151,39.9981799,-75.5660819,"1395 East Boot Road, West Chester, PA, 19380",1395 East Boot Road,West Chester,PA,19380,Chester,610-738-8870
+11153,39.9672346,-75.5250926,"1535 West Chester Pike, West Chester, PA, 19382",1535 West Chester Pike,West Chester,PA,19382,Chester,484-356-9480
+11152,39.970533,-75.587601,"927 Paoli Pike, West Chester, PA, 19380",927 Paoli Pike,West Chester,PA,19380,Chester,610-696-0818
+10910,40.382075,-79.87666,"4927 Homeville Road, West Mifflin, PA, 15122",4927 Homeville Road,West Mifflin,PA,15122,Allegheny,412-469-2220
+1814,40.212037,-79.770575,"113 West Main Street, West Newton, PA, 15089",113 West Main Street,West Newton,PA,15089,Westmoreland,724-872-6401
+7825,40.617338,-80.091158,"201 Devine Drive, Wexford, PA, 15090",201 Devine Drive,Wexford,PA,15090,Allegheny,724-935-1880
+1314,41.0597113,-75.7722281,"501 Main Street Ste 2, White Haven, PA, 18661",501 Main Street Ste 2,White Haven,PA,18661,Luzerne,570-443-9519
+4004,40.6350066,-75.488377,"2108 Macarthur Road, Whitehall, PA, 18052",2108 Macarthur Road,Whitehall,PA,18052,Lehigh,610-740-9401
+11077,41.224973,-75.880993,"920 Wilkes-Barre Township Blvd, Wilkes Barre, PA, 18702",920 Wilkes-Barre Township Blvd,Wilkes Barre,PA,18702,Luzerne,570-823-8730
+1413,41.240648,-75.8823302,"155 East Northampton Street, Wilkes Barre, PA, 18701",155 East Northampton Street,Wilkes Barre,PA,18701,Luzerne,570-822-2791
+415,41.245775,-75.882818,"33 Public Square, Wilkes Barre, PA, 18701",33 Public Square,Wilkes Barre,PA,18701,Luzerne,570-829-3568
+1632,41.2777441,-75.8578199,"20 South River Street, Wilkes Barre, PA, 18705",20 South River Street,Wilkes Barre,PA,18705,Luzerne,570-824-7242
+11036,41.248991,-76.963722,"1913 East 3rd Street, Williamsport, PA, 17701",1913 East 3rd Street,Williamsport,PA,17701,Lycoming,570-323-0402
+4791,41.259006,-77.044234,"2023 Lycoming Creek Road, Williamsport, PA, 17701",2023 Lycoming Creek Road,Williamsport,PA,17701,Lycoming,570-327-9920
+4415,41.2440861,-77.0039829,"14 Fifth Street, Williamsport, PA, 17701",14 Fifth Street,Williamsport,PA,17701,Lycoming,570-321-9350
+11034,39.98477645,-76.28228809,"2600 N Willow Street Pike, Willow Street, PA, 17584",2600 N Willow Street Pike,Willow Street,PA,17584,Lancaster,717-464-1720
+1780,40.23433334,-78.83108854,"1516 Jefferson Avenue, Windber, PA, 15963",1516 Jefferson Avenue,Windber,PA,15963,Somerset,814-467-9168
+3400,40.3713948,-76.189462,"420 North 3rd Street, Womelsdorf, PA, 19567",420 North 3rd Street,Womelsdorf,PA,19567,Berks,610-589-4186
+11122,40.0032353,-75.2834582,"284 East Lancaster Avenue, Wynnewood, PA, 19096",284 East Lancaster Avenue,Wynnewood,PA,19096,Montgomery,610-649-3798
+517,39.96187792,-76.72905605,"40-42 West Market Street, York, PA, 17401",40-42 West Market Street,York,PA,17401,York,717-854-4432
+11033,39.9786336,-76.6601567,"3300 East Market Street, York, PA, 17402",3300 East Market Street,York,PA,17402,York,717-840-0204
+7886,39.9104657,-76.7062449,"115 Leader Heights Road, York, PA, 17403",115 Leader Heights Road,York,PA,17403,York,717-741-0823
+451,39.9536417,-76.7532632,"1200 West Market Street, York, PA, 17404",1200 West Market Street,York,PA,17404,York,717-854-6989
