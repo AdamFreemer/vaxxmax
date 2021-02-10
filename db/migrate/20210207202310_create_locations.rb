@@ -12,6 +12,7 @@ class CreateLocations < ActiveRecord::Migration[6.1]
       t.string :zip
       t.string :latitude
       t.string :longitude
+      t.string :county
       t.string :phone
       t.datetime :last_updated
       t.datetime :when_available

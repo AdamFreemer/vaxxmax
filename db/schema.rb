@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_043836) do
     t.string "zip"
     t.string "latitude"
     t.string "longitude"
+    t.string "county"
     t.string "phone"
     t.datetime "last_updated"
     t.datetime "when_available"

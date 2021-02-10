@@ -14,6 +14,7 @@ csv.each do |row|
   t.latitude = row['latitude']
   t.longitude = row['longitude']
   t.phone = row['phone']
+  t.county = row['county']
   t.save
   puts "#{t.store_number}, #{t.address} saved"
 end
