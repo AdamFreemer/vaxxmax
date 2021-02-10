@@ -1,7 +1,7 @@
 class LocationUpdateJob
   include Sidekiq::Worker
 
-  def update_locations
+  self.def update_locations
     @locations = Location.all
     @locations.each do |location|
       uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
