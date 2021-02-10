@@ -15,7 +15,6 @@ class LocationUpdateJob
       location.slot_2 = !(data['Data']['slots']['2'] == false)
       location.last_updated = DateTime.now
       location.save
-      
       response.body
     end
     @http.shutdown
