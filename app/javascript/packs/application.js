@@ -13,7 +13,6 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
 $(document).ready(function() {
   $("#fetch-button").click(function(){
     $("#loading").show();
@@ -25,11 +24,9 @@ $(document).ready(function() {
     });
   }); 
 
-  $(document).ready( function () {
-    $('#locations').DataTable(
-      {
-        "iDisplayLength": 100
-      }
-    );
-  } );
+  $('#locations').DataTable(
+    {
+      "iDisplayLength": 500
+    }
+  );
 });
