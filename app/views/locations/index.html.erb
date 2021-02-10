@@ -14,7 +14,9 @@
       <th>State</th>
       <th>Zip</th>
       <th>Fetch Data Attempt</th>
-      <th>Last Updated<th>
+      <th>Last Updated</th>
+      <th>Availability</th>
+      <th>When Available</th>
     </tr>
   </thead>
 
@@ -30,7 +32,9 @@
         <td><%= location.state %></td>
         <td><%= location.zip %></td>
         <td><%= location.status %></td>
-        <td><%= location.last_updated %></td>
+        <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)") %></td>
+        <td><%= location.availability %></td>
+        <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)") %></td>
       </tr>
     <% end %>
   </tbody>

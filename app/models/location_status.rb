@@ -1,0 +1,2 @@
+class LocationStatus < ApplicationRecord
+end

@@ -12,8 +12,14 @@ class LocationUpdateJob
       location.slot_1 = !(data['Data']['slots']['1'] == false)
       location.slot_2 = !(data['Data']['slots']['2'] == false)
       location.last_updated = DateTime.now
+      if location.slot_1 || location.slot_2
+        location.availability = true
+        location.when_available = DateTime.now
+      end
       location.save
+
       response.body
+
     end
     @http.shutdown
   end

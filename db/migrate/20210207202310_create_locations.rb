@@ -14,6 +14,8 @@ class CreateLocations < ActiveRecord::Migration[6.1]
       t.string :longitude
       t.string :phone
       t.datetime :last_updated
+      t.datetime :when_available
+      t.boolean :availability
 
       t.timestamps
     end
