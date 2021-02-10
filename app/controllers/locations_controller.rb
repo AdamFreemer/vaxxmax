@@ -1,4 +1,6 @@
 class LocationsController < ApplicationController
+  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: :index
+
   before_action :set_location, only: %i[show edit update destroy]
 
   # GET /locations or /locations.json
