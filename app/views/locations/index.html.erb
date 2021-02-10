@@ -2,21 +2,21 @@
 
 <h1>Locations</h1>
 
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered" id="locations">
   <thead class="thead-dark">
     <tr>
       <th>ID</th>
       <th>Store Number</th>
       <th>Shot 1 Avail</th>      
       <th>Shot 2 Avail</th>
-      <th>Address</th>
+      <th>Full Address</th>
       <th>City</th>
       <th>State</th>
       <th>Zip</th>
-      <th>Fetch Data Attempt</th>
+      <th>Last Fetch</th>
       <th>Last Updated</th>
+      <th>Became Available</th>
       <th>Availability</th>
-      <th>When Available</th>
     </tr>
   </thead>
 
@@ -27,14 +27,14 @@
         <td><%= location.store_number %></td>
         <td><%= location.slot_1 %></td>
         <td><%= location.slot_2 %></td>
-        <td><%= location.address %></td>
+        <td><%= location.full_address %></td>
         <td><%= location.city %></td>
         <td><%= location.state %></td>
         <td><%= location.zip %></td>
         <td><%= location.status %></td>
         <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)") %></td>
-        <td><%= location.availability %></td>
         <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)") %></td>
+        <td><%= location.availability %></td>
       </tr>
     <% end %>
   </tbody>

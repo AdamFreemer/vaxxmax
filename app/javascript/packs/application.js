@@ -24,4 +24,12 @@ $(document).ready(function() {
       location.reload(); 
     });
   }); 
+
+  $(document).ready( function () {
+    $('#locations').DataTable(
+      {
+        "iDisplayLength": 100
+      }
+    );
+  } );
 });
