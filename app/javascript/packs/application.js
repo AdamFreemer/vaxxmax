@@ -26,7 +26,8 @@ $(document).ready(function() {
 
   $('#locations').DataTable(
     {
-      "iDisplayLength": 500
+      "iDisplayLength": 100,
+      "order": [[ 9, "desc" ]]
     }
   );
 });
