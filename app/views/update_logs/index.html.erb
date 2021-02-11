@@ -1,0 +1,26 @@
+
+<p id="notice"><%= notice %></p>
+
+<h1>Update Log</h1>
+
+<table class="table table-striped table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Created</th>
+      <th>Task</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @update_logs.each do |update_log| %>
+      <tr>
+        <td><%= update_log&.created_at&.in_time_zone("Eastern Time (US & Canada)").strftime("%m-%e-%Y, %l:%M %p") %></td>
+        <td><%= update_log&.task %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back to Main', locations_path %>

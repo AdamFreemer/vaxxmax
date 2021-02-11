@@ -8,29 +8,34 @@ class LocationUpdateJob
       execute_update('MA')
       execute_update('NH')
       execute_update('VT')
+      UpdateLog.create(task: 'update_locations_north_east')
     end
 
     def update_locations_mid_atlantic
       execute_update('PA')
       execute_update('DE')
       execute_update('MD')
+      UpdateLog.create(task: 'update_locations_mid_atlantic')
     end
 
     def update_locations_west
       execute_update('CA')
       execute_update('NV')
+      UpdateLog.create(task: 'update_locations_west')
     end
 
     def update_locations_north_west
       execute_update('WA')
       execute_update('ID')
       execute_update('OR')
+      UpdateLog.create(task: 'update_locations_north_west')
     end
 
     def update_locations_midwest
       execute_update('OH')
       execute_update('MI')
       execute_update('VA')
+      UpdateLog.create(task: 'update_locations_midwest')
     end
 
     def execute_update(state)
