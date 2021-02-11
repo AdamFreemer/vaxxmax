@@ -53,8 +53,10 @@ class LocationUpdateJob
         location.slot_2 = !(data['Data']['slots']['2'] == false)
         location.last_updated = DateTime.now
         if location.slot_1 || location.slot_2
+          location.when_available = DateTime.now if location.availability.blank?
           location.availability = true
-          location.when_available = DateTime.now
+        else
+          location.availability = false
         end
         location.save
         response.body
