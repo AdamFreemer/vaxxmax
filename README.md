@@ -1,24 +1,16 @@
-# README
+# Vaccinator Availability App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)
 
-Things you may want to cover:
+This application pings locations based off their store ID and checks for vaccine availability. 
 
-* Ruby version
+Application notes:
 
-* System dependencies
+* Currently running on Heroku at: https://vaccinator-app.herokuapp.com/
 
-* Configuration
+* The application only pings Rite Aid stores currently. 
 
-* Database creation
+* On Heroku, all ~2500 Rite Aid store locations are loaded in the database.
 
-* Database initialization
+* A background job pings all stores in regional batches roughly every 10 minutes.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

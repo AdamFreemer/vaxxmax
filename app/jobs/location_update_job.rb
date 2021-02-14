@@ -63,5 +63,26 @@ class LocationUpdateJob
       end
       @http.shutdown
     end
+
+    def walgreens
+      binding.pry
+      uri = URI('https://www.walgreens.com/hcschedulersvc/svc/v2/immunizationLocations/timeslots')
+      req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
+      req.body = {
+        position: {
+          latitude: 40.11971279999999,
+          longitude: -75.0097103
+        },
+        state: 'PA',
+        vaccine: { productId: '' },
+        appointmentAvailability: { startDateTime: '2021-02-11' },
+        radius: 25,
+        size: 25,
+        serviceId: 99
+      }.to_json
+      response = Net::HTTP.start(uri.hostname, uri.port) do |http|
+        http.request(req)
+      end
+    end
   end
 end
