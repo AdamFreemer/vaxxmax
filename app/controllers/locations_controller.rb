@@ -5,7 +5,8 @@ class LocationsController < ApplicationController
 
   # GET /locations or /locations.json
   def index
-    @locations = Location.all
+    @states = states
+    @locations = Location.where(availability: true)
   end
 
   # GET /locations/1 or /locations/1.json
@@ -62,28 +63,36 @@ class LocationsController < ApplicationController
     LocationUpdateJob.perform_async(true)
   end
 
+  def set_state
+    session[:state] = params[:state]
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_location
-      @location = Location.find(params[:id])
-    end
+  def set_location
+    @location = Location.find(params[:id])
+  end
 
-    def fetch
-      @locations.each do |location|
-        uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
-        response = Net::HTTP.get_response(uri)
-        data = JSON.parse(response.body)
-        puts "#{location.id} - id: #{location.store_number} #{data}"
-        location.status = data['Status']
-        location.slot_1 = !(data['Data']['slots']['1'] == false)
-        location.slot_2 = !(data['Data']['slots']['2'] == false)
-        location.save
-        response.body
-      end
-    end
+  def states
+    %w[CA CT DE ID MA MD MI NH NJ NV NY OH OR PA VA VT WA]
+  end
 
-    # Only allow a list of trusted parameters through.
-    def location_params
-      params.fetch(:location, {})
+  def fetch
+    @locations.each do |location|
+      uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
+      response = Net::HTTP.get_response(uri)
+      data = JSON.parse(response.body)
+      puts "#{location.id} - id: #{location.store_number} #{data}"
+      location.status = data['Status']
+      location.slot_1 = !(data['Data']['slots']['1'] == false)
+      location.slot_2 = !(data['Data']['slots']['2'] == false)
+      location.save
+      response.body
     end
+  end
+
+  # Only allow a list of trusted parameters through.
+  def location_params
+    params.fetch(:location, {})
+  end
 end

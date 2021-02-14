@@ -24,9 +24,25 @@ $(document).ready(function() {
     });
   }); 
 
-  // setTimeout(function(){
-  //   window.location.reload(1);
-  // }, 5000);
+
+
+    // $.get( "ajax/test.html", function( data ) {
+    //   $( ".result" ).html( data );
+    //   alert( "Load was performed." );
+    // });
+  $("#state-select").on('change', function(){
+    data = $("#state").val();
+    console.log(data)
+    // $.get( "/", function( data ) {
+    //   $( ".result" ).html( data );
+    //   alert( "Load was performed." );
+    // });
+  
+      // do your code here
+      // It will specifically called on change of your element
+  });
+
+
 
   $('#locations').DataTable(
     {

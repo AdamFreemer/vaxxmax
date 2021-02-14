@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :locations
   get 'update_records', to: 'locations#update_records'
   get 'logs', to: 'update_logs#index'
+  get 'set_state', to: 'locations#set_state'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
