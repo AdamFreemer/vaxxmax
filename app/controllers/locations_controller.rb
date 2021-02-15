@@ -5,7 +5,7 @@ class LocationsController < ApplicationController
 
   def index
     @states = states
-    @locations = Location.where(availability: true, state: session[:state])
+    @locations = Location.where(state: session[:state])
   end
 
   def show; end;
