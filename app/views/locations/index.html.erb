@@ -47,7 +47,6 @@
       <th>Zip</th>
       <th>Last Updated</th>
       <th>Became Available</th>
-      <th>Availability</th>
     </tr>
   </thead>
 
@@ -64,7 +63,6 @@
         <td><%= location.zip %></td>
         <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
         <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-        <td><%= location.availability ? "Yes" : "No" %></td>
       </tr>
     <% end %>
   </tbody>
