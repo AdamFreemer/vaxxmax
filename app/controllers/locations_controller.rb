@@ -1,28 +1,22 @@
 class LocationsController < ApplicationController
-  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: :index
+  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:index, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
 
-  # GET /locations or /locations.json
   def index
     @states = states
-    @locations = Location.where(availability: true)
+    @locations = Location.where(availability: true, state: session[:state])
   end
 
-  # GET /locations/1 or /locations/1.json
-  def show
-  end
+  def show; end;
 
   # GET /locations/new
   def new
     @location = Location.new
   end
 
-  # GET /locations/1/edit
-  def edit
-  end
+  def edit; end;
 
-  # POST /locations or /locations.json
   def create
     @location = Location.new(location_params)
 
@@ -37,7 +31,6 @@ class LocationsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /locations/1 or /locations/1.json
   def update
     respond_to do |format|
       if @location.update(location_params)
@@ -50,7 +43,6 @@ class LocationsController < ApplicationController
     end
   end
 
-  # DELETE /locations/1 or /locations/1.json
   def destroy
     @location.destroy
     respond_to do |format|
@@ -65,10 +57,11 @@ class LocationsController < ApplicationController
 
   def set_state
     session[:state] = params[:state]
+    redirect_to locations_url
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+
   def set_location
     @location = Location.find(params[:id])
   end

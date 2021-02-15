@@ -24,25 +24,14 @@ $(document).ready(function() {
     });
   }); 
 
-
-
-    // $.get( "ajax/test.html", function( data ) {
-    //   $( ".result" ).html( data );
-    //   alert( "Load was performed." );
-    // });
   $("#state-select").on('change', function(){
-    data = $("#state").val();
-    console.log(data)
-    // $.get( "/", function( data ) {
-    //   $( ".result" ).html( data );
-    //   alert( "Load was performed." );
-    // });
-  
-      // do your code here
-      // It will specifically called on change of your element
+    var state_dropdown_value = $("#state-select").val();
+
+    $.get( "/set_state/" + state_dropdown_value, function( data ) {
+      $( ".result" ).html( data );
+      location.reload();
+    });
   });
-
-
 
   $('#locations').DataTable(
     {
