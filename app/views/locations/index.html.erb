@@ -24,7 +24,12 @@
     </div>
     
     <div class="col-4 text-center">
-      <div class="blog-header-small text-dark" href="#">VaxxMax.com</div>
+      <div class="blog-header-small text-dark" href="#">
+      <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
+      <code>VaxxMax.com is a non-profit website.<br>
+      Click here to donate and help pay for server and hosting costs.</code>
+      </a>
+      </div>
     </div>
 
     <div class="col-3 pt-3">
@@ -41,7 +46,7 @@
       <th>Store Number</th>
       <th>Shot 1 Avail</th>      
       <th>Shot 2 Avail</th>
-      <th>Full Address</th>
+      <th>Clickable Address (Google Maps)</th>
       <th>City</th>
       <th>State</th>
       <th>Zip</th>
@@ -57,7 +62,7 @@
         <td><%= location.store_number %></td>
         <td><%= location.slot_1 ? "Yes" : "No" %></td>
         <td><%= location.slot_2 ? "Yes" : "No" %></td>
-        <td><%= location.full_address %></td>
+        <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
         <td><%= location.city %></td>
         <td><%= location.state %></td>
         <td><%= location.zip %></td>
