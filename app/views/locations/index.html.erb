@@ -20,7 +20,7 @@
 
   <div class="row justify-content-between align-items-center">
     <div class="col-3 pt-3">
-      <div><%= select_tag "state-select", options_for_select(@states, session[:state]), class: "form-control" %></div>
+      <div><%= select_tag "provider-select", options_for_select(["Rite Aid - Nationwide Locations"], "-"), class: "form-control" %></div>
     </div>
     
     <div class="col-4 text-center">
@@ -31,8 +31,8 @@
       </div>
     </div>
 
-    <div class="col-3 pt-3">
-      <div><%= select_tag "state-select", options_for_select(["Rite Aid"], "MasterCard"), class: "form-control" %></div>
+    <div class="col-3 pt-3">  
+      <div><%= select_tag "state-select", options_for_select(@states, session[:state]), class: "form-control" %></div>
     </div>
   </div>
 </header>
@@ -79,4 +79,4 @@
 <p class="text-center">This site is not affiliated with or endorsed by Rite Aid or any other business or government agencies.<br>
 This site is for informational purposes only. The provided information may not be complete or accurate.<br>
 Copyright © 2021 Adam Freemer. All rights reserved.</p>
-<p class="text-center contact-info">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
+<p class="text-center">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
