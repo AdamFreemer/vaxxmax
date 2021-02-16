@@ -5,12 +5,16 @@ class LocationsController < ApplicationController
 
   def index
     @states = states
-    @locations = Location.where(availability: true, state: session[:state])
+    @locations = Location
+                 .where(availability: true, state: session[:state])
+                 .where('when_available > ?', DateTime.now - 2.days)
+    @locations_old = Location
+                     .where(availability: true, state: session[:state])
+                     .where('when_available < ?', DateTime.now - 2.days)
   end
 
   def show; end;
 
-  # GET /locations/new
   def new
     @location = Location.new
   end
