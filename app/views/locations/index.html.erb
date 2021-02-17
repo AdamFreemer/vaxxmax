@@ -86,45 +86,46 @@
   </div>
 </div>
 
-
-<div class="shadow-sm p-3 mb-5 bg-white rounded">
-  <p class="text-center">The below locations are stale and most likely do not have availability.</p>
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered table-condensed" id="locations_old">
-      <thead class="thead-dark">
-        <tr>
-          <th>Store Number</th>
-          <th>Store Website</th>
-          <th>Shot 1 Avail</th>      
-          <th>Shot 2 Avail</th>
-          <th>Clickable Address (Google Maps)</th>
-          <th>City</th>
-          <th>State</th>
-          <th>Zip</th>
-          <th>Last Updated</th>
-          <th>Became Available</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @locations_old.each do |location| %>
+<% if @locations_old.length > 0 %>
+  <div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <p class="text-center">The below locations are stale and most likely do not have availability.</p>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-condensed" id="locations_old">
+        <thead class="thead-dark">
           <tr>
-            <td><%= location.store_number %></td>
-            <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
-            <td><%= location.slot_1 ? "Yes" : "No" %></td>
-            <td><%= location.slot_2 ? "Yes" : "No" %></td>
-            <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
-            <td><%= location.city %></td>
-            <td><%= location.state %></td>
-            <td><%= location.zip %></td>
-            <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-            <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+            <th>Store Number</th>
+            <th>Store Website</th>
+            <th>Shot 1 Avail</th>      
+            <th>Shot 2 Avail</th>
+            <th>Clickable Address (Google Maps)</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Last Updated</th>
+            <th>Became Available</th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
+
+        <tbody>
+          <% @locations_old.each do |location| %>
+            <tr>
+              <td><%= location.store_number %></td>
+              <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
+              <td><%= location.slot_1 ? "Yes" : "No" %></td>
+              <td><%= location.slot_2 ? "Yes" : "No" %></td>
+              <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
+              <td><%= location.city %></td>
+              <td><%= location.state %></td>
+              <td><%= location.zip %></td>
+              <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+              <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+  <% end %>
 
 <%= link_to 'Logs', logs_path %>
 
