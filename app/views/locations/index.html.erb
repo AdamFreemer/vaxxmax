@@ -74,7 +74,7 @@
             <td><%= location.slot_1 ? "Yes" : "No" %></td>
             <td><%= location.slot_2 ? "Yes" : "No" %></td>
             <td>
-              <%= link_to  location.full_address, location.google_search, id: "full-address-#{location.id}" %>
+              <%= link_to location.full_address, location.google_search, id: "full-address-#{location.id}", target: :_blank %>
               <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
                 Copy Address
               </button>              
