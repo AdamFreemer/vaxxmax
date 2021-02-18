@@ -1,15 +1,16 @@
 class LocationsController < ApplicationController
-  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:index, :set_state]
+  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:rite_aid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
 
-  def index
+  def rite_aid
     @states = states
     @locations = Location
-                 .where(availability: true, state: session[:state])
+                 .where(store_name: 'Rite Aid', availability: true, state: session[:state])
                  .where('when_available > ?', DateTime.now - 2.days)
+
     @locations_old = Location
-                     .where(availability: true, state: session[:state])
+                     .where(store_name: 'Rite Aid', availability: true, state: session[:state])
                      .where('when_available < ?', DateTime.now - 2.days)
   end
 
@@ -24,12 +25,17 @@ class LocationsController < ApplicationController
   end
 
   def show; end;
+  def walgreens
+
+  end
+
+  def show; end
 
   def new
     @location = Location.new
   end
 
-  def edit; end;
+  def edit; end
 
   def create
     @location = Location.new(location_params)
@@ -40,18 +46,6 @@ class LocationsController < ApplicationController
         format.json { render :show, status: :created, location: @location }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @location.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def update
-    respond_to do |format|
-      if @location.update(location_params)
-        format.html { redirect_to @location, notice: "Location was successfully updated." }
-        format.json { render :show, status: :ok, location: @location }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @location.errors, status: :unprocessable_entity }
       end
     end
@@ -71,7 +65,7 @@ class LocationsController < ApplicationController
 
   def set_state
     session[:state] = params[:state]
-    redirect_to locations_url
+    redirect_to rite_aid_path
   end
 
   private
