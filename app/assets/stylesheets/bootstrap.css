@@ -6,6 +6,22 @@
   border-radius: .1rem;
 }
 
+.btn-md {
+  margin-top: 1em;
+  padding: .40rem .4rem;
+  font-size: .70rem;
+  line-height: 1;
+  border-radius: .1rem;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-red {
+  color: red; 
+}
+
 .contact-info {
   margin-bottom: 60px;
 }

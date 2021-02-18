@@ -26,7 +26,11 @@
       <div class="col-4 text-center">
         <div class="blog-header-small text-dark" href="#">
         <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
-          <code>I’m providing this tool for free but could use help to cover hosting & development costs. Thanks!<br>(Click here to contribute)</code>
+          <code>I’m providing this tool for free but could use help to cover hosting & development costs. Thanks!<br>
+              <button class="btn btn-md btn-outline-primary">
+                >> Click here to contribute <<
+              </button>              
+          </code>
         </a>
         </div>
       </div>
@@ -55,8 +59,8 @@
         <tr>
           <th>Store Number</th>
           <th>Store Website</th>
-          <th>Shot 1 Avail</th>      
-          <th>Shot 2 Avail</th>
+          <th class="text-center">Shot 1</th>      
+          <th class="text-center">Shot 2</th>
           <th>Clickable Address (Google Maps)</th>
           <th>City</th>
           <th>State</th>
@@ -71,8 +75,30 @@
           <tr>
             <td><%= location.store_number %></td>
             <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
-            <td><%= location.slot_1 ? "Yes" : "No" %></td>
-            <td><%= location.slot_2 ? "Yes" : "No" %></td>
+            <td class="text-center">
+              <% if location.slot_1 == true %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-green" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>   
+              <% else %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                </svg>           
+              <% end %>
+            </td>
+            <td class="text-center">
+              <% if location.slot_2 == true %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-green" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>   
+              <% else %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                </svg>           
+              <% end %>
+            </td>
             <td>
               <%= link_to location.full_address, location.google_search, id: "full-address-#{location.id}", target: :_blank %>
               <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
