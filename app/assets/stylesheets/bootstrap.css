@@ -22,6 +22,10 @@
   color: red; 
 }
 
+.text-black {
+  color: #555;
+}
+
 .contact-info {
   margin-bottom: 60px;
 }
