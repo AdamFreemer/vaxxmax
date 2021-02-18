@@ -1859,6 +1859,11 @@ clean-stack@^2.0.0:
   resolved "https://registry.yarnpkg.com/clean-stack/-/clean-stack-2.2.0.tgz#ee8472dbb129e727b31e8a10a427dee9dfe4008b"
   integrity sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==
 
+clipboard.js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/clipboard.js/-/clipboard.js-1.0.1.tgz#4ef05f61d90a5ecd406c41846288f1a89c4e74d6"
+  integrity sha1-TvBfYdkKXs1AbEGEYojxqJxOdNY=
+
 cliui@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-5.0.0.tgz#deefcfdb2e800784aa34f46fa08e06851c7bbbc5"

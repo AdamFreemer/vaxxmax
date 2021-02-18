@@ -1,8 +1,15 @@
 /* stylelint-disable selector-list-comma-newline-after */
+.btn-group-xs > .btn, .btn-xs {
+  padding: .40rem .4rem;
+  font-size: .70rem;
+  line-height: .3;
+  border-radius: .1rem;
+}
 
 .contact-info {
   margin-bottom: 60px;
 }
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;

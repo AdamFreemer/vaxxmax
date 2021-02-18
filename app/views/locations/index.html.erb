@@ -73,7 +73,12 @@
             <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
             <td><%= location.slot_1 ? "Yes" : "No" %></td>
             <td><%= location.slot_2 ? "Yes" : "No" %></td>
-            <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
+            <td>
+              <%= link_to  location.full_address, location.google_search, id: "full-address-#{location.id}" %>
+              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
+                Copy Address
+              </button>              
+            </td>
             <td><%= location.city %></td>
             <td><%= location.state %></td>
             <td><%= location.zip %></td>
@@ -134,15 +139,13 @@ This site is for informational purposes only. The provided information may not b
 Copyright © 2021 Adam Freemer. All rights reserved.</p>
 <p class="text-center">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
 
-<p class="text-center">Release Version: 1.1</p>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBM5JPGJ69"></script>
+<p class="text-center">Release Version: 1.2</p>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MBM5JPGJ69');
+  var clipboard = new ClipboardJS('.btn');
+  clipboard.on('success', function (e) {
+    console.log(e);
+  });
+  clipboard.on('error', function (e) {
+    console.log(e);
+  });
 </script>
-
-<script data-ad-client="ca-pub-2738817184624621" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
