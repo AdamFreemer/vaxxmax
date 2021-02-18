@@ -39,6 +39,7 @@ class LocationUpdateJob
     end
 
     def execute_update(state)
+      puts "-- STARTING Update Job | State: #{state}"
       @locations = Location.where(state: state)
       @locations.each_with_index do |location, i|
         sleep(3) if i.to_s.include? '99'
@@ -46,9 +47,13 @@ class LocationUpdateJob
         @http = Net::HTTP::Persistent.new
         response = @http.request uri
         data = JSON.parse(response.body)
-        puts "-- Index: #{i} - State: #{state} - Location: #{location.id} - id: #{location.store_number} #{data}"
-
+        puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
         location.status = data['Status']
+        if data['Data'].nil?
+          puts "-- ERROR : Location ID: #{location.id} - store #: #{location.store_number} #{data}"
+          UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
+          next
+        end
         location.slot_1 = !(data['Data']['slots']['1'] == false)
         location.slot_2 = !(data['Data']['slots']['2'] == false)
         location.last_updated = DateTime.now
@@ -62,6 +67,7 @@ class LocationUpdateJob
         response.body
       end
       @http.shutdown
+      puts "-- COMPLETED Update Job | State: #{state}"
     end
 
     def walgreens
