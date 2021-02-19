@@ -59,6 +59,7 @@ class LocationUpdateJob
         location.last_updated = DateTime.now
         if location.slot_1 || location.slot_2
           location.when_available = DateTime.now if location.availability.blank?
+          location.store_availability_count += 1 if location.availability.blank?
           location.availability = true
         else
           location.availability = false
