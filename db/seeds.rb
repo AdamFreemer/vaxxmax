@@ -5,6 +5,7 @@ csv_text = File.read(Rails.root.join('db', 'locations.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
   t = Location.new
+  t.is_rite_aid = true
   t.store_number = row['store_number']
   t.full_address = row['full_address']
   t.address = row['address']

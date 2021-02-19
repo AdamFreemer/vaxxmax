@@ -1,8 +1,17 @@
 class AddWallgreensData < ActiveRecord::Migration[6.1]
   require 'csv'
   def change
+    # For production, update Rite Aid records first
+    puts "-- Updateing Rite Aid is_rite_aid boolean to be true for all records."
+    locations = Location.all
+    locations.each do |location|
+      location.is_rite_aid = true
+      location.save
+    end
+    # Now import Walgreens data
+    puts "-- Adding Walgreens PA data"
     csv_text = File.read(Rails.root.join('db', 'locations_walgreens_pa.csv'))
-    csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+    csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
     csv.each do |row|
       t = Location.new
       t.store_number = row['store_number']
@@ -15,12 +24,12 @@ class AddWallgreensData < ActiveRecord::Migration[6.1]
       t.longitude = row['longitude']
       t.phone = row['phone']
       t.county = row['county']
-      t.store_name = row['store_name']
+      t.is_walgreens = true
       t.store_url = row['store_url']
       t.save
       puts "#{t.store_number}, #{t.address} saved"
     end
 
-    puts "There are now #{Location.count} rows in the transactions table"
+    puts "-- Added Walgreens PA data. There are now #{Location.count} rows in the transactions table"
   end
 end
