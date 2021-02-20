@@ -50,12 +50,14 @@ class LocationUpdateJob
           response = @http.request uri
           data = JSON.parse(response.body)
         rescue StandardError => e
-          puts "-- ERROR JSON.parse or Net:HTTP -- Location ID: #{location.id} - #{e.message}"
+          puts "-- ERROR JSON.parse or Net:HTTP -- Location ID: #{location.id} - store #: #{location.store_number} #{data}"
           data = nil
+          UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
+          next
         end
-
         puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
-        if data['Data'].nil? || data.nil?
+        
+        if data['Data'].nil?
           puts "-- ERROR : Location ID: #{location.id} - store #: #{location.store_number} #{data}"
           UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
