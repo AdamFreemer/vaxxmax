@@ -36,7 +36,7 @@ $(document).ready(function() {
   $('#locations').DataTable(
     {
       "iDisplayLength": 25,
-      "order": [[ 9, "desc" ]],
+      "order": [[ 6, "desc" ]],
       "oLanguage": {
         "sSearch": "Search all returned data: "
       }
