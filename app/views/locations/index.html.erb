@@ -4,17 +4,10 @@
   <p id="notice"><%= notice %></p>
 
   <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-3 text-center">
-        <div class="blog-header-logo text-dark" href="#">&nbsp;</div>
-      </div>
-      <div class="col-6 text-center">
-        <div class="blog-header-logo text-dark" href="#">National Vaccine Availability</div>
-      </div>
-        <div class="col-3 text-center">
-        <div class="blog-header-logo text-dark" href="#"></div>
-      </div>  
-    </div>
+
+        <div class="blog-header-logo text-dark text-center" href="#">National Vaccine Availability</div>
+     
+
 
     <br>
 
@@ -23,18 +16,18 @@
         <div><%= select_tag "provider-select", options_for_select(["Rite Aid - Nationwide Locations"], "-"), class: "form-control" %></div>
       </div>
       
-      <div class="col-4 text-center">
+      <div class="col-6 text-center">
         <div class="blog-header-small text-dark" href="#">
         
           <code class="text-black">I’m providing this tool for free, but could use help to cover hosting & development costs. Thanks!<br>
-              <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
-              <button class="btn btn-md btn-outline-primary">
-                Contribute via PayPal
-              </button>    
-              </a>   
-              <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
-                Contribure via Bitcoin
-              </button>                 
+            <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
+            <button class="btn btn-md btn-outline-primary">
+              Contribute via PayPal
+            </button>    
+            </a>   
+            <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
+              Contribure via Bitcoin
+            </button>                 
           </code>
           <br><br>
           <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a><br>    
@@ -98,7 +91,7 @@
             <td>
               <%= link_to location.full_address, location.google_search, id: "full-address-#{location.id}", target: :_blank %>
               <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
-                Copy Address
+                Copy
               </button>              
             </td>
             <td><%= location.city %></td>
@@ -149,7 +142,7 @@
             <td>
               <%= link_to location.full_address, location.google_search, id: "full-address-#{location.id}", target: :_blank %>
               <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
-                Copy Address
+                Copy
               </button>              
             </td>
             <td><%= location.city %></td>
@@ -181,12 +174,12 @@
     </div>
   </div>    
 <p class="text-center">Please remember we all need to continue to wear masks.</p>
-<br>
-<p class="text-center">This site is not affiliated with or endorsed by Rite Aid or any other business or government agencies.<br>
-This site is for informational purposes only. The provided information may not be complete or accurate.<br>
-Copyright © 2021 Adam Freemer. All rights reserved.</p>
-<p class="text-center">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
-<p class="text-center">Release Version: 1.5.1</p>
+
+<p class="text-center text-justify">This site is not affiliated with or endorsed by Rite Aid or any other business or government agencies.<br>
+  This site is for informational purposes only. The provided information may not be complete or accurate.</p>
+<p class="text-center text-justify">Copyright © 2021 Adam Freemer. All rights reserved.</p>
+<p class="text-center text-justify">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
+<p class="text-center text-justify">Release Version: 1.5.1</p>
 <p class="text-center"><%= link_to 'Logs', logs_path %></p>
 
 <div class="modal fade" id="bitcoinModal" tabindex="-1" role="dialog" aria-labelledby="bitcoinModal" aria-hidden="true">
