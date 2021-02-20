@@ -55,7 +55,7 @@ class LocationUpdateJob
         end
 
         puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
-        if data['Data'].nil?
+        if data['Data'].nil? || data.nil?
           puts "-- ERROR : Location ID: #{location.id} - store #: #{location.store_number} #{data}"
           UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
