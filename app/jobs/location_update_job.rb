@@ -45,7 +45,7 @@ class LocationUpdateJob
         sleep(3) if i.to_s.include? '99'
         uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
         @http = Net::HTTP::Persistent.new
-        
+  
         begin
           response = @http.request uri
           data = JSON.parse(response.body)
@@ -53,6 +53,7 @@ class LocationUpdateJob
           puts "-- ERROR JSON.parse or Net:HTTP -- Location ID: #{location.id} - #{e.message}"
           data = nil
         end
+        
         puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
         location.status = data['Status']
         if data['Data'].nil?
