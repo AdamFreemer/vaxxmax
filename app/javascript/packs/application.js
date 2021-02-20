@@ -42,4 +42,14 @@ $(document).ready(function() {
       }
     }
   );
+
+  $('#logs').DataTable(
+    {
+      "iDisplayLength": 25,
+      "order": [[ 0, "asc" ]],
+      "oLanguage": {
+        "sSearch": "Search all returned data: "
+      }
+    }
+  );
 });

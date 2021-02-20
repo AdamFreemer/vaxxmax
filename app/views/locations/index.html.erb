@@ -39,7 +39,7 @@
           <br><br>
           <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a><br>    
           </code>
-          <code class="text-black">New feature: availability counter (how many times store has had availability previously).</a><br>    
+          <code class="text-black">Data is updated approximately every 5 minutes.</a><br>    
           </code>
         </a>      
         </div>
@@ -75,7 +75,6 @@
           <th>State</th>
           <th>Last Updated</th>
           <th>Became Available</th>
-          <th>X Available</th>
         </tr>
       </thead>
 
@@ -106,7 +105,6 @@
             <td class="text-center"><%= location.state %></td>
             <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
             <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-            <td class="text-center"><%= location.store_availability_count %></td>
           </tr>
         <% end %>
       </tbody>
@@ -128,7 +126,6 @@
           <th>State</th>
           <th>Last Updated</th>
           <th>Became Available</th>
-          <th>X Available</th>
         </tr>
       </thead>
 
@@ -159,7 +156,6 @@
             <td class="text-center"><%= location.state %></td>
             <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
             <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-            <td class="text-center"><%= location.store_availability_count %></td>
           </tr>
         <% end %>
       </tbody>
@@ -174,7 +170,7 @@
 This site is for informational purposes only. The provided information may not be complete or accurate.<br>
 Copyright © 2021 Adam Freemer. All rights reserved.</p>
 <p class="text-center">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
-<p class="text-center">Release Version: 1.5.0</p>
+<p class="text-center">Release Version: 1.5.1</p>
 
 <div class="modal fade" id="bitcoinModal" tabindex="-1" role="dialog" aria-labelledby="bitcoinModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
