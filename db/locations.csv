@@ -167,7 +167,6 @@ store_number,latitude,longitude,full_address,address,city,state,zip,county,phone
 5563,34.2232211,-118.4484204,"8400 Van Nuys Boulevard, Panorama City, CA, 91402",8400 Van Nuys Boulevard,Panorama City,CA,91402,Los Angeles,818-891-6785
 5575,34.1655016,-118.4056204,"12511 Magnolia Boulevard, Valley Village, CA, 91607",12511 Magnolia Boulevard,Valley Village,CA,91607,Los Angeles,818-506-8795
 5490,34.0220507,-118.4641966,"2412 Pico Boulevard, Santa Monica, CA, 90405",2412 Pico Boulevard,Santa Monica,CA,90405,Los Angeles,310-450-7624
-5436,34.1044246,-118.3097044,"1841 North Western Avenue, Los Angeles, CA, 90027",1841 North Western Avenue,Los Angeles,CA,90027,Los Angeles,323-461-4541
 6267,33.98241988,-118.0382627,"6512 Comstock Avenue, Whittier, CA, 90601",6512 Comstock Avenue,Whittier,CA,90601,Los Angeles,562-696-1015
 5574,34.1865188,-118.3785482,"11350 Victory Boulevard, North Hollywood, CA, 91606",11350 Victory Boulevard,North Hollywood,CA,91606,Los Angeles,818-760-7300
 5505,33.9191184,-118.0736901,"12319 South Norwalk Boulevard, Norwalk, CA, 90650",12319 South Norwalk Boulevard,Norwalk,CA,90650,Los Angeles,562-863-3688
@@ -1636,7 +1635,6 @@ store_number,latitude,longitude,full_address,address,city,state,zip,county,phone
 3109,41.2448343,-80.8423667,"1560 Parkman Road Nw, Warren, OH, 44485",1560 Parkman Road Nw,Warren,OH,44485,Trumbull,330-392-7555
 2414,40.395962,-81.346933,"735 North Water Street, Uhrichsville, OH, 44683",735 North Water Street,Uhrichsville,OH,44683,Tuscarawas,740-922-7587
 2392,40.4923696,-81.4592858,"705 West High Avenue, New Philadelphia, OH, 44663",705 West High Avenue,New Philadelphia,OH,44663,Tuscarawas,330-339-2565
-2441,40.2363651,-83.3559908,"800 Delaware Avenue, Marysville, OH, 43040",800 Delaware Avenue,Marysville,OH,43040,Union,937-642-3601
 1430,39.272041,-81.570474,"201 Washington Boulevard, Belpre, OH, 45714",201 Washington Boulevard,Belpre,OH,45714,Washington,740-423-4894
 1379,39.4128863,-81.4492718,"301 Greene Street, Marietta, OH, 45750",301 Greene Street,Marietta,OH,45750,Washington,740-376-0769
 4814,40.8389935,-81.7637383,"222 South Main Street, Orrville, OH, 44667",222 South Main Street,Orrville,OH,44667,Wayne,330-683-8711
@@ -2114,7 +2112,6 @@ store_number,latitude,longitude,full_address,address,city,state,zip,county,phone
 3434,39.9670131,-75.1696217,"1924 Fairmount Avenue, Philadelphia, PA, 19130",1924 Fairmount Avenue,Philadelphia,PA,19130,Philadelphia,215-765-5078
 2709,40.068886,-75.1810933,"8235 Stenton Avenue, Philadelphia, PA, 19150",8235 Stenton Avenue,Philadelphia,PA,19150,Philadelphia,215-247-8535
 3227,39.9362537,-75.1944445,"3000-02 Reed Street, Philadelphia, PA, 19146",3000-02 Reed Street,Philadelphia,PA,19146,Philadelphia,215-467-7920
-2793,39.9714584,-75.1561223,"1201-43 West Girard Ave, Philadelphia, PA, 19123",1201-43 West Girard Ave,Philadelphia,PA,19123,Philadelphia,215-236-4860
 1127,39.985911,-75.1557911,"2131-59 North Broad Street, Philadelphia, PA, 19122",2131-59 North Broad Street,Philadelphia,PA,19122,Philadelphia,215-236-2297
 1563,40.0426707,-75.1798992,"6201 Germantown Avenue, Philadelphia, PA, 19144",6201 Germantown Avenue,Philadelphia,PA,19144,Philadelphia,215-713-2695
 11140,39.91214953,-75.24374396,"2512 Island Avenue, Philadelphia, PA, 19153",2512 Island Avenue,Philadelphia,PA,19153,Philadelphia,215-937-9665
