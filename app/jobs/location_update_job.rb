@@ -53,14 +53,14 @@ class LocationUpdateJob
           puts "-- ERROR JSON.parse or Net:HTTP -- Location ID: #{location.id} - #{e.message}"
           data = nil
         end
-        
+
         puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
-        location.status = data['Status']
         if data['Data'].nil?
           puts "-- ERROR : Location ID: #{location.id} - store #: #{location.store_number} #{data}"
           UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
+        location.status = data['Status']
         location.slot_1 = !(data['Data']['slots']['1'] == false)
         location.slot_2 = !(data['Data']['slots']['2'] == false)
         location.last_updated = DateTime.now
