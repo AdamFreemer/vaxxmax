@@ -2,39 +2,39 @@ class LocationUpdateJob
   class << self
     # CA, CT, DE, ID, MA, MD, MI, NH, NJ, NV, NY, OH, OR, PA, VA, VT, WA
     def update_locations_north_east
-      execute_update('NY')
-      execute_update('NJ')
-      execute_update('CT')
-      execute_update('MA')
-      execute_update('NH')
-      execute_update('VT')
+      rite_aid_update('NY')
+      rite_aid_update('NJ')
+      rite_aid_update('CT')
+      rite_aid_update('MA')
+      rite_aid_update('NH')
+      rite_aid_update('VT')
       UpdateLog.create(task: 'update_locations_north_east')
     end
 
     def update_locations_mid_atlantic
-      execute_update('PA')
-      execute_update('DE')
-      execute_update('MD')
+      rite_aid_update('PA')
+      rite_aid_update('DE')
+      rite_aid_update('MD')
       UpdateLog.create(task: 'update_locations_mid_atlantic')
     end
 
     def update_locations_west
-      execute_update('CA')
-      execute_update('NV')
+      rite_aid_update('CA')
+      rite_aid_update('NV')
       UpdateLog.create(task: 'update_locations_west')
     end
 
     def update_locations_north_west
-      execute_update('WA')
-      execute_update('ID')
-      execute_update('OR')
+      rite_aid_update('WA')
+      rite_aid_update('ID')
+      rite_aid_update('OR')
       UpdateLog.create(task: 'update_locations_north_west')
     end
 
     def update_locations_midwest
-      execute_update('OH')
-      execute_update('MI')
-      execute_update('VA')
+      rite_aid_update('OH')
+      rite_aid_update('MI')
+      rite_aid_update('VA')
       UpdateLog.create(task: 'update_locations_midwest')
     end
 
