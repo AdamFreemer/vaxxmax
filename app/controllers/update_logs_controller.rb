@@ -1,6 +1,6 @@
 class UpdateLogsController < ApplicationController
   def index
-    @update_logs = UpdateLog.all
+    @update_logs = UpdateLog.last(250)
   end
 
   private
