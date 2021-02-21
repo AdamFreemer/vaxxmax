@@ -1,6 +1,6 @@
 class UpdateLogsController < ApplicationController
   def index
-    @update_logs = UpdateLog.order('created_at')
+    @update_logs = UpdateLog.all
   end
 
   private
