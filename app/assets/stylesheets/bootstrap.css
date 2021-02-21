@@ -1,4 +1,21 @@
 /* stylelint-disable selector-list-comma-newline-after */
+.title-text {
+  line-height: 2.25rem;
+}
+
+.changelog {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.vaxxmax-logo-text {
+  padding: 5px 15px 15px 15px;
+}
+
+.dropdowns {
+  padding-top: 25px;
+}
+
 .btn-group-xs > .btn, .btn-xs {
   padding: .40rem .4rem;
   font-size: .70rem;

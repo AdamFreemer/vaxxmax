@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-9 mx-auto text-center"> 
+  <div  id="amzn-assoc-ad-7103bd20-f16c-40e2-8a00-c5ebd66b0ec8"></div>
+  <script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=7103bd20-f16c-40e2-8a00-c5ebd66b0ec8">
+  </script>
+  </div>
+</div>    
+<p class="text-center">Please remember we all need to continue to wear masks.</p>
+
+<p class="text-center text-justify">This site is not affiliated with or endorsed by Rite Aid or any other business or government agencies.<br>
+  This site is for informational purposes only. The provided information may not be complete or accurate.</p>
+<p class="text-center text-justify">Copyright © 2021 Adam Freemer. All rights reserved.</p>
+<p class="text-center text-justify">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
+<p class="text-center text-justify">Release Version: 1.7.0 | <%= link_to 'Logs', logs_path %></p>
+<p class="text-center"></p>
+
+<div class="modal fade" id="bitcoinModal" tabindex="-1" role="dialog" aria-labelledby="bitcoinModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Bitcoin Address For Donations</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center"><b>16YKUhp9g4BWpKQSWsTvXR4K8CB55QYFVZ</b></div><br><br>
+        <%= image_tag("btc.png", class: 'mx-auto d-block') %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="changelogModal" tabindex="-1" role="dialog" aria-labelledby="changelog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Changelog</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <b>Version 1.7.0</b><br>
+        - Rework UI to be mobile component<br>
+        - Lots of styling fixes and UI cleanup<br>
+        - Separate out dropdown code precursor to Walgreens code<br>
+        - Add zipcode column back in<br>
+        - Update logging to be more verbose<br>
+        - Update logging table UI<br>
+        - Tweak masks ads<br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var clipboard = new ClipboardJS('.btn');
+  clipboard.on('success', function (e) {
+    console.log(e);
+  });
+  clipboard.on('error', function (e) {
+    console.log(e);
+  });
+</script>

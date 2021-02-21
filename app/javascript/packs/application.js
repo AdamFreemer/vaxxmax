@@ -14,16 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
-  $("#fetch-button").click(function(){
-    $("#loading").show();
-    $("#fetch-button").hide();
-    $.get( "/update_records", function( data ) {
-      $( ".result" ).html( data );
-      alert( "Load was performed." );
-      location.reload(); 
-    });
-  }); 
-
   $("#state-select").on('change', function(){
     var state_dropdown_value = $("#state-select").val();
 
@@ -36,9 +26,9 @@ $(document).ready(function() {
   $('#locations').DataTable(
     {
       "iDisplayLength": 25,
-      "order": [[ 6, "desc" ]],
+      "order": [[ 7, "desc" ]],
       "oLanguage": {
-        "sSearch": "Search all returned data: "
+        "sSearch": "Search: "
       }
     }
   );
@@ -48,7 +38,7 @@ $(document).ready(function() {
       "iDisplayLength": 25,
       "order": [[ 0, "asc" ]],
       "oLanguage": {
-        "sSearch": "Search all returned data: "
+        "sSearch": "Search: "
       }
     }
   );
