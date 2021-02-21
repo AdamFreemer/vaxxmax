@@ -13,6 +13,16 @@ class LocationsController < ApplicationController
                      .where('when_available < ?', DateTime.now - 2.days)
   end
 
+  def test
+    @states = states
+    @locations = Location
+                 .where(availability: true, state: session[:state])
+                 .where('when_available > ?', DateTime.now - 2.days)
+    @locations_old = Location
+                     .where(availability: true, state: session[:state])
+                     .where('when_available < ?', DateTime.now - 2.days)
+  end
+
   def show; end;
 
   def new
