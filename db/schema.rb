@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2021_02_19_044918) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,7 +42,13 @@ ActiveRecord::Schema.define(version: 2021_02_19_044918) do
     t.boolean "availability"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "store_url"
+    t.boolean "is_rite_aid", default: false
+    t.boolean "is_walgreens", default: false
     t.integer "store_availability_count", default: 0
+    t.index ["availability"], name: "index_locations_on_availability"
+    t.index ["state"], name: "index_locations_on_state"
+    t.index ["when_available"], name: "index_locations_on_when_available"
   end
 
   create_table "update_logs", force: :cascade do |t|
@@ -49,4 +56,5 @@ ActiveRecord::Schema.define(version: 2021_02_19_044918) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+
 end

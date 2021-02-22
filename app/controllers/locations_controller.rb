@@ -14,6 +14,11 @@ class LocationsController < ApplicationController
                      .where('when_available < ?', DateTime.now - 2.days)
   end
 
+  def walgreens
+    @locations = Location.where(is_walgreens: true, availability: true, state: session[:state])
+                 
+  end
+
   def test
     @states = states
     @locations = Location
@@ -25,12 +30,6 @@ class LocationsController < ApplicationController
   end
 
   def show; end;
-  def walgreens
-    @locations = Location.where(store_name: 'Walgreens', availability: true, state: session[:state])
-                 
-  end
-
-  def show; end
 
   def new
     @location = Location.new
@@ -69,6 +68,15 @@ class LocationsController < ApplicationController
     redirect_to rite_aid_path
   end
 
+  def rite_aid_city_locations
+    cities = Location.where(is_walgreens: true).distinct.pluck(:city)
+
+    cities.each do |city|
+      Location.where(is_walgreens: true, city: city).pluck(:city, :state, :zip, :latitude, :longitude)
+    end
+  end
+
+
   private
 
   def set_location
@@ -82,7 +90,11 @@ class LocationsController < ApplicationController
   end
 
   def states_rite_aid
-    %w[CA CT DE ID MA MD MI NH NJ NV NY OH OR PA VA VT WA]
+    Location.where(is_rite_aid: true).distinct.pluck(:state)
+  end
+
+  def states_walgreens
+    Location.where(is_walgreens: true).distinct.pluck(:state)
   end
 
   # Only allow a list of trusted parameters through.

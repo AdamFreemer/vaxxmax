@@ -10,7 +10,7 @@ class AddWallgreensData < ActiveRecord::Migration[6.1]
     end
     # Now import Walgreens data
     puts "-- Adding Walgreens PA data"
-    csv_text = File.read(Rails.root.join('db', 'locations_walgreens_pa.csv'))
+    csv_text = File.read(Rails.root.join('db', 'locations_walgreens.csv'))
     csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
     csv.each do |row|
       t = Location.new
