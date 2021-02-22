@@ -1,5 +1,5 @@
 <%# This will auto-reload the page every 60s %>
-<meta http-equiv="refresh" content="60" />
+<%# <meta http-equiv="refresh" content="60" /> %>
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p id="notice"><%= notice %></p>
 
@@ -28,7 +28,7 @@
     
     <div class="row dropdowns">
       <div class="col-sm">
-        <%= select_tag "provider-select", options_for_select(["Rite Aid - Nationwide Locations"], "-"), class: "form-control" %><br>
+        <%= select_tag "provider-select", options_for_select(@providers, session[:provider]), class: "form-control" %><br>
       </div>
       <div class="col-sm text-center">
         <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
@@ -38,7 +38,7 @@
           </button>
       </div>
       <div class="col-sm">
-        <%= select_tag "state-select", options_for_select(@states, session[:state]), class: "form-control" %>
+        <%= select_tag "state-select-rite-aid", options_for_select(@states_rite_aid, session[:state_rite_aid]), class: "form-control" %>
       </div>
     </div>
   </header>

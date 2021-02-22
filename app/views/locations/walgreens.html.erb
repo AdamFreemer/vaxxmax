@@ -1,65 +1,67 @@
 <%# This will auto-reload the page every 60s %>
 <meta http-equiv="refresh" content="60" />
-<div class="shadow-sm p-3 mb-5 bg-white rounded">
+<div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p id="notice"><%= notice %></p>
 
-  <header class="blog-header py-3">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-      <div class="col-4 text-center">
-        <div class="blog-header-logo text-dark" href="#">&nbsp;</div>
-      </div>
-      <div class="col-4 text-center">
-        <div class="blog-header-logo text-dark" href="#">National Vaccine Availability</div>
-      </div>
-        <div class="col-4 text-center">
-        <div class="blog-header-logo text-dark" href="#"></div>
-      </div>  
-    </div>
-
+  <header>
+    <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
+    <br>
+    <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
+    <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
     <br>
 
     <div class="row justify-content-between align-items-center">
-      <div class="col-3 pt-3">
-        <div><%= select_tag "provider-select", options_for_select(@providers, "-"), class: "form-control" %></div>
-      </div>
-      
-      <div class="col-4 text-center">
+      <div class="col-12 text-center">
         <div class="blog-header-small text-dark" href="#">
-        <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
-          <code>I’m providing this tool for free but could use help to cover hosting & development costs. Thanks!<br>(Click here to contribute)</code>
-        </a>
+          <code class="text-black">This tool is free, but donations to cover hosting & development costs are welcome. Thanks!</code><br>
+          <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
+            <button class=" btn btn-md btn-outline-primary">
+              <code class="text-dark">Contribute via PayPal</code>
+            </button>    
+          </a>   
+          <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
+            <code class="text-dark">Contribure via Bitcoin</code>
+          </button>                 
         </div>
       </div>
-
-      <div class="col-3 pt-3">  
-        <div><%= select_tag "state-select", options_for_select(@states_walgreens, session[:state]), class: "form-control" %></div>
+    </div>
+    
+    <div class="row dropdowns">
+      <div class="col-sm">
+        <%= select_tag "provider-select", options_for_select(@providers, session[:provider]), class: "form-control" %><br>
+      </div>
+      <div class="col-sm text-center">
+        <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
+        <code class="text-black">Data is updated approximately every 5 minutes.</code><br>
+          <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
+            <code class="text-dark">Changelog</code>
+          </button>
+      </div>
+      <div class="col-sm">
+        <%= select_tag "state-select-walgreens", options_for_select(@states_walgreens, session[:state_walgreens]), class: "form-control" %>
       </div>
     </div>
   </header>
-
-  <br><br>
-  <p class="text-center">Welcome to VaxxMax. This is the Walgreens vaccine slot finder page.
-    You'll want to go here first: <a href="https://www.riteaid.com/pharmacy/apt-scheduler" target="_blank">https://www.riteaid.com/pharmacy/apt-scheduler</a>.<br>
-    After pre-qualifying, find an available location below to copy / past on the Rite Aid page for scheduling. <br>
-  
-  </p>
 </div>
 
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
+  <p class="text-center">Welcome to VaxxMax. This is the Walgreens vaccine slot finder page.<br>
+    After pre-qualifying, find an available location below to copy / past on the Walgreens page for scheduling.<br>
+  </p>
+
+
   <p class="text-center">
     The below locations have been recently updated and have the best probability of a slot being open based on the "Last Updated" date field.
   </p>
+  
   <div class="table-responsive">
     <table class="table table-striped table-bordered table-condensed" id="locations">
       <thead class="thead-dark">
         <tr>
-          <th>Store Number</th>
-          <th>Store Website</th>
-          <th>Shot 1 Avail</th>      
-          <th>Shot 2 Avail</th>
-          <th>Clickable Address (Google Maps)</th>
-          <th>City</th>
-          <th>State</th>
+          <th>Availability</th>
+          <th>Lookup Location</th>
+          <th>Town / City</th>
+          <th>State</th>      
           <th>Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
@@ -69,14 +71,27 @@
       <tbody>
         <% @locations.each do |location| %>
           <tr>
-            <td><%= location.store_number %></td>
-            <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
-            <td><%= location.slot_1 ? "Yes" : "No" %></td>
-            <td><%= location.slot_2 ? "Yes" : "No" %></td>
-            <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
-            <td><%= location.city %></td>
-            <td><%= location.state %></td>
-            <td><%= location.zip %></td>
+            <td class="text-center">
+              <% if true %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill text-green" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                </svg>   
+              <% else %>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+                </svg>           
+              <% end %>
+            </td>
+            <td id="full-address-<%= location.id %>">
+              <%= location.name %>, <%= location.state %>
+              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
+                Copy
+              </button> 
+            </td>
+            <td><%= location.name %></td>
+            <td class="text-center"><%= location.state %></td>
+            <td class="text-center"><%= location.zip %></td>
             <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
             <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
           </tr>
@@ -85,74 +100,3 @@
     </table>
   </div>
 </div>
-
-<div id="822891673">
-    <script type="text/javascript">
-        try {
-            window._mNHandle.queue.push(function (){
-                window._mNDetails.loadTag("822891673", "970x90", "822891673");
-            });
-        }
-        catch (error) {}
-    </script>
-</div>
-
-<% if @locations_old.length > 0 %>
-  <div class="shadow-sm p-3 mb-5 bg-white rounded">
-    <p class="text-center">The below locations are stale and most likely do not have availability.</p>
-    <div class="table-responsive">
-      <table class="table table-striped table-bordered table-condensed" id="locations_old">
-        <thead class="thead-dark">
-          <tr>
-            <th>Store Number</th>
-            <th>Store Website</th>
-            <th>Shot 1 Avail</th>      
-            <th>Shot 2 Avail</th>
-            <th>Clickable Address (Google Maps)</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Zip</th>
-            <th>Last Updated</th>
-            <th>Became Available</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @locations_old.each do |location| %>
-            <tr>
-              <td><%= location.store_number %></td>
-              <td><%= link_to "Store Website", location&.rite_aid_location_website, target: :_blank %></td>
-              <td><%= location.slot_1 ? "Yes" : "No" %></td>
-              <td><%= location.slot_2 ? "Yes" : "No" %></td>
-              <td><%= link_to location.full_address, location.google_search, target: :_blank %></td>
-              <td><%= location.city %></td>
-              <td><%= location.state %></td>
-              <td><%= location.zip %></td>
-              <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-              <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <% end %>
-
-<%= link_to 'Logs', logs_path %>
-
-<p class="text-center">This site is not affiliated with or endorsed by Rite Aid or any other business or government agencies.<br>
-This site is for informational purposes only. The provided information may not be complete or accurate.<br>
-Copyright © 2021 Adam Freemer. All rights reserved.</p>
-<p class="text-center">Contact Information: <a href="https://www.linkedin.com/in/adamfreemer">LinkedIn</a> <a href="https://twitter.com/AdamFreemer">Twitter</a></p>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MBM5JPGJ69"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MBM5JPGJ69');
-</script>
-
-<script data-ad-client="ca-pub-2738817184624621" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

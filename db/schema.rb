@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_044918) do
+ActiveRecord::Schema.define(version: 2021_02_22_010404) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,19 @@ ActiveRecord::Schema.define(version: 2021_02_19_044918) do
 
   create_table "update_logs", force: :cascade do |t|
     t.string "task"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "walgreens_cities", force: :cascade do |t|
+    t.boolean "availability"
+    t.string "name"
+    t.string "state"
+    t.string "zip"
+    t.string "latitude"
+    t.string "longitude"
+    t.datetime "last_updated"
+    t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

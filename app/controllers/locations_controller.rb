@@ -6,35 +6,33 @@ class LocationsController < ApplicationController
 
   def rite_aid
     @locations = Location
-                 .where(is_rite_aid: true, availability: true, state: session[:state])
+                 .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
                  .where('when_available > ?', DateTime.now - 2.days)
 
     @locations_old = Location
-                     .where(is_rite_aid: true, availability: true, state: session[:state])
+                     .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
                      .where('when_available < ?', DateTime.now - 2.days)
   end
 
   def walgreens
-    @locations = Location.where(is_walgreens: true, availability: true, state: session[:state])
-                 
+    @locations = WalgreensCity.where(state: "PA")
   end
 
   def test
-    @states = states
+    @states = states_rite_aid
     @locations = Location
-                 .where(availability: true, state: session[:state])
+                 .where(availability: true, state: session[:state_rite_aid])
                  .where('when_available > ?', DateTime.now - 2.days)
     @locations_old = Location
-                     .where(availability: true, state: session[:state])
+                     .where(availability: true, state: session[:state_rite_aid])
                      .where('when_available < ?', DateTime.now - 2.days)
   end
-
-  def show; end;
 
   def new
     @location = Location.new
   end
 
+  def show; end
   def edit; end
 
   def create
@@ -59,23 +57,18 @@ class LocationsController < ApplicationController
     end
   end
 
-  def update_records
-    LocationUpdateJob.perform_async(true)
-  end
+  def set_state_rite_aid
+    # binding.pry
+    session[:state_rite_aid] = params[:state_rite_aid]
 
-  def set_state
-    session[:state] = params[:state]
     redirect_to rite_aid_path
   end
 
-  def rite_aid_city_locations
-    cities = Location.where(is_walgreens: true).distinct.pluck(:city)
+  def set_state_walgreens
+    session[:state_walgreens] = params[:state_walgreens]
 
-    cities.each do |city|
-      Location.where(is_walgreens: true, city: city).pluck(:city, :state, :zip, :latitude, :longitude)
-    end
+    redirect_to walgreens_path
   end
-
 
   private
 
@@ -85,16 +78,16 @@ class LocationsController < ApplicationController
 
   def set_dropdowns
     @states_rite_aid = states_rite_aid
-    @states_walgreens = ['PA']
-    @providers = ['Rite Aid - Nationwide Locations', 'Walgreens - Pennsylvania']
+    @states_walgreens = states_walgreens
+    @providers = ['Rite Aid - Nationwide Locations', 'Walgreens - Nationwide Locations']
   end
 
   def states_rite_aid
-    Location.where(is_rite_aid: true).distinct.pluck(:state)
+    Location.where(is_rite_aid: true).order(:state).distinct.pluck(:state)
   end
 
   def states_walgreens
-    Location.where(is_walgreens: true).distinct.pluck(:state)
+    WalgreensCity.order(:state).distinct.pluck(:state)
   end
 
   # Only allow a list of trusted parameters through.
