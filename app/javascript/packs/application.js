@@ -32,23 +32,16 @@ $(document).ready(function() {
     });
   });
 
-  $('#locations').DataTable(
-    {
-      "iDisplayLength": 25,
-      "order": [[ 7, "desc" ]],
-      "oLanguage": {
-        "sSearch": "Search: "
-      }
+  $("#provider").on('change', function(){
+    console.log("provider onchange: " + $("#provider").val())
+    if ($("#provider").val() == "walgreens") {
+      localStorage['provider'] = "walgreens";
+      document.location.href = '/walgreens';
     }
-  );
 
-  $('#logs').DataTable(
-    {
-      "iDisplayLength": 25,
-      "order": [[ 0, "asc" ]],
-      "oLanguage": {
-        "sSearch": "Search: "
-      }
+    if ($("#provider").val() == "riteaid") {
+      localStorage['provider'] = "riteaid";
+      document.location.href = '/rite_aid';
     }
-  );
+  });
 });

@@ -5,6 +5,7 @@
 
   <header>
     <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
+    <div class="blog-header-logo text-dark text-center title-text">Rite Aid</div>
     <br>
     <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
     <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
@@ -28,7 +29,12 @@
     
     <div class="row dropdowns">
       <div class="col-sm">
-        <%= select_tag "provider-select", options_for_select(@providers, session[:provider]), class: "form-control" %><br>
+        <div class="dropdown">
+          <select name="provider" id="provider" class="form-control">
+            <option value="walgreens">Walgreens</option>
+            <option value="riteaid">Rite Aid</option>
+          </select>
+        </div> 
       </div>
       <div class="col-sm text-center">
         <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
@@ -160,3 +166,24 @@
   </div>
 </div>
 <% end %>
+
+<script>
+  $('#locations').DataTable(
+    {
+      "iDisplayLength": 25,
+      "order": [[ 7, "desc" ]],
+      "oLanguage": {
+        "sSearch": "Search: "
+      }
+    }
+  );
+
+  $(document).ready(function() {
+    if (localStorage['provider'] == null) {
+      localStorage['provider'] = "riteaid";
+      document.location.href = '/rite_aid';
+    }
+
+    $("#provider").val(localStorage['provider'])
+  });
+</script>
