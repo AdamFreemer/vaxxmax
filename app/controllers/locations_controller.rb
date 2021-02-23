@@ -1,5 +1,5 @@
 class LocationsController < ApplicationController
-  http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:rite_aid, :walgreens, :set_state]
+  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:rite_aid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
   before_action :set_dropdowns, only: %i[walgreens rite_aid]
@@ -33,29 +33,29 @@ class LocationsController < ApplicationController
   end
 
   def show; end
-  def edit; end
+  # def edit; end
 
-  def create
-    @location = Location.new(location_params)
+  # def create
+  #   @location = Location.new(location_params)
 
-    respond_to do |format|
-      if @location.save
-        format.html { redirect_to @location, notice: "Location was successfully created." }
-        format.json { render :show, status: :created, location: @location }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @location.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #   respond_to do |format|
+  #     if @location.save
+  #       format.html { redirect_to @location, notice: "Location was successfully created." }
+  #       format.json { render :show, status: :created, location: @location }
+  #     else
+  #       format.html { render :new, status: :unprocessable_entity }
+  #       format.json { render json: @location.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
-  def destroy
-    @location.destroy
-    respond_to do |format|
-      format.html { redirect_to locations_url, notice: "Location was successfully destroyed." }
-      format.json { head :no_content }
-    end
-  end
+  # def destroy
+  #   @location.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to locations_url, notice: "Location was successfully destroyed." }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   def set_state_rite_aid
     # binding.pry
