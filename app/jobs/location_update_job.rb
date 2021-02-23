@@ -152,7 +152,6 @@ class LocationUpdateJob
           response_data = JSON.parse(response.body)
 
           if response_data['appointmentsAvailable'] == true
-
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.store_availability_count += 1 if location.availability.blank?
@@ -164,6 +163,9 @@ class LocationUpdateJob
           end
           location.save
         rescue StandardError => e
+          location.availability = false
+          location.last_updated = DateTime.now
+          location.save
           puts "-- ERROR Walgreens | ID: #{location.id} | State: #{state} - Zip: #{location.zip} -- City: #{location.name} \n Message: #{e}"
           next
         end
