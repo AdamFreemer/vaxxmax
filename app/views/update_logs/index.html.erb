@@ -24,3 +24,15 @@
 <br>
 
 <%= link_to 'Back to Main', locations_path %>
+
+<script>
+  $('#logs').DataTable(
+    {
+      "iDisplayLength": 25,
+      "order": [[ 0, "asc" ]],
+      "oLanguage": {
+        "sSearch": "Search: "
+      }
+    }
+  );
+</script>

@@ -23,3 +23,29 @@ task update_locations_midwest: :environment do
   LocationUpdateJob.update_locations_midwest
   puts "locations midwest updated!"
 end
+
+task update_walgreens_1: :environment do
+  LocationUpdateJob.update_walgreens_1
+  puts "Walgreens 1 updated!"
+end
+
+task update_walgreens_2: :environment do
+  LocationUpdateJob.update_walgreens_2
+  puts "Walgreens 2 updated!"
+end
+
+task update_walgreens_3: :environment do
+  LocationUpdateJob.update_walgreens_3
+  puts "Walgreens 3 updated!"
+end
+
+
+task update_walgreens_4: :environment do
+  LocationUpdateJob.update_walgreens_4
+  puts "Walgreens 4 updated!"
+end
+
+task update_walgreens_5: :environment do
+  LocationUpdateJob.update_walgreens_5
+  puts "Walgreens 4 updated!"
+end

@@ -14,32 +14,34 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
-  $("#state-select").on('change', function(){
-    var state_dropdown_value = $("#state-select").val();
-
-    $.get( "/set_state/" + state_dropdown_value, function( data ) {
+  $("#state-select-rite-aid").on('change', function(){
+    var state_dropdown_value = $("#state-select-rite-aid").val();
+    console.log("select value: " + state_dropdown_value)
+    $.get( "/set_state_rite_aid/" + state_dropdown_value, function( data ) {
       $( ".result" ).html( data );
       location.reload();
     });
   });
 
-  $('#locations').DataTable(
-    {
-      "iDisplayLength": 25,
-      "order": [[ 7, "desc" ]],
-      "oLanguage": {
-        "sSearch": "Search: "
-      }
-    }
-  );
+  $("#state-select-walgreens").on('change', function(){
+    var state_dropdown_value = $("#state-select-walgreens").val();
 
-  $('#logs').DataTable(
-    {
-      "iDisplayLength": 25,
-      "order": [[ 0, "asc" ]],
-      "oLanguage": {
-        "sSearch": "Search: "
-      }
+    $.get( "/set_state_walgreens/" + state_dropdown_value, function( data ) {
+      $( ".result" ).html( data );
+      location.reload();
+    });
+  });
+
+  $("#provider").on('change', function(){
+    console.log("provider onchange: " + $("#provider").val())
+    if ($("#provider").val() == "walgreens") {
+      localStorage['provider'] = "walgreens";
+      document.location.href = '/walgreens';
     }
-  );
+
+    if ($("#provider").val() == "riteaid") {
+      localStorage['provider'] = "riteaid";
+      document.location.href = '/rite_aid';
+    }
+  });
 });
