@@ -52,9 +52,9 @@
 
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the Walgreens vaccine slot finder page.<br>
-    After pre-qualifying, find an available location below to copy / past on the Walgreens page for scheduling.<br>
+  You'll want to go here first: <a href="https://www.walgreens.com/findcare/vaccination/covid-19/location-screening" target="_blank">https://www.walgreens.com/findcare/vaccination/covid-19/location-screening</a>.<br>
+    After pre-qualifying, find an available location below to copy / past the zipcode below on the Walgreens page for scheduling.<br>
   </p>
-
 
   <p class="text-center">
     The below locations have been recently updated and have the best probability of a slot being open based on the "Last Updated" date field.
@@ -65,10 +65,9 @@
       <thead class="thead-dark">
         <tr>
           <th>Availability</th>
-          <th>Lookup Location</th>
           <th>Town / City</th>
-          <th>State</th>      
-          <th>Zip</th>
+          <th class="text-center">State</th>      
+          <th class="text-center">Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
         </tr>
@@ -89,15 +88,14 @@
                 </svg>           
               <% end %>
             </td>
-            <td id="full-address-<%= location.id %>">
-              <%= location.name %>, <%= location.state %>
-              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
+            <td><%= location.name %></td>
+            <td class="text-center"><%= location.state %></td>
+            <td class="text-center" id="zip-<%= location.id %>">
+              <%= location.zip %>
+              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#zip-<%= location.id %>">
                 Copy
               </button> 
             </td>
-            <td><%= location.name %></td>
-            <td class="text-center"><%= location.state %></td>
-            <td class="text-center"><%= location.zip %></td>
             <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
             <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
           </tr>
@@ -106,6 +104,8 @@
     </table>
   </div>
 </div>
+
+<div id="provider_status" value="walgreens" style="visibility: hidden"></div>
 
 <script>
   $('#locations').DataTable(
@@ -119,10 +119,12 @@
   );
 
   $(document).ready(function() {
-    if (localStorage['provider'] == null) {
+    page = document.getElementById('provider_status').getAttribute('value')
+    if ( localStorage['provider'] == null ) {
       localStorage['provider'] = "riteaid";
       document.location.href = '/rite_aid';
-    }    
-    $("#provider").val(localStorage['provider'])
+    }
+
+    $("#provider").val(page)
   });
 </script>

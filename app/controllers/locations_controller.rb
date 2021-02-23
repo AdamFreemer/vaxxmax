@@ -15,7 +15,7 @@ class LocationsController < ApplicationController
   end
 
   def walgreens
-    @locations = WalgreensCity.where(state: "PA")
+    @locations = WalgreensCity.where(state: session[:state_walgreens], availability: true)
   end
 
   def test

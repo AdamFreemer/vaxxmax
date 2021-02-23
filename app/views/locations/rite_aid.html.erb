@@ -167,6 +167,8 @@
 </div>
 <% end %>
 
+<div id="provider_status" value="riteaid" style="visibility: hidden"></div>
+
 <script>
   $('#locations').DataTable(
     {
@@ -179,11 +181,12 @@
   );
 
   $(document).ready(function() {
-    if (localStorage['provider'] == null) {
+    page = document.getElementById('provider_status').getAttribute('value')
+    if ( localStorage['provider'] == null ) {
       localStorage['provider'] = "riteaid";
       document.location.href = '/rite_aid';
     }
 
-    $("#provider").val(localStorage['provider'])
+    $("#provider").val(page)
   });
 </script>
