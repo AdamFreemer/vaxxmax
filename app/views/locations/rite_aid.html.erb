@@ -44,7 +44,7 @@
           </button>
       </div>
       <div class="col-sm">
-        <%= select_tag "state-select-rite-aid", options_for_select(@states_rite_aid, session[:state_rite_aid]), class: "form-control" %>
+        <%= select_tag "state-select-rite-aid", options_for_select(@states_rite_aid, session[:state_rite_aid]), prompt: 'Select State', class: "form-control" %>
       </div>
     </div>
   </header>
@@ -202,3 +202,5 @@
             r.parentNode.insertBefore(s, r);
     }(document, 'script'));
 </script>
+
+<script src="//ap.lijit.com/www/delivery/fpi.js?z=862680&width=468&height=60"></script> 

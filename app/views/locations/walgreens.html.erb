@@ -5,7 +5,7 @@
 
   <header>
     <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
-    <div class="blog-header-logo text-dark text-center title-text">Walgreens (beta)</div>
+    <div class="blog-header-logo text-dark text-center title-text">Walgreens</div>
     <br>
     <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
     <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
@@ -44,7 +44,7 @@
           </button>
       </div>
       <div class="col-sm">
-        <%= select_tag "state-select-walgreens", options_for_select(@states_walgreens, session[:state_walgreens]), class: "form-control" %>
+        <%= select_tag "state-select-walgreens", options_for_select(@states_walgreens, session[:state_walgreens]), prompt: 'Select State', class: "form-control" %>
       </div>
     </div>
   </header>
@@ -90,8 +90,8 @@
             </td>
             <td><%= location.name %></td>
             <td class="text-center"><%= location.state %></td>
-            <td class="text-center" id="zip-<%= location.id %>">
-              <%= location.zip %>
+            <td class="text-center">
+              <span id="zip-<%= location.id %>"><%= location.zip %></span>
               <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#zip-<%= location.id %>">
                 Copy
               </button> 
