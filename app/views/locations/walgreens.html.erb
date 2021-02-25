@@ -1,6 +1,13 @@
 <%# This will auto-reload the page every 60s %>
 <meta http-equiv="refresh" content="60" />
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
+
+<link href="dist/css/jquery.jConveyorTicker.min.css" rel="stylesheet">
+
+<script src="dist/js/jquery.jConveyorTicker.min.js"></script>
+
+
+
   <p id="notice"><%= notice %></p>
 
   <header>
@@ -25,7 +32,27 @@
           </button>                 
         </div>
       </div>
-    </div>
+     
+      
+        <div class="js-conveyor-example">
+          <ul>
+            <li>
+              <span>Horizontal Ticker <a href="https://www.jqueryscript.net/animation/">Animation</a> In jQuery</span>
+            </li>
+            <li>
+              <a href="#">
+                <span>I am a <b>hyperlink</b></span>
+              </a>
+            </li>
+            <li>
+              <span>Conveyor Ticker</span>
+            </li>
+            <li>
+              <span>A Simple jQuery plugin</span>
+            </li>
+          </ul>
+        </div>
+
     
     <div class="row dropdowns">
       <div class="col-sm">
@@ -119,6 +146,16 @@
   );
 
   $(document).ready(function() {
+$(function() {
+  $('.js-conveyor-example').jConveyorTicker({
+    anim_duration: 200
+  });
+});
+
+
+
+
+
     page = document.getElementById('provider_status').getAttribute('value')
     if ( localStorage['provider'] == null ) {
       localStorage['provider'] = "riteaid";
