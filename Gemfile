@@ -2,8 +2,10 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-gem "barnes"
+gem 'barnes'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'derailed_benchmarks', group: :development
+gem "stackprof", group: :development
 gem 'google-analytics-rails', '1.1.1'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
