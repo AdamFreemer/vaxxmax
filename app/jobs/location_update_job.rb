@@ -89,11 +89,11 @@ class LocationUpdateJob
           UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
-        puts "-- Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
+        puts "-- SUCCESS Rite Aid | Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
 
         if data['Data'].nil?
-          puts "-- ERROR Rite Aid   : Location ID: #{location.id} - store #: #{location.store_number} #{data}"
-          UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
+          puts "-- ERROR Rite Aid | Location ID: #{location.id} - store #: #{location.store_number} #{data}"
+          UpdateLog.create(task: "-- ERROR Rite Aid #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
         location.status = data['Status']
