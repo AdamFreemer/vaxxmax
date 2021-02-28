@@ -104,11 +104,11 @@
             <td class="text-center"><%= location.state %></td>
             <td class="text-center"><%= location.zip %></td>
             <td>
-              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
+              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               about <%= time_ago_in_words(location.last_updated) %> ago
             </td>
             <td>
-              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
+              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               about <%= time_ago_in_words(location.when_available) %> ago
             </td>
           </tr>
@@ -164,11 +164,11 @@
             <td class="text-center"><%= location.state %></td>
             <td class="text-center"><%= location.zip %></td>
             <td>
-              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
+              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               about <%= time_ago_in_words(location.last_updated) %> ago
             </td>
             <td>
-              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
+              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               about <%= time_ago_in_words(location.when_available) %> ago
             </td>
           </tr>
