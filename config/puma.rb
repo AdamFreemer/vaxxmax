@@ -1,6 +1,6 @@
 # As per https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
 
-workers Integer(ENV['WEB_CONCURRENCY'] || 7)
+workers Integer(ENV['WEB_CONCURRENCY'] || 6)
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
