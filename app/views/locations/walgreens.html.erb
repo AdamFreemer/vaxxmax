@@ -97,11 +97,11 @@
               </button> 
             </td>
             <td>
-              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %l:%M %p'), style: 'display:none') %>
+              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
               <%= time_ago_in_words(location.last_updated) %> ago
             </td>
             <td>
-              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %l:%M %p'), style: 'display:none') %>
+              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
           </tr>
@@ -117,7 +117,7 @@
   $('#locations').DataTable(
     {
       "iDisplayLength": 25,
-      "order": [[ 4, "desc" ]],
+      "order": [[ 5, "desc" ]],
       "oLanguage": {
         "sSearch": "Search: "
       }
