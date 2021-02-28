@@ -1,0 +1,1 @@
+PumaWorkerKiller.enable_rolling_restart(4 * 3600) # 12 hours in seconds
