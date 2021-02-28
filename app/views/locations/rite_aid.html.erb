@@ -103,8 +103,8 @@
             <td><%= location.city %></td>
             <td class="text-center"><%= location.state %></td>
             <td class="text-center"><%= location.zip %></td>
-            <td><%= time_ago_in_words(location.last_updated) %> ago</td>
-            <td><%= time_ago_in_words(location.when_available) %> ago</td>
+            <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+            <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
           </tr>
         <% end %>
       </tbody>

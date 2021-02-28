@@ -40,7 +40,7 @@
         <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
         <code class="text-black">Data is updated approximately every 10 minutes.</code><br>
           <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
-            <code class="text-dark">What's New!</code>
+            <code class="text-dark">Changelog</code>
           </button>
       </div>
       <div class="col-sm">
@@ -96,8 +96,8 @@
                 Copy
               </button> 
             </td>
-            <td><%= time_ago_in_words(location.last_updated) %> ago</td>
-            <td><%= time_ago_in_words(location.when_available) %> ago</td>
+            <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+            <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
           </tr>
         <% end %>
       </tbody>
