@@ -96,8 +96,14 @@
                 Copy
               </button> 
             </td>
-            <td><%= location.last_updated&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
-            <td><%= location.when_available&.in_time_zone("Eastern Time (US & Canada)")&.strftime("%m-%e-%Y, %l:%M %p") %></td>
+            <td>
+              <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %l:%M %p'), style: 'display:none') %>
+              <%= time_ago_in_words(location.last_updated) %> ago
+            </td>
+            <td>
+              <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %l:%M %p'), style: 'display:none') %>
+              <%= time_ago_in_words(location.when_available) %> ago
+            </td>
           </tr>
         <% end %>
       </tbody>
