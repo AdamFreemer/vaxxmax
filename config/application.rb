@@ -29,7 +29,7 @@ module VaccineLocatorApp
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     Sentry.init do |config|
-      config.dsn = 'https://a20cca07e67e4fc9b870fe8f5aa97b7b@o537373.ingest.sentry.io/5655480'
+      config.dsn = 'https://5403a3a65e624a48bc16a7c5f1090a08@o537441.ingest.sentry.io/5655636'
       config.breadcrumbs_logger = [:active_support_logger]
       # To activate performance monitoring, set one of these options.
       # We recommend adjusting the value in production:
