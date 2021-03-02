@@ -13,8 +13,14 @@ class Location < ApplicationRecord
 
   def distance(user_location, location)
     begin
-      user_location = Geocoder.search(user_location)
-      distance = Geocoder::Calculations.distance_between([user_location.first.coordinates[0], user_location.first.coordinates[1]], [location.latitude.to_f, location.longitude.to_f ])
+      puts "-- (user_location, location): #{user_location} | #{location}"
+      user_loc = Geocoder.search(user_location)
+      puts "-- user_location: #{user_loc}"
+      distance = Geocoder::Calculations.distance_between(
+        [user_loc.first.coordinates[0], user_loc.first.coordinates[1]],
+        [location.latitude.to_f, location.longitude.to_f ]
+      )
+      puts "-- distance: #{distance}"
       distance.to_i
     rescue
       'N/A'
