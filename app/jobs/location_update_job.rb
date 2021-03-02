@@ -8,34 +8,34 @@ class LocationUpdateJob
       rite_aid_update('MA')
       rite_aid_update('NH')
       rite_aid_update('VT')
-      UpdateLog.create(task: 'update_locations_north_east')
+      # UpdateLog.create(task: 'update_locations_north_east')
     end
 
     def update_locations_mid_atlantic
       rite_aid_update('PA')
       rite_aid_update('DE')
       rite_aid_update('MD')
-      UpdateLog.create(task: 'update_locations_mid_atlantic')
+      # UpdateLog.create(task: 'update_locations_mid_atlantic')
     end
 
     def update_locations_west
       rite_aid_update('CA')
       rite_aid_update('NV')
-      UpdateLog.create(task: 'update_locations_west')
+      # UpdateLog.create(task: 'update_locations_west')
     end
 
     def update_locations_north_west
       rite_aid_update('WA')
       rite_aid_update('ID')
       rite_aid_update('OR')
-      UpdateLog.create(task: 'update_locations_north_west')
+      # UpdateLog.create(task: 'update_locations_north_west')
     end
 
     def update_locations_midwest
       rite_aid_update('OH')
       rite_aid_update('MI')
       rite_aid_update('VA')
-      UpdateLog.create(task: 'update_locations_midwest')
+      # UpdateLog.create(task: 'update_locations_midwest')
     end
 
     def update_walgreens_1
@@ -86,14 +86,14 @@ class LocationUpdateJob
         rescue StandardError => e
           puts "-- ERROR JSON.parse or Net:HTTP | State: #{state} - Location ID: #{location.id} -- Message: #{e}"
           data = nil
-          UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
+          # UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
         puts "-- SUCCESS Rite Aid | Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
 
         if data['Data'].nil?
           puts "-- ERROR Rite Aid | Location ID: #{location.id} - store #: #{location.store_number} #{data}"
-          UpdateLog.create(task: "-- ERROR Rite Aid #{location.id} - store #: #{location.store_number} #{data}")
+          # UpdateLog.create(task: "-- ERROR Rite Aid #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
         location.status = data['Status']
