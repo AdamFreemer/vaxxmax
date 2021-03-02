@@ -25,4 +25,3 @@ production:
   advisory_locks: false
   checkout_timeout: <%= ENV['DATABASE_CHECKOUT_TIMEOUT'] || 5 %>
   reaping_frequency: <%= ENV['DATABASE_REAPING_FREQUENCY'] || nil %>
-  statement_timeout: <%= ENV['DATABASE_STATEMENT_TIMEOUT'] || 5000 %>
