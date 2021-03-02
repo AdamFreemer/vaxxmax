@@ -2,7 +2,8 @@ class LocationsController < ApplicationController
   # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens riteaid]
+  before_action :set_dropdowns, only: %i[walgreens rite_aid]
+  before_action :geolocate, only: %i[walgreens rite_aid]
 
   def riteaid
     @locations = Location
@@ -33,6 +34,14 @@ class LocationsController < ApplicationController
   end
 
   def show; end
+
+  def geolocate
+    @user_location = if request.remote_ip == '127.0.0.1'
+                       '172.56.21.89'
+                     else
+                       Geocoder.search(request.remote_ip)
+                     end
+  end
 
   def set_state_rite_aid
     # binding.pry

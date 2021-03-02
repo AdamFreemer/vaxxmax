@@ -10,4 +10,14 @@ class Location < ApplicationRecord
 
     "https://www.riteaid.com/locations/#{st}/#{cit}/#{add}.html"
   end
+
+  def distance(user_location, location)
+    begin
+      user_location = Geocoder.search(user_location)
+      distance = Geocoder::Calculations.distance_between([user_location.first.coordinates[0], user_location.first.coordinates[1]], [location.latitude.to_f, location.longitude.to_f ])
+      distance.to_i
+    rescue
+      'N/A'
+    end
+  end
 end
