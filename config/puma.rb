@@ -6,9 +6,9 @@ threads threads_count, threads_count
 
 preload_app!
 
-rackup            DefaultRackup
-port              ENV['PORT']                       || 3000
-environment       ENV['RACK_ENV']                   || 'development'
+rackup      DefaultRackup
+port        ENV['PORT']     || 3000
+environment ENV['RACK_ENV'] || 'development'
 
 before_fork do
   # Start Heroku's Ruby runtime metrics collection
