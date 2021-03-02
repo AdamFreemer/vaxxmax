@@ -22,3 +22,4 @@ production:
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
   url: <%= ENV['DATABASE_CONNECTION_POOL_URL'] || ENV['DATABASE_URL'] %>
   prepared_statements: false
+  advisory_locks: false
