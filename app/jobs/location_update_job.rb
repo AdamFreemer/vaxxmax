@@ -84,15 +84,15 @@ class LocationUpdateJob
           response = @http.request uri
           data = JSON.parse(response.body)
         rescue StandardError => e
-          puts "-- ERROR JSON.parse or Net:HTTP | State: #{state} - Location ID: #{location.id} -- Message: #{e}"
+          puts "-- ERROR Rite Aid | #{state} | #{location.city} | #{location.store_number}"
           data = nil
           # UpdateLog.create(task: "-- ERROR #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
-        puts "-- SUCCESS Rite Aid | Index: #{i} - State: #{state} - Location ID: #{location.id} - store #: #{location.store_number} #{data}"
+        puts "-- SUCCESS Rite Aid | #{data['Data']['slots']['1']} | #{state} | id: #{location.id} | store: #{location.store_number}"
 
         if data['Data'].nil?
-          puts "-- ERROR Rite Aid | Location ID: #{location.id} - store #: #{location.store_number} #{data}"
+          puts "-- ERROR Rite Aid | ID: #{location.id} | Store: #{location.store_number}"
           # UpdateLog.create(task: "-- ERROR Rite Aid #{location.id} - store #: #{location.store_number} #{data}")
           next
         end
@@ -111,11 +111,11 @@ class LocationUpdateJob
         response.body
       end
       @http.shutdown
-      puts "-- COMPLETED Update Job | State: #{state}"
+      puts "-- COMPLETED Update Job | State: #{state} --------"
     end
 
     def walgreens_update(state) 
-      puts "-- Starting Walgreens update for state: #{state}"
+      puts "-- Starting Walgreens update for state: #{state} --------"
 
       locations = WalgreensCity.where(state: state)
       locations.each do |location|
@@ -159,9 +159,7 @@ class LocationUpdateJob
           if response_data['appointmentsAvailable'] == true
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
-            # location.store_availability_count += 1 if location.availability.blank?
             location.availability = true
-            puts response.body
           else
             location.availability = false
             location.last_updated = DateTime.now
@@ -171,10 +169,10 @@ class LocationUpdateJob
           location.availability = false
           location.last_updated = DateTime.now
           location.save
-          puts "-- ERROR Walgreens | ID: #{location.id} | State: #{state} - Zip: #{location.zip} -- City: #{location.name} \n Message: #{e}"
+          puts "-- ERROR Walgreens | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
           next
         end
-        puts "-- SUCCESS Walgreens | Availability: #{location.availability} | ID: #{location.id} -- State: #{state} -- Zip: #{location.zip} -- City: #{location.name}"
+        puts "-- SUCCESS Walgreens | #{location.availability} | #{state} | #{location.name} | #{location.id}"
       end
     end
   end
