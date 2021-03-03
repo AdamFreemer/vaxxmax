@@ -33,29 +33,6 @@ class LocationsController < ApplicationController
   end
 
   def show; end
-  # def edit; end
-
-  # def create
-  #   @location = Location.new(location_params)
-
-  #   respond_to do |format|
-  #     if @location.save
-  #       format.html { redirect_to @location, notice: "Location was successfully created." }
-  #       format.json { render :show, status: :created, location: @location }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       format.json { render json: @location.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # def destroy
-  #   @location.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to locations_url, notice: "Location was successfully destroyed." }
-  #     format.json { head :no_content }
-  #   end
-  # end
 
   def set_state_rite_aid
     # binding.pry
@@ -88,10 +65,5 @@ class LocationsController < ApplicationController
 
   def states_walgreens
     WalgreensCity.order(:state).distinct.pluck(:state)
-  end
-
-  # Only allow a list of trusted parameters through.
-  def location_params
-    params.fetch(:location, {})
   end
 end
