@@ -1,10 +1,10 @@
 class LocationsController < ApplicationController
-  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:rite_aid, :walgreens, :set_state]
+  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens rite_aid]
+  before_action :set_dropdowns, only: %i[walgreens riteaid]
 
-  def rite_aid
+  def riteaid
     @locations = Location
                  .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
                  .where('when_available > ?', DateTime.now - 2.days)
@@ -33,35 +33,12 @@ class LocationsController < ApplicationController
   end
 
   def show; end
-  # def edit; end
-
-  # def create
-  #   @location = Location.new(location_params)
-
-  #   respond_to do |format|
-  #     if @location.save
-  #       format.html { redirect_to @location, notice: "Location was successfully created." }
-  #       format.json { render :show, status: :created, location: @location }
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #       format.json { render json: @location.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
-
-  # def destroy
-  #   @location.destroy
-  #   respond_to do |format|
-  #     format.html { redirect_to locations_url, notice: "Location was successfully destroyed." }
-  #     format.json { head :no_content }
-  #   end
-  # end
 
   def set_state_rite_aid
     # binding.pry
     session[:state_rite_aid] = params[:state_rite_aid]
 
-    redirect_to rite_aid_path
+    redirect_to riteaid_path
   end
 
   def set_state_walgreens
@@ -88,10 +65,5 @@ class LocationsController < ApplicationController
 
   def states_walgreens
     WalgreensCity.order(:state).distinct.pluck(:state)
-  end
-
-  # Only allow a list of trusted parameters through.
-  def location_params
-    params.fetch(:location, {})
   end
 end

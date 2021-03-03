@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     if ($("#provider").val() == "riteaid") {
       localStorage['provider'] = "riteaid";
-      document.location.href = '/rite_aid';
+      document.location.href = '/riteaid';
     }
   });
 });

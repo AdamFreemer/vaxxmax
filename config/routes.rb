@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root to: 'locations#rite_aid'
+  root to: 'locations#riteaid'
 
-  get 'rite_aid', to: 'locations#rite_aid'
+  get 'riteaid', to: 'locations#riteaid'
   get 'walgreens', to: 'locations#walgreens'
   get 'logs', to: 'update_logs#index'
   get 'test', to: 'locations#test'
