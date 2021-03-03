@@ -5,8 +5,7 @@ Rack::Attack.blocklist('allow2ban login scrapers') do |req|
     # The count for the IP is incremented if the return value is truthy.
     req.path == '/' and req.get?
     req.path == '/walgreens' and req.get?
-    req.path == '/rite_aid' and req.get?
+    req.path == '/riteaid' and req.get?
   end
 end
 
-Rack::Attack.cache.store = ActiveSupport::Cache::MemoryStore.new

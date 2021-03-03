@@ -1,10 +1,10 @@
 class LocationsController < ApplicationController
-  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:rite_aid, :walgreens, :set_state]
+  # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens rite_aid]
+  before_action :set_dropdowns, only: %i[walgreens riteaid]
 
-  def rite_aid
+  def riteaid
     @locations = Location
                  .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
                  .where('when_available > ?', DateTime.now - 2.days)
@@ -61,7 +61,7 @@ class LocationsController < ApplicationController
     # binding.pry
     session[:state_rite_aid] = params[:state_rite_aid]
 
-    redirect_to rite_aid_path
+    redirect_to riteaid_path
   end
 
   def set_state_walgreens
