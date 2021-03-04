@@ -112,10 +112,9 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
-            <% distance = location.distance(@user_location, location) %>
+
             <td class="text-center">
-              <%= content_tag(:span, distance, style: 'display:none') %>
-              <%= distance %>
+              <%= location.distance(@user_location, location).to_i %>
             </td>
           </tr>
         <% end %>
