@@ -39,7 +39,7 @@ class LocationsController < ApplicationController
     @user_location = if request.remote_ip == '127.0.0.1'
                        '172.56.21.89'
                      else
-                       Geocoder.search(request.remote_ip)
+                       request.remote_ip
                      end
   end
 
