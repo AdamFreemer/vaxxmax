@@ -74,7 +74,7 @@
           <th>Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
-          <th>Distance (mi)</th>
+          <th class="text-center">Distance (mi)</th>
         </tr>
       </thead>
 
@@ -112,7 +112,6 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
-
             <td class="text-center">
               <%= location.distance(@user_location, location).to_i %>
             </td>
@@ -139,6 +138,7 @@
           <th>Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
+          <th class="text-center">Distance (mi)</th>
         </tr>
       </thead>
 
@@ -176,6 +176,9 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
+            <td class="text-center">
+              <%= location.distance(@user_location, location).to_i %>
+            </td>            
           </tr>
         <% end %>
       </tbody>
