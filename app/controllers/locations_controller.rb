@@ -2,8 +2,8 @@ class LocationsController < ApplicationController
   # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens rite_aid]
-  before_action :geolocate, only: %i[walgreens rite_aid]
+  before_action :set_dropdowns, only: %i[walgreens riteaid]
+  before_action :geolocate, only: %i[walgreens riteaid]
 
   def riteaid
     @locations = Location
