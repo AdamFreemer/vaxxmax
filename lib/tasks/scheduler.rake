@@ -24,6 +24,13 @@ task update_locations_midwest: :environment do
   puts "locations midwest updated!"
 end
 
+task update_pa: :environment do
+  LocationUpdateJob.update_pa
+  puts "locations in pa updated!"
+end
+
+## walgreens
+
 task update_walgreens_1: :environment do
   LocationUpdateJob.update_walgreens_1
   puts "Walgreens 1 updated!"

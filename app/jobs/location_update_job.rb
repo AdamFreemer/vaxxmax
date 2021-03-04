@@ -38,6 +38,11 @@ class LocationUpdateJob
       # UpdateLog.create(task: 'update_locations_midwest')
     end
 
+    def update_pa
+      rite_aid_update('PA')
+      # UpdateLog.create(task: 'update_locations_midwest')
+    end
+
     def update_walgreens_1
       states = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL"]
       states.each do |state|
