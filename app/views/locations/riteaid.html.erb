@@ -74,7 +74,7 @@
           <th>Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
-          <th>Distance</th>
+          <th>Distance (mi)</th>
         </tr>
       </thead>
 
@@ -115,7 +115,7 @@
             <% distance = location.distance(@user_location, location) %>
             <td class="text-center">
               <%= content_tag(:span, distance, style: 'display:none') %>
-              <%= distance %> miles
+              <%= distance %>
             </td>
           </tr>
         <% end %>

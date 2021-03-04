@@ -37,7 +37,7 @@ class LocationsController < ApplicationController
 
   def geolocate
     @user_location = if request.remote_ip == '127.0.0.1'
-                       '172.56.21.89'
+                       '100.14.167.116'
                      else
                        request.remote_ip
                      end
