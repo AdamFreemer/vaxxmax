@@ -14,6 +14,11 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
+  navigator.geolocation.getCurrentPosition((position) => {
+    console.log("-- you are here: ", position.coords.latitude, position.coords.longitude);
+  });
+
+
   $("#state-select-rite-aid").on('change', function(){
     var state_dropdown_value = $("#state-select-rite-aid").val();
     console.log("select value: " + state_dropdown_value)
