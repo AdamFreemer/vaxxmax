@@ -39,7 +39,7 @@ class LocationsController < ApplicationController
     @user_ip = if request.remote_ip == '127.0.0.1'
                  '69.242.71.104'
                else
-                 request.remote_ip
+                 request.remote_ip unless request.path.starts_with?('/assets')
                end
 
   end
