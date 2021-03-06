@@ -36,11 +36,12 @@ class LocationsController < ApplicationController
   def show; end
 
   def geolocate
-    @user_ip = if request.remote_ip == '127.0.0.1'
-                 '100.14.167.116'
-               else
-                 request.remote_ip
-               end
+    # @user_ip = if request.remote_ip == '127.0.0.1'
+    #              '69.242.71.104'
+    #            else
+    #              request.remote_ip
+    #            end
+    request.remote_ip
   end
 
   def set_state_rite_aid
