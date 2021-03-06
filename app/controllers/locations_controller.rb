@@ -41,7 +41,7 @@ class LocationsController < ApplicationController
     #            else
     #              request.remote_ip
     #            end
-    request.ip
+    request.remote_ip
   end
 
   def set_state_rite_aid
