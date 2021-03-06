@@ -36,12 +36,12 @@ class LocationsController < ApplicationController
   def show; end
 
   def geolocate
-    # @user_ip = if request.remote_ip == '127.0.0.1'
-    #              '69.242.71.104'
-    #            else
-    #              request.remote_ip
-    #            end
-    request.remote_ip
+    @user_ip = if request.remote_ip == '127.0.0.1'
+                 '69.242.71.104'
+               else
+                 request.env["HTTP_X_FORWARDED_FOR"]
+               end
+
   end
 
   def set_state_rite_aid
