@@ -17,8 +17,10 @@ class Location < ApplicationRecord
       return "N/A" if user_ip.nil?
       user = User.find_or_create_by(ip: user_ip) do |user|
         uri = URI("https://pro.ip-api.com/json/#{user_ip&.chomp}\?key\=#{ENV['IP_API_KEY']}")
+        puts "---- uri: #{uri}"
         response = Net::HTTP.get(uri)
         params = JSON.parse(response)
+        puts "---- params: #{params}"
 
         if params['status'] == 'success'
           user.update(ip: user_ip, latitude: params['lat'],
