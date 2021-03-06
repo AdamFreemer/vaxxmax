@@ -39,7 +39,7 @@ class LocationsController < ApplicationController
     @user_ip = if request.remote_ip == '127.0.0.1'
                  '69.242.71.104'
                else
-                 request.ip
+                 request.remote_ip
                end
 
   end
