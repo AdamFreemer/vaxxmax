@@ -14,8 +14,9 @@ class Location < ApplicationRecord
   def distance(user_ip, location)
     begin
       puts "-- user ip: #{user_ip}"
+      return "N/A" if user_ip.nil?
       user = User.find_or_create_by(ip: user_ip) do |user|
-        uri = URI("https://pro.ip-api.com/json/#{user_ip}\?key\=#{ENV['IP_API_KEY']}")
+        uri = URI("https://pro.ip-api.com/json/#{user_ip&.chomp}\?key\=#{ENV['IP_API_KEY']}")
         response = Net::HTTP.get(uri)
         params = JSON.parse(response)
 
