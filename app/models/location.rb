@@ -13,6 +13,7 @@ class Location < ApplicationRecord
 
   def distance(user_ip, location)
     begin
+      puts "-- user ip: #{user_ip}"
       user = User.find_or_create_by(ip: user_ip) do |user|
         uri = URI("https://pro.ip-api.com/json/#{user_ip}\?key\=#{ENV['IP_API_KEY']}")
         response = Net::HTTP.get(uri)
@@ -23,6 +24,7 @@ class Location < ApplicationRecord
                       longitude: params['lon'], zipcode: params['zip'], state: params['region'])
         end
       end
+      puts "-- user: #{user.latitude.to_f}, #{user.longitude.to_f} | location: #{location.latitude.to_f}, #{location.longitude.to_f}"
       @distance = Haversine.distance(user.latitude.to_f, user.longitude.to_f, location.latitude.to_f, location.longitude.to_f).to_miles.to_i
     rescue StandardError
       'N/A'
