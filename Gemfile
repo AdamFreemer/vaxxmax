@@ -6,6 +6,7 @@ gem 'barnes'
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'geocoder'
 gem 'google-analytics-rails', '1.1.1'
+gem 'haversine'
 gem 'hiredis'
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'

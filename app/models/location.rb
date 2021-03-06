@@ -11,14 +11,29 @@ class Location < ApplicationRecord
     "https://www.riteaid.com/locations/#{st}/#{cit}/#{add}.html"
   end
 
-  def distance(user_location, location)
+  def distance(user_ip, location)
+    @user = User.find_or_create_by(ip: user_ip) do |user|
+      uri = URI("https://pro.ip-api.com/json/#{user_ip.chomp}\?key\=#{ENV["IP_API_KEY"]}")
+            begin
+              response = Net::HTTP.get(uri)
+              params = JSON.parse(response)
+              # binding.pry
+            rescue StandardError
+              "N/A"
+            end
+            # binding.pry
+            if params['status'] == 'success'
+              # binding.pry
+              user.update(ip: user_ip, latitude: params['lat'],
+                          longitude: params['lon'], zipcode: params['zip'], state: params['region'])
+            end
+    end
+
     begin
-      user_loc = Geocoder.search(user_location)
-      distance = Geocoder::Calculations.distance_between(
-        [user_loc.first.coordinates[0], user_loc.first.coordinates[1]],
-        [location.latitude.to_f, location.longitude.to_f ]
-      )
-      distance.to_i
+      Haversine.distance(
+        @user.latitude.to_f, @user.longitude.to_f, 
+        location.latitude.to_f, location.longitude.to_f
+      ).to_miles.to_i
     rescue StandardError
       'N/A'
     end

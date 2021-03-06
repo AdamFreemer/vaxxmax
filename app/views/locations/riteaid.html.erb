@@ -74,13 +74,13 @@
           <th>Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
-          <th class="text-center">Distance (mi)</th>
+          <th class="text-left">Distance (mi)</th>
         </tr>
       </thead>
 
       <tbody>
         <% @locations.each do |location| %>
-          <tr>
+          <tr data-lat="<%= location.latitude %>" data-lon="<%= location.longitude %>">
             <td class="text-center"><%= link_to location.store_number, location&.rite_aid_location_website, target: :_blank %></td>
             <td class="text-center">
               <% if location.slot_1 %>
@@ -112,8 +112,8 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
-            <td class="text-center">
-              <%= location.distance(@user_location, location).to_i %>
+            <td class="text-left">
+              <%= location.distance(@user_ip, location) %>
             </td>
           </tr>
         <% end %>
@@ -177,7 +177,7 @@
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
             <td class="text-center">
-              <%= location.distance(@user_location, location).to_i %>
+              <%= location.distance(@user_ip, location).to_i %>
             </td>            
           </tr>
         <% end %>
