@@ -11,7 +11,7 @@ class Location < ApplicationRecord
     "https://www.riteaid.com/locations/#{st}/#{cit}/#{add}.html"
   end
 
-  def distance(user_ip, zipcode, location)
+  def distance(user_ip, zipcode='undefined', location)
     begin
       puts "--- #{user_ip}"
       search_location = if zipcode == 'undefined'
