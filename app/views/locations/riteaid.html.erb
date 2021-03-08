@@ -216,7 +216,7 @@
   $(document).ready(function() {
     // datatables add zip field
     $("div.toolbar").html(
-      '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zipcode</button></div><br>'
+      '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'
       );
 
     page = document.getElementById('provider_status').getAttribute('value')
@@ -242,7 +242,7 @@
         });
       }
     });
-    
+
     if (localStorage['zipcode'] == null || localStorage['provider'] == null) {
       $("#zipcode").attr("placeholder", "Enter Zipcode");
     } else {
