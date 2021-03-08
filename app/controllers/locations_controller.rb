@@ -36,7 +36,7 @@ class LocationsController < ApplicationController
   def show; end
 
   def geolocate
-    @user_ip = if request.remote_ip == '127.0.0.1'
+    @user_ip = if request.remote_ip == '127.0.0.1' || request.remote_ip == '::1'
                  '100.14.167.116'
                else
                  request.remote_ip
@@ -44,9 +44,8 @@ class LocationsController < ApplicationController
   end
 
   def set_state_rite_aid
-    # binding.pry
     session[:state_rite_aid] = params[:state_rite_aid]
-
+    session[:zipcode]= params[:zipcode]
     redirect_to riteaid_path
   end
 
@@ -54,6 +53,13 @@ class LocationsController < ApplicationController
     session[:state_walgreens] = params[:state_walgreens]
 
     redirect_to walgreens_path
+  end
+
+  def set_zipcode
+    # binding.pry
+    session[:zipcode] = params[:zipcode]
+    
+    redirect_to riteaid_path
   end
 
   private
