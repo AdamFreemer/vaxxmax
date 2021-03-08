@@ -14,16 +14,17 @@ class Location < ApplicationRecord
   def distance(user_ip, zipcode, location)
     begin
       puts "--- #{user_ip}"
-      search_location = if zipcode.present?
+      search_location = if zipcode == 'undefined'
+                          lookup_by_ip(user_ip)
+                        elsif zipcode.present?
                           Zipcode.find_by(zipcode: zipcode.to_i)
                         else
                           lookup_by_ip(user_ip)
                         end
 
-
-      Haversine.distance(search_location.latitude.to_f,
-        search_location.longitude.to_f, location.latitude.to_f,
-        location.longitude.to_f).to_miles.to_i
+    Haversine.distance(search_location.latitude.to_f,
+      search_location.longitude.to_f, location.latitude.to_f,
+      location.longitude.to_f).to_miles.to_i
     rescue StandardError
       'N/A'
     end
