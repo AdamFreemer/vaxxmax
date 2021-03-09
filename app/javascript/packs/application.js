@@ -14,10 +14,12 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
+
+
   $("#state-select-rite-aid").on('change', function(){
     var state_dropdown_value = $("#state-select-rite-aid").val();
-    console.log("select value: " + state_dropdown_value)
-    $.get( "/set_state_rite_aid/" + state_dropdown_value, function( data ) {
+
+    $.get( "/set_state_rite_aid/" + state_dropdown_value +  "/" + localStorage['zipcode'], function( data ) {
       $( ".result" ).html( data );
       location.reload();
     });
