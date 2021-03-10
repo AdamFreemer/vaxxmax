@@ -1,13 +1,12 @@
 class AddCvsData < ActiveRecord::Migration[6.1]
   require 'csv'
   def change
-    add_column :locations, :is_cvs, :boolean
-    # Now import CVS data
+    sleep(3.seconds)
     puts "-- Adding CVS store data"
     csv_text = File.read(Rails.root.join('db', 'locations_cvs.csv'))
     csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
     csv.each do |row|
-      t = Location.new
+      t = Location.new(is_cvs: true)
       t.store_number = row['store_number']
       t.full_address = row['full_address']
       t.address = row['address']
@@ -18,7 +17,7 @@ class AddCvsData < ActiveRecord::Migration[6.1]
       t.longitude = row['longitude']
       t.phone = row['phone']
       t.county = row['county']
-      t.is_cvs = true
+
       t.save
       puts "#{t.store_number}, #{t.address} saved"
     end
