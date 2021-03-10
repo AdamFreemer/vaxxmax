@@ -34,16 +34,28 @@ $(document).ready(function() {
     });
   });
 
+  $("#state-select-cvs").on('change', function(){
+    var state_dropdown_value = $("#state-select-cvs").val();
+
+    $.get( "/set_state_cvs/" + state_dropdown_value, function( data ) {
+      $( ".result" ).html( data );
+      location.reload();
+    });
+  });
+
   $("#provider").on('change', function(){
     console.log("provider onchange: " + $("#provider").val())
     if ($("#provider").val() == "walgreens") {
       localStorage['provider'] = "walgreens";
       document.location.href = '/walgreens';
     }
-
     if ($("#provider").val() == "riteaid") {
       localStorage['provider'] = "riteaid";
       document.location.href = '/riteaid';
+    }
+    if ($("#provider").val() == "cvs") {
+      localStorage['provider'] = "cvs";
+      document.location.href = '/cvs';
     }
   });
 });

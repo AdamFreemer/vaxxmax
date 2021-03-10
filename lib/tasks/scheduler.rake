@@ -1,4 +1,9 @@
 # lib/tasks/scheduler.rake desc "tweets to twitter.com/blockwork_cc"
+task update_cvs: :environment do
+  LocationUpdateJob.update_cvs
+  puts "cvs updated!"
+end
+
 task update_locations_north_east: :environment do
   LocationUpdateJob.update_locations_north_east
   puts "locations north_west updated!"
