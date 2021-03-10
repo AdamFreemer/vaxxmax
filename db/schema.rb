@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_07_185923) do
+ActiveRecord::Schema.define(version: 2021_03_10_134215) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(version: 2021_03_07_185923) do
     t.boolean "is_rite_aid", default: false
     t.boolean "is_walgreens", default: false
     t.integer "store_availability_count", default: 0
+    t.boolean "is_cvs", default: false
     t.index ["availability"], name: "index_locations_on_availability"
     t.index ["state"], name: "index_locations_on_state"
     t.index ["when_available"], name: "index_locations_on_when_available"
