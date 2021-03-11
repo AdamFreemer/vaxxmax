@@ -68,6 +68,7 @@
           <th>Town / City</th>
           <th class="text-center">State</th>      
           <th class="text-center">Zip</th>
+          <th class="text-center">County</th>
           <th>Last Updated</th>
           <th>Became Available</th>
           <th class="text-center">Distance (mi)</th>           
@@ -90,6 +91,7 @@
                 Copy
               </button> 
             </td>
+            <td><%= location.county %></td>
             <td>
               <%= content_tag(:span, location.last_updated&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.last_updated) %> ago

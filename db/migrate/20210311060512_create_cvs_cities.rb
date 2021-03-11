@@ -5,6 +5,7 @@ class CreateCvsCities < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :state
       t.string :zip
+      t.string :county
       t.string :latitude
       t.string :longitude
       t.datetime :last_updated
@@ -18,14 +19,15 @@ class CreateCvsCities < ActiveRecord::Migration[6.1]
       location = Location.where(
         is_cvs: true, city: cvs_location[0],
         state: cvs_location[1]
-      ).pluck(:city, :state, :zip, :latitude, :longitude).first
+      ).pluck(:city, :state, :zip, :county, :latitude, :longitude).first
 
       cvs_city = CvsCity.new(
         name: location[0],
         state: location[1],
         zip: location[2],
-        latitude: location[3],
-        longitude: location[4]
+        county: location[3],
+        latitude: location[4],
+        longitude: location[5]
       )
       cvs_city.save
       puts "-- CvsCity created: #{cvs_city.name}"
