@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_134215) do
+ActiveRecord::Schema.define(version: 2021_03_11_060512) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cvs_cities", force: :cascade do |t|
+    t.boolean "availability"
+    t.string "name"
+    t.string "state"
+    t.string "zip"
+    t.string "county"
+    t.string "latitude"
+    t.string "longitude"
+    t.datetime "last_updated"
+    t.datetime "when_available"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "location_statuses", force: :cascade do |t|
     t.string "address"
@@ -46,8 +60,11 @@ ActiveRecord::Schema.define(version: 2021_03_10_134215) do
     t.boolean "is_rite_aid", default: false
     t.boolean "is_walgreens", default: false
     t.integer "store_availability_count", default: 0
-    t.boolean "is_cvs", default: false
+    t.boolean "is_cvs"
     t.index ["availability"], name: "index_locations_on_availability"
+    t.index ["is_cvs"], name: "index_locations_on_is_cvs"
+    t.index ["is_rite_aid"], name: "index_locations_on_is_rite_aid"
+    t.index ["is_walgreens"], name: "index_locations_on_is_walgreens"
     t.index ["state"], name: "index_locations_on_state"
     t.index ["when_available"], name: "index_locations_on_when_available"
   end
