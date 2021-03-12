@@ -233,7 +233,7 @@ class LocationUpdateJob
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true
         else
-          
+
           location.availability = false
           location.last_updated = DateTime.now
         end

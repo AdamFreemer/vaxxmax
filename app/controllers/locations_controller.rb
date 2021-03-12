@@ -33,12 +33,6 @@ class LocationsController < ApplicationController
                      .where('when_available < ?', DateTime.now - 2.days)
   end
 
-  def new
-    @location = Location.new
-  end
-
-  def show; end
-
   def geolocate
     @user_ip = if request.remote_ip == '127.0.0.1' || request.remote_ip == '::1'
                  '100.14.167.116'
