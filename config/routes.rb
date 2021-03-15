@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'locations#riteaid'
 
   get 'riteaid', to: 'locations#riteaid'
+  get 'rite_aid', to: 'locations#riteaid'
   get 'walgreens', to: 'locations#walgreens'
   get 'cvs', to: 'locations#cvs'
   get 'set_zipcode/:zipcode', to: 'locations#set_zipcode'
