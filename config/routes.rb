@@ -12,7 +12,12 @@ Rails.application.routes.draw do
   get 'set_state_rite_aid/:state_rite_aid/:zipcode', to: 'locations#set_state_rite_aid'
   get 'set_state_walgreens/:state_walgreens', to: 'locations#set_state_walgreens'
   get 'set_state_cvs/:state_cvs', to: 'locations#set_state_cvs'
-  mount Sidekiq::Web => '/_sidekiq' # mount Sidekiq::Web in your Rails app
+
+  Sidekiq::Web.use Rack::Auth::Basic do |username, password|
+    ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_USERNAME'])) &
+      ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(password), ::Digest::SHA256.hexdigest(ENV['SIDEKIQ_PASSWORD']))
+  end
+  mount Sidekiq::Web, at: '/sidekiq'
 
   get 'logs', to: 'update_logs#index'
   get 'test', to: 'locations#test'
