@@ -227,8 +227,6 @@ class LocationUpdateJob
         next if location.blank?
 
         if site_location['status'] == "Available"
-          # binding.pry
-
           location.last_updated = DateTime.now
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true
