@@ -10,6 +10,7 @@ gem 'haversine'
 
 gem 'hiredis'
 gem 'redis', require: ['redis', 'redis/connection/hiredis']
+gem 'redis-rails'
 gem 'sidekiq'
 
 gem 'jbuilder', '~> 2.7'
