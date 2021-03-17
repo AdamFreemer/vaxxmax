@@ -1,7 +1,11 @@
-# Ads.txt last updated on: 2021/03/11 02-43-028604 by MONUMETRIC
+# Ads.txt last updated on: 2021/03/16 22-11-483417 by MONUMETRIC
 spotxchange.com, 114948, RESELLER, 7842df1d2fe2db34  #SpotX
 spotx.tv, 114948, RESELLER, 7842df1d2fe2db34         #SpotX
 monumetric.com, e84ce5d2-26a2-492b-acc7-53a0d8e0a5e2, DIRECT, 032969285
+appnexus.com, 7911, RESELLER #yieldmo
+rubiconproject.com, 17070, RESELLER, 0bfd66d529a55807 #yieldmo
+yieldmo.com, 2518831497914294538, DIRECT
+yieldmo.com, 2518832149079990540, DIRECT
 ad-generation.jp, 12474, RESELLER, 7f4ea9029ac04e53
 appnexus.com, 1356, RESELLER, f5ab79cb980f11d1
 appnexus.com, 1908, RESELLER, f5ab79cb980f11d1

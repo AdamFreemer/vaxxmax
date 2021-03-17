@@ -220,20 +220,19 @@ class LocationUpdateJob
       end
     end
 
-    def cvs_parse(data, state)
+    def cvs_parse(payload, state)
+      return if payload.blank? || state.blank?
+
+      data = payload[state]
       data.each do |site_location|
-        # binding.pry
         location = CvsCity.find_by(state: state, name: site_location['city']&.titleize)
         next if location.blank?
 
         if site_location['status'] == "Available"
-          # binding.pry
-
           location.last_updated = DateTime.now
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true
         else
-
           location.availability = false
           location.last_updated = DateTime.now
         end
