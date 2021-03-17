@@ -305,7 +305,7 @@ DEPENDENCIES
   selenium-webdriver
   sentry-rails
   sentry-ruby
-  sidekiq (~> 6.1.0)
+  sidekiq
   spring
   stackprof
   turbolinks (~> 5)

@@ -7,7 +7,11 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'geocoder'
 gem 'google-analytics-rails', '1.1.1'
 gem 'haversine'
+
 gem 'hiredis'
+gem 'redis', require: ['redis', 'redis/connection/hiredis']
+gem 'sidekiq'
+
 gem 'jbuilder', '~> 2.7'
 gem 'jquery-rails'
 gem 'net-http-persistent'
@@ -16,12 +20,10 @@ gem 'puma', '~> 5.0'
 gem 'puma_worker_killer'
 gem 'rack-attack'
 gem 'rails', '~> 6.1.1'
-gem 'redis'
 gem 'rollbar'
 gem 'sass-rails', '>= 6'
 gem 'sentry-rails'
 gem 'sentry-ruby'
-gem 'sidekiq', '~> 6.1.0'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 
