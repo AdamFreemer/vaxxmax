@@ -7,11 +7,7 @@ class RiteAidKickOffWorker
 
   def perform
     rite_aid_states.each do |state|
-      begin
-        RiteAidWorker.perform_async(state)
-      rescue StandardError => e
-        puts "-- FAILURE | Rite Aid | #{state} | #{e}"
-      end
+      RiteAidWorker.perform_async(state)
     end
   end
 end

@@ -3,8 +3,7 @@ class RiteAidWorker
 
   def perform(state)
     locations = Location.where(state: state, is_rite_aid: true)
-    locations.each_with_index do |location, i|
-      sleep(3) if i.to_s.include? '99'
+    locations.each_with_index do |location|
       uri = URI("https://www.riteaid.com/services/ext/v2/vaccine/checkSlots?storeNumber=#{location.store_number}")
       @http = Net::HTTP::Persistent.new
 
