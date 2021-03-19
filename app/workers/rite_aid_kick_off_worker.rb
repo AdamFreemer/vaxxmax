@@ -1,4 +1,4 @@
-class RiteAidWestWorker
+class RiteAidKickOffWorker
   include Sidekiq::Worker
 
   def rite_aid_states
