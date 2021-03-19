@@ -88,3 +88,10 @@ task rite_aid_mid_west: :environment do
   RiteAidMidWestWorker.perform_async
   puts "locations midwest updated!"
 end
+
+# Master Rite Aid kickoff
+
+task rite_aid_kickoff: :environment do
+  RiteAidKickOffWorker.perform_async
+  puts "Start RiteAid!"
+end
