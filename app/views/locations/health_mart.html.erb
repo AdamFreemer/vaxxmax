@@ -6,7 +6,6 @@
   <header>
     <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
     <div class="blog-header-logo text-dark text-center title-text">Health Mart</div>
-        <div class="blog-header-logo text-dark text-center title-text">Pharmacies</div>
     <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
     <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
     <br>
@@ -54,12 +53,9 @@
 
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the Health Mart vaccine slot finder page. Note this page is in beta form at this time.<br>
-  You'll want to go here first: <a href="#" target="_blank">https://www.cvs.com/vaccine/intake/store/covid-screener/covid-qns</a>.<br>
+  Unfamiliar to some, Health Mart is an umbrella organization over many local pharmacies, facilitating vaccination via national resources. <br>
+  You'll want to go here first: <a href="https://www.healthmart.com/covid-19-vaccineinfo.html" target="_blank">https://www.healthmart.com/covid-19-vaccineinfo.html</a>.<br>
     After required pre-qualification, refer back to the VaxxMax site for availabilities.<br>
-  </p>
-
-  <p class="text-center">
-    The below locations have been recently updated and have the best probability of a slot being open based on the "Last Updated" date field.
   </p>
   
   <div class="table-responsive">
@@ -127,7 +123,7 @@
 
   $(document).ready(function() {
     $("#provider").on('change', function(){
-      console.log("provider onchangexx: " + $("#provider").val())
+      console.log("provider onchange health mart: " + $("#provider").val())
       if ($("#provider").val() == "health_mart") {
         localStorage['provider'] = "health_mart";
         document.location.href = '/health_mart';

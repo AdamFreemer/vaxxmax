@@ -126,7 +126,7 @@
 
   $(document).ready(function() {
     $("#provider").on('change', function(){
-      console.log("provider onchangexx: " + $("#provider").val())
+      console.log("provider onchange cvs: " + $("#provider").val())
       if ($("#provider").val() == "health_mart") {
         localStorage['provider'] = "health_mart";
         document.location.href = '/health_mart';

@@ -34,7 +34,7 @@
           <select name="provider" id="provider" class="form-control">
             <option value="riteaid">Rite Aid</option>
             <option value="cvs">CVS</option>
-            <option value="healthmart">Health Mart</option>
+            <option value="health_mart">Health Mart</option>
             <option value="walgreens">Walgreens</option>
           </select>
         </div>      
@@ -133,7 +133,7 @@
 
   $(document).ready(function() {
     $("#provider").on('change', function(){
-      console.log("provider onchangexx: " + $("#provider").val())
+      console.log("provider onchange walgreens: " + $("#provider").val())
       if ($("#provider").val() == "health_mart") {
         localStorage['provider'] = "health_mart";
         document.location.href = '/health_mart';

@@ -14,8 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
-
-
   $("#state-select-rite-aid").on('change', function(){
     var state_dropdown_value = $("#state-select-rite-aid").val();
 
