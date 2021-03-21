@@ -43,8 +43,22 @@ $(document).ready(function() {
     });
   });
 
+  $("#state-select-health-mart").on('change', function(){
+    var state_dropdown_value = $("#state-select-health-mart").val();
+
+    $.get( "/set_state_health_mart/" + state_dropdown_value, function( data ) {
+      $( ".result" ).html( data );
+      location.reload();
+    });
+  });
+
   $("#provider").on('change', function(){
-    console.log("provider onchange: " + $("#provider").val())
+    console.log("provider onchangexx: " + $("#provider").val())
+    if ($("#provider").val() == "healthmart") {
+      localStorage['provider'] = "healthmart";
+      document.location.href = '/health_mart';
+    }
+    
     if ($("#provider").val() == "walgreens") {
       localStorage['provider'] = "walgreens";
       document.location.href = '/walgreens';
