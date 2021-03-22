@@ -14,8 +14,6 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
-
-
   $("#state-select-rite-aid").on('change', function(){
     var state_dropdown_value = $("#state-select-rite-aid").val();
 
@@ -41,21 +39,5 @@ $(document).ready(function() {
       $( ".result" ).html( data );
       location.reload();
     });
-  });
-
-  $("#provider").on('change', function(){
-    console.log("provider onchange: " + $("#provider").val())
-    if ($("#provider").val() == "walgreens") {
-      localStorage['provider'] = "walgreens";
-      document.location.href = '/walgreens';
-    }
-    if ($("#provider").val() == "riteaid") {
-      localStorage['provider'] = "riteaid";
-      document.location.href = '/riteaid';
-    }
-    if ($("#provider").val() == "cvs") {
-      localStorage['provider'] = "cvs";
-      document.location.href = '/cvs';
-    }
   });
 });

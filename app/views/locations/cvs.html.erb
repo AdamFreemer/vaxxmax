@@ -30,9 +30,10 @@
       <div class="col-sm">
         <div class="dropdown">
           <select name="provider" id="provider" class="form-control">
-            <option value="walgreens">Walgreens</option>
             <option value="riteaid">Rite Aid</option>
             <option value="cvs">CVS</option>
+            <option value="health_mart">Health Mart</option>
+            <option value="walgreens">Walgreens</option>
           </select>
         </div>      
       </div>
@@ -124,6 +125,27 @@
   );
 
   $(document).ready(function() {
+    $("#provider").on('change', function(){
+      console.log("provider onchange cvs: " + $("#provider").val())
+      if ($("#provider").val() == "health_mart") {
+        localStorage['provider'] = "health_mart";
+        document.location.href = '/health_mart';
+      }
+      
+      if ($("#provider").val() == "walgreens") {
+        localStorage['provider'] = "walgreens";
+        document.location.href = '/walgreens';
+      }
+      if ($("#provider").val() == "riteaid") {
+        localStorage['provider'] = "riteaid";
+        document.location.href = '/riteaid';
+      }
+      if ($("#provider").val() == "cvs") {
+        localStorage['provider'] = "cvs";
+        document.location.href = '/cvs';
+      }
+    });
+
     page = document.getElementById('provider_status').getAttribute('value')
     if ( localStorage['provider'] == null ) {
       localStorage['provider'] = "riteaid";

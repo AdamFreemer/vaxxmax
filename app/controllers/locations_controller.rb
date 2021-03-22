@@ -2,8 +2,8 @@ class LocationsController < ApplicationController
   # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
 
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens riteaid cvs]
-  before_action :geolocate, only: %i[walgreens riteaid cvs]
+  before_action :set_dropdowns, only: %i[walgreens riteaid cvs health_mart]
+  before_action :geolocate, only: %i[walgreens riteaid cvs health_mart]
 
   def riteaid
     @locations = Location
@@ -21,6 +21,10 @@ class LocationsController < ApplicationController
 
   def cvs
     @locations = CvsCity.where(state: session[:state_cvs], availability: true)
+  end
+
+  def health_mart
+    @locations = HealthMartCity.where(state: session[:state_health_mart], availability: true)
   end
 
   def test
@@ -59,6 +63,12 @@ class LocationsController < ApplicationController
     redirect_to cvs_path
   end
 
+  def set_state_health_mart
+    session[:state_health_mart] = params[:state_health_mart]
+
+    redirect_to health_mart_path
+  end
+
   def set_zipcode
     session[:zipcode] = params[:zipcode]
     
@@ -72,10 +82,10 @@ class LocationsController < ApplicationController
   end
 
   def set_dropdowns
-    @states_rite_aid = states_rite_aid
+    @states_rite_aid = states_rite_aid.sort { |a, b| a <=> b }
     @states_walgreens = states_walgreens
     @states_cvs = states_cvs.sort { |a, b| a <=> b }
-    @providers = ['Rite Aid - Nationwide Locations', 'Walgreens - Nationwide Locations']
+    @states_health_mart = states_health_mart.sort { |a, b| a <=> b }
   end
 
   def states_rite_aid
@@ -84,6 +94,10 @@ class LocationsController < ApplicationController
 
   def states_walgreens
     WalgreensCity.order(:state).distinct.pluck(:state)
+  end
+
+  def states_health_mart
+    HealthMartCity.order(:state).distinct.pluck(:state)
   end
 
   def states_cvs
