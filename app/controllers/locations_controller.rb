@@ -64,7 +64,6 @@ class LocationsController < ApplicationController
   end
 
   def set_state_health_mart
-    # binding.pry
     session[:state_health_mart] = params[:state_health_mart]
 
     redirect_to health_mart_path

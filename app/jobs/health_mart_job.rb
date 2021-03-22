@@ -36,7 +36,7 @@ class HealthMartJob
     end
 
     def update(state)
-      locations = HealthMartCity.all
+      locations = HealthMartCity.where(state: state)
       locations.each do |location|
         require 'net/http'
         require 'uri'
@@ -63,9 +63,8 @@ class HealthMartJob
           response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
             http.request(request)
           end
-          response_data = JSON.parse(response.body)
 
-          if response_data.body != []
+          if response.body != "[]"
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
@@ -81,7 +80,7 @@ class HealthMartJob
           puts "-- ERROR HealthMart | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
           next
         end
-        puts "-- SUCCESS HealthMart | #{location.availability} | #{state} | #{location.name} | #{location.id}"
+        puts "-- SUCCESS HealthMart | #{location.availability} | #{state} | #{location.name} | #{location.zip}"
       end
     end
   end

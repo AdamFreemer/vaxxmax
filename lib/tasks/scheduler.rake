@@ -95,3 +95,30 @@ task rite_aid_kickoff: :environment do
   RiteAidKickOffWorker.perform_async
   puts "Start RiteAid!"
 end
+
+# Health Mart
+
+task health_mart_zone_1: :environment do
+  HealthMartOneWorker.perform_async
+  puts "Start HealthMart 1!"
+end
+
+task health_mart_zone_2: :environment do
+  HealthMartTwoWorker.perform_async
+  puts "Start HealthMart 2!"
+end
+
+task health_mart_zone_3: :environment do
+  HealthMartThreeWorker.perform_async
+  puts "Start HealthMart 3!"
+end
+
+task health_mart_zone_4: :environment do
+  HealthMartFourWorker.perform_async
+  puts "Start HealthMart 4!"
+end
+
+task health_mart_zone_5: :environment do
+  HealthMartFiveWorker.perform_async
+  puts "Start HealthMart 5!"
+end
