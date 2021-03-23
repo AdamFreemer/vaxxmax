@@ -130,6 +130,7 @@ class LocationUpdateJob
 
       locations = WalgreensCity.where(state: state)
       locations.each do |location|
+        sleep 2 
         jsonbody = {
           serviceId: '99',
           position: {
