@@ -142,8 +142,9 @@ class LocationUpdateJob
           }, radius: 25
         }
 
+        proxy_addr = ENV["PROXIMO_URL"] if ENV["PROXIMO_URL"]
         uri = URI.parse("https://www.walgreens.com/hcschedulersvc/svc/v1/immunizationLocations/availability")
-        request = Net::HTTP::Post.new(uri)
+        request = Net::HTTP::Post.new(uri, proxy_addr)
         request.content_type = 'application/json; charset=UTF-8'
         request.body = jsonbody.to_json
         request["Authority"] = 'www.walgreens.com'
