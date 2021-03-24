@@ -1,6 +1,6 @@
 class WalgreensJob
   class << self
-    def parse_walgreens
+    def process
       states.each do |state|
         uri = URI.parse("https://www.vaccinespotter.org/api/v0/states/#{state}.json")
         request = Net::HTTP::Persistent.new
@@ -16,10 +16,20 @@ class WalgreensJob
 
     def process_state(state, data_set)
       data_set.each do |feature|
-        puts "-- #{state} | provider: #{feature['properties']['provider']} | zip: #{feature['properties']['postal_code']} | avail: #{feature['properties']['appointments_available']}"
-        if feature['properties']['provider'] == "walgreens" && feature['properties']['appointments_available'].present?
-          
+        zip = feature['properties']['postal_code']
+        location = WalgreensCity.find_by(zip: zip)
+        next if location.nil?
+
+        if feature['properties']['provider'] == 'walgreens' && feature['properties']['appointments_available'] == true
+          location.last_updated = DateTime.now
+          location.when_available = DateTime.now if location.availability.blank?
+          location.availability = true
+        else
+          location.availability = false
+          location.last_updated = DateTime.now
         end
+        location.save
+        puts "-- SUCCESS Walgreens | #{location.availability} | #{location.state} | #{location.name} | #{location.zip}"
       end
     end
 
