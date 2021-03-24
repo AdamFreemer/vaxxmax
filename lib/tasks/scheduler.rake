@@ -147,3 +147,10 @@ task health_mart_5: :environment do
   HealthMartJob.update_zone_5
   puts "Start HealthMart 5!"
 end
+
+# Walgreens API fetch
+
+task walgreens_vspotter: :environment do
+  WalgreensJob.process
+  puts "Process Walgreens from vspotter..."
+end
