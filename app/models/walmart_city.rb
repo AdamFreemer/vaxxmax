@@ -1,0 +1,2 @@
+class WalmartCity < ApplicationRecord
+end
