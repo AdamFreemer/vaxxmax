@@ -1,71 +1,22 @@
-<div class="shadow-sm p-3 mb-6 bg-white rounded">
-  <p id="notice"><%= notice %></p>
-
-  <header>
     <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
-    <div class="blog-header-logo text-dark text-center title-text">Rite Aid</div>
-    <br>
+    <div class="blog-header-logo text-dark text-center title-text"><%= @title %></div>
     <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
     <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
-    <div class="text-center" href="#">Notice: Please click <a href="https://www.riteaid.com/content/dam/riteaid-web/campaigns/FY21/holidays-and-events/covid-19/vaccine/Rite-Aid-COVID-19-Eligibility-and-Registration-Guide.pdf" target="_blank" style="color:red">here</a> for Rite Aid's most current vaccine eligibility nationwide. 
-    </div>
     <br>
 
     <div class="row justify-content-between align-items-center">
       <div class="col-12 text-center">
         <div class="blog-header-small text-dark" href="#">
           <code class="text-black">This tool is free, but donations to cover hosting & development costs are welcome. Thanks!</code><br>
-          <!-- button row -->
-          <button class=" btn btn-md btn-outline-primary">
-            <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
+          <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
+            <button class=" btn btn-md btn-outline-primary">
               <code class="text-dark">Contribute via PayPal</code>
-            </a>   
-          </button> 
-          <button class="btn btn-md btn-outline-primary" data-toggle="modal">
-            <a href="https://www.facebook.com/vaxxmax" target="_blank">
-              <code class="text-dark">Find us on Facebook</code>
-            </a>   
-          </button>            
-          <button class="btn btn-md btn-outline-primary" id="changelog" data-toggle="modal" data-target="#changelogModal">
-            <code class="text-dark">What's New!</code>
-          </button>               
+            </button>    
+          </a>   
           <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
             <code class="text-dark">Contribute via Bitcoin</code>
-          </button>     
-          <!-- button row -->            
+          </button>                 
         </div>
       </div>
     </div>
     
-    <div class="row dropdowns">
-      <div class="col-sm">
-        <div class="dropdown">
-          <select name="provider" id="provider" class="form-control">
-            <option value="riteaid">Rite Aid</option>
-            <option value="cvs">CVS</option>
-            <option value="health_mart">Health Mart</option>
-            <option value="walgreens">Walgreens</option>
-          </select>
-        </div> 
-      </div>
-      <div class="col-sm">
-        <!--MONUMETRIC Top Leaderboard 2 D:320x50,320x100 T:320x50,320x100 M:320x50,320x100 START-->
-        <div id="mmt-58602b59-7e99-4790-bc3d-713cdcf59a06"></div><script type="text/javascript" data-cfasync="false">$MMT = window.$MMT || {}; $MMT.cmd = $MMT.cmd || [];$MMT.cmd.push(function(){ $MMT.display.slots.push(["58602b59-7e99-4790-bc3d-713cdcf59a06"]); })</script>
-        <!--MONUMETRIC Top Leaderboard 2 D:320x50,320x100 T:320x50,320x100 M:320x50,320x100  ENDS-->
-      </div>
-
-      <div class="col-sm">
-        <% 
-          if params[:action] == 'riteaid'
-
-          elsif params[:action] == 'walgreens'
-          elsif params[:action] == 'walmart'
-          elsif params[:action] == 'cvs'
-          elsif params[:action] == 'cvs'
-        %>
-        
-        <%= select_tag "state-select", options_for_select(@states, session[:state_rite_aid]), prompt: 'Select State', class: "form-control" %>
-      </div>
-    </div>
-  </header>
-</div>

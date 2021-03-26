@@ -1,52 +1,16 @@
-<%# This will auto-reload the page every 60s %>
-<meta http-equiv="refresh" content="60" />
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
-  <p id="notice"><%= notice %></p>
-
   <header>
-    <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
-    <div class="blog-header-logo text-dark text-center title-text">Walgreens</div>
-    <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
-    <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
-
-    <br>
-
-    <div class="row justify-content-between align-items-center">
-      <div class="col-12 text-center">
-        <div class="blog-header-small text-dark" href="#">
-          <code class="text-black">This tool is free, but donations to cover hosting & development costs are welcome. Thanks!</code><br>
-          <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
-            <button class=" btn btn-md btn-outline-primary">
-              <code class="text-dark">Contribute via PayPal</code>
-            </button>    
-          </a>   
-          <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
-            <code class="text-dark">Contribute via Bitcoin</code>
-          </button>                 
-        </div>
-      </div>
-    </div>
-    
+    <%= render "layouts/header" %>
     <div class="row dropdowns">
-      <div class="col-sm">
-        <div class="dropdown">
-          <select name="provider" id="provider" class="form-control">
-            <option value="riteaid">Rite Aid</option>
-            <option value="cvs">CVS</option>
-            <option value="health_mart">Health Mart</option>
-            <option value="walgreens">Walgreens</option>
-          </select>
-        </div>      
-      </div>
+      <%= render "layouts/provider" %>
       <div class="col-sm text-center">
         <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
-        <code class="text-black">Data is updated approximately every 10 minutes.</code><br>
-          <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
-            <code class="text-dark">Changelog</code>
-          </button>
+        <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
+          <code class="text-dark">What's New!</code>
+        </button>
       </div>
       <div class="col-sm">
-        <%= select_tag "state-select-walgreens", options_for_select(@states_walgreens, session[:state_walgreens]), prompt: 'Select State', class: "form-control" %>
+        <%= select_tag "state-select-walgreens", options_for_select(@states, session[:state_walgreens]), prompt: 'Select State', class: "form-control" %>
       </div>
     </div>
   </header>
@@ -120,6 +84,17 @@
 <div id="provider_status" value="walgreens" style="visibility: hidden"></div>
 
 <script>
+  $(document).ready(function() {
+    $("#state-select-walgreens").on('change', function(){
+      var state_dropdown_value = $("#state-select-walgreens").val();
+
+      $.get( "/set_state_walgreens/" + state_dropdown_value, function( data ) {
+        $( ".result" ).html( data );
+        location.reload();
+      });
+    });    
+  });
+
   $('#locations').DataTable(
     {
       "iDisplayLength": 25,
@@ -129,34 +104,6 @@
       }
     }
   );
-
-  $(document).ready(function() {
-    $("#provider").on('change', function(){
-      console.log("provider onchange walgreens: " + $("#provider").val())
-      if ($("#provider").val() == "health_mart") {
-        localStorage['provider'] = "health_mart";
-        document.location.href = '/health_mart';
-      }
-      
-      if ($("#provider").val() == "walgreens") {
-        localStorage['provider'] = "walgreens";
-        document.location.href = '/walgreens';
-      }
-      if ($("#provider").val() == "riteaid") {
-        localStorage['provider'] = "riteaid";
-        document.location.href = '/riteaid';
-      }
-      if ($("#provider").val() == "cvs") {
-        localStorage['provider'] = "cvs";
-        document.location.href = '/cvs';
-      }
-    });
-
-    page = document.getElementById('provider_status').getAttribute('value')
-    if ( localStorage['provider'] == null ) {
-      localStorage['provider'] = "riteaid";
-      document.location.href = '/riteaid';
-    }
-    $("#provider").val(page)
-  });
 </script>
+
+<%= render "layouts/provider_js" %>

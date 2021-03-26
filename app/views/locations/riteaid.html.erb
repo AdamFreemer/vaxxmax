@@ -1,4 +1,22 @@
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
+  <header>
+    <%= render "layouts/header" %>
+    <div class="row dropdowns">
+      <%= render "layouts/provider" %>
+      <div class="col-sm text-center">
+        <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
+        <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
+          <code class="text-dark">What's New!</code>
+        </button>
+      </div>
+      <div class="col-sm">
+        <%= select_tag "state-select-rite-aid", options_for_select(@states, session[:state_rite_aid]), prompt: 'Select State', class: "form-control" %>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the Rite Aid vaccine slot finder page.
     You'll want to go here first: <a href="https://www.riteaid.com/pharmacy/apt-scheduler" target="_blank">https://www.riteaid.com/pharmacy/apt-scheduler</a>.<br>
     After required pre-qualification, find an available location below to copy / paste to on the Rite Aid website for scheduling.<br>
@@ -135,6 +153,28 @@
 <div id="provider_status" value="riteaid" style="visibility: hidden"></div>
 <div id="zipcode_status" value="riteaid" style="visibility: hidden"></div>
 
+<style>
+  /* For zipcode entry box */
+  @media only screen and (min-width:769px) {
+    .zip-container {
+      margin-left: -34px;
+    }
+  }
+
+  .zip-container {
+    margin-bottom: 10px !important;
+  }
+
+  .zipcode {
+    margin-right: 5px;
+    height: 30px;
+  }
+
+  .toolbar {
+      float: left;
+  }
+</style>
+
 <script>
   $('#locations').DataTable(
     {
@@ -148,40 +188,19 @@
   );
 
   $(document).ready(function() {
-    // datatables add zip field
-    $("#provider").on('change', function(){
-      console.log("provider onchange riteaid: " + $("#provider").val())
-      if ($("#provider").val() == "health_mart") {
-        localStorage['provider'] = "health_mart";
-        document.location.href = '/health_mart';
-      }
-      
-      if ($("#provider").val() == "walgreens") {
-        localStorage['provider'] = "walgreens";
-        document.location.href = '/walgreens';
-      }
-      if ($("#provider").val() == "riteaid") {
-        localStorage['provider'] = "riteaid";
-        document.location.href = '/riteaid';
-      }
-      if ($("#provider").val() == "cvs") {
-        localStorage['provider'] = "cvs";
-        document.location.href = '/cvs';
-      }
-    });
+    $("#state-select-rite-aid").on('change', function(){
+      var state_dropdown_value = $("#state-select-rite-aid").val();
 
-
+      $.get( "/set_state_rite_aid/" + state_dropdown_value, function( data ) {
+        $( ".result" ).html( data );
+        location.reload();
+      });
+    });    
+ 
+    // zipcode related
     $("div.toolbar").html(
       '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'
       );
-
-    page = document.getElementById('provider_status').getAttribute('value')
-    console.log('-- page: ' + page)
-    if ( localStorage['provider'] == null ) {
-      localStorage['provider'] = "riteaid";
-      document.location.href = '/riteaid';
-    }
-    $("#provider").val(page)
 
     $("#set-zipcode").on('click', function(){
       var zipcode = $("#zipcode").val();
@@ -207,24 +226,3 @@
     }
   });
 </script>
-
-<style>
-  @media only screen and (min-width:769px) {
-    .zip-container {
-      margin-left: -34px;
-    }
-  }
-
-  .zip-container {
-    margin-bottom: 10px !important;
-  }
-
-  .zipcode {
-    margin-right: 5px;
-    height: 30px;
-  }
-
-  .toolbar {
-      float: left;
-  }
-</style>

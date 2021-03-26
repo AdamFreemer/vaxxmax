@@ -1,4 +1,22 @@
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
+  <header>
+    <%= render "layouts/header" %>
+    <div class="row dropdowns">
+      <%= render "layouts/provider" %>
+      <div class="col-sm text-center">
+        <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
+        <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
+          <code class="text-dark">What's New!</code>
+        </button>
+      </div>
+      <div class="col-sm">
+        <%= select_tag "state-select-walmart", options_for_select(@states, session[:state_walmart]), prompt: 'Select State', class: "form-control" %>
+      </div>
+    </div>
+  </header>
+</div>
+
+<div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the CVS vaccine slot finder page. Note this page is in beta form at this time.<br>
   You'll want to go here first: <a href="https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes" target="_blank">https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes</a>.<br>
     After required pre-qualification, refer back to the VaxxMax site for availabilities.<br>
@@ -61,6 +79,17 @@
 <div id="provider_status" value="cvs" style="visibility: hidden"></div>
 
 <script>
+  $(document).ready(function() {
+    $("#state-select-walmart").on('change', function(){
+      var state_dropdown_value = $("#state-select-walmart").val();
+
+      $.get( "/set_state_walmart/" + state_dropdown_value, function( data ) {
+        $( ".result" ).html( data );
+        location.reload();
+      });
+    });    
+  });
+
   $('#locations').DataTable(
     {
       "iDisplayLength": 25,
@@ -70,34 +99,6 @@
       }
     }
   );
-
-  $(document).ready(function() {
-    $("#provider").on('change', function(){
-      console.log("provider onchange cvs: " + $("#provider").val())
-      if ($("#provider").val() == "health_mart") {
-        localStorage['provider'] = "health_mart";
-        document.location.href = '/health_mart';
-      }
-      
-      if ($("#provider").val() == "walgreens") {
-        localStorage['provider'] = "walgreens";
-        document.location.href = '/walgreens';
-      }
-      if ($("#provider").val() == "riteaid") {
-        localStorage['provider'] = "riteaid";
-        document.location.href = '/riteaid';
-      }
-      if ($("#provider").val() == "cvs") {
-        localStorage['provider'] = "cvs";
-        document.location.href = '/cvs';
-      }
-    });
-
-    page = document.getElementById('provider_status').getAttribute('value')
-    if ( localStorage['provider'] == null ) {
-      localStorage['provider'] = "riteaid";
-      document.location.href = '/riteaid';
-    }
-    $("#provider").val(page)
-  });
 </script>
+
+<%= render "layouts/provider_js" %>
