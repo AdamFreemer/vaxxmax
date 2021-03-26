@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get 'set_zipcode/:zipcode', to: 'locations#set_zipcode'
 
   post 'cvs_ingest', to: 'data_collections#cvs_ingest'
+  get 'cvs_data', to: 'data_collections#cvs_data'
+
 
   # per page select dropdowns
   get 'set_state_cvs/:state_cvs', to: 'locations#set_state_cvs'
