@@ -68,7 +68,6 @@ class WalmartJob
             http.request(request)
           end
           parsed_response = JSON.parse(response.body)
-          puts "-- message: #{parsed_response}"
           if parsed_response['status'] == "1"
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
@@ -82,10 +81,10 @@ class WalmartJob
           location.availability = false
           location.last_updated = DateTime.now
           location.save
-          puts "-- ERROR Walmart | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
+          puts "-- ERROR Walmart | #{location.id} | #{state} | #{location.city} \n Message: #{e}"
           next
         end
-        puts "-- SUCCESS Walmart | #{location.availability} | #{state} | #{location.name} | #{location.zip}"
+        puts "-- SUCCESS Walmart | #{location.availability} | #{state} | #{location.zip} | #{location.city}"
       end
     end
   end
