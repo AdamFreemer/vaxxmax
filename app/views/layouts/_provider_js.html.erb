@@ -1,7 +1,7 @@
 <script>
   $(document).ready(function() {
     // set provide to rite aid if first visit
-    page = document.getElementById('provider_status').getAttribute('value')
+    page = document.getElementById('provider-status').getAttribute('value')
     if ( localStorage['provider'] == null ) {
       localStorage['provider'] = "riteaid";
       document.location.href = '/riteaid';
@@ -10,24 +10,29 @@
 
     // provider set state logic and reload
     $("#provider").on('change', function(){
-      console.log("provider onchange cvs: " + $("#provider").val())
+
       if ($("#provider").val() == "health_mart") {
+              console.log("-- provider onchange: " + $("#provider").val())
         localStorage['provider'] = "health_mart";
         document.location.href = '/health_mart';
       }
       if ($("#provider").val() == "riteaid") {
+              console.log("-- provider onchange: " + $("#provider").val())
         localStorage['provider'] = "riteaid";
         document.location.href = '/riteaid';
       }
       if ($("#provider").val() == "cvs") {
+              console.log("-- provider onchange: " + $("#provider").val())
         localStorage['provider'] = "cvs";
         document.location.href = '/cvs';
       }
       if ($("#provider").val() == "walgreens") {
+              console.log("-- provider onchange: " + $("#provider").val())
         localStorage['provider'] = "walgreens";
         document.location.href = '/walgreens';
       }
       if ($("#provider").val() == "walmart") {
+              console.log("-- provider onchange: " + $("#provider").val())
         localStorage['provider'] = "walmart";
         document.location.href = '/walmart';
       }

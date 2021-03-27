@@ -1,7 +1,7 @@
 class LocationsController < ApplicationController
   # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :geolocate, only: %i[walgreens walmart riteaid cvs health_mart]
+  before_action :geolocate, only: %i[cvs health_mart riteaid walgreens walmart]
 
   def cvs
     @title = 'CVS'
@@ -36,7 +36,7 @@ class LocationsController < ApplicationController
   def walmart
     @title = 'Walmart'
     @states = states_walmart.sort { |a, b| a <=> b }
-    @locations = WalgreensCity.where(state: session[:state_walgreens], availability: true)
+    @locations = WalmartCity.where(state: session[:state_walmart], availability: true)
   end
 
   def geolocate

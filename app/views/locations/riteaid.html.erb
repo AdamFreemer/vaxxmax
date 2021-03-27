@@ -150,7 +150,8 @@
 </div>
 <% end %>
 
-<div id="provider_status" value="riteaid" style="visibility: hidden"></div>
+<%# Set Provider dropdown to page value %>
+<div id="provider-status" value="riteaid" style="visibility: hidden"></div>
 <div id="zipcode_status" value="riteaid" style="visibility: hidden"></div>
 
 <style>
@@ -226,3 +227,5 @@
     }
   });
 </script>
+
+<%= render "layouts/provider_js" %>

@@ -19,7 +19,7 @@
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the CVS vaccine slot finder page. Note this page is in beta form at this time.<br>
   You'll want to go here first: <a href="https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes" target="_blank">https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes</a>.<br>
-    After required pre-qualification, refer back to the VaxxMax site for availabilities.<br>
+    After required pre-qualification, refer back to the VaxxMax site for availabilities. Vaxxmax provides you with an availability zip code.<br> There may be several stores listed on the Walmart website in your zipcode, but at minimum one should have availability.<br>
   </p>
 
   <p class="text-center">
@@ -67,7 +67,7 @@
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
             <td class="text-center">
-              <%= location.distance(@user_ip, @zipcode, location).to_i %> 
+              <%= location&.distance(@user_ip, @zipcode, location).to_i %> 
             </td>             
           </tr>
         <% end %>
@@ -76,7 +76,8 @@
   </div>
 </div>
 
-<div id="provider_status" value="cvs" style="visibility: hidden"></div>
+<%# Set Provider dropdown to page value %>
+<div id="provider-status" value="walmart" style="visibility: hidden"></div>
 
 <script>
   $(document).ready(function() {

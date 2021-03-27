@@ -36,7 +36,7 @@ class WalmartJob
     end
 
     def update(state)
-      locations = WalMartCity.where(state: state)
+      locations = WalmartCity.where(state: state)
       locations.each do |location|
         require 'net/http'
         require 'uri'
@@ -63,19 +63,13 @@ class WalmartJob
           use_ssl: uri.scheme == 'https'
         }
         
-        response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-          http.request(request)
-        end
-        
-        # response.code
-        # response.body
-
         begin
           response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
             http.request(request)
           end
-
-          if response.body != "[]"
+          parsed_response = JSON.parse(response.body)
+          puts "-- message: #{parsed_response}"
+          if parsed_response['status'] == "1"
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
@@ -88,10 +82,10 @@ class WalmartJob
           location.availability = false
           location.last_updated = DateTime.now
           location.save
-          puts "-- ERROR HealthMart | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
+          puts "-- ERROR Walmart | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
           next
         end
-        puts "-- SUCCESS HealthMart | #{location.availability} | #{state} | #{location.name} | #{location.zip}"
+        puts "-- SUCCESS Walmart | #{location.availability} | #{state} | #{location.name} | #{location.zip}"
       end
     end
   end
