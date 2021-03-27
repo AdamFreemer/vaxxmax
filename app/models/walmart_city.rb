@@ -11,11 +11,9 @@ class WalmartCity < ApplicationRecord
                           lookup_by_ip(user_ip)
                         end
 
-    distance = Haversine.distance(search_location.latitude.to_f,
+    Haversine.distance(search_location.latitude.to_f,
       search_location.longitude.to_f, location.latitude.to_f,
       location.longitude.to_f).to_miles.to_i
-    puts "--- distance: #{distance}"
-    distance
     rescue StandardError
       'N/A'
     end
