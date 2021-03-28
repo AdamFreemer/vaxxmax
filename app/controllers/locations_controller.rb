@@ -1,11 +1,23 @@
 class LocationsController < ApplicationController
   # http_basic_authenticate_with name: ENV['ADMIN_USERNAME'], password: ENV['ADMIN_PASSWORD'], except: [:'riteaid, :walgreens, :set_state]
-
   before_action :set_location, only: %i[show edit update destroy]
-  before_action :set_dropdowns, only: %i[walgreens riteaid cvs health_mart]
-  before_action :geolocate, only: %i[walgreens riteaid cvs health_mart]
+  before_action :geolocate, only: %i[cvs health_mart riteaid walgreens walmart]
+
+  def cvs
+    @title = 'CVS'
+    @states = states_cvs.sort { |a, b| a <=> b }
+    @locations = CvsCity.where(state: session[:state_cvs], availability: true)
+  end
+
+  def health_mart
+    @title = 'Health Mart'
+    @states = states_health_mart.sort { |a, b| a <=> b }
+    @locations = HealthMartCity.where(state: session[:state_health_mart], availability: true)
+  end
 
   def riteaid
+    @title = 'Rite Aid'
+    @states = states_rite_aid.sort { |a, b| a <=> b }
     @locations = Location
                  .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
                  .where('when_available > ?', DateTime.now - 2.days)
@@ -16,30 +28,20 @@ class LocationsController < ApplicationController
   end
 
   def walgreens
+    @title = 'Walgreens'
+    @states = states_walgreens.sort { |a, b| a <=> b }
     @locations = WalgreensCity.where(state: session[:state_walgreens], availability: true)
   end
 
-  def cvs
-    @locations = CvsCity.where(state: session[:state_cvs], availability: true)
-  end
-
-  def health_mart
-    @locations = HealthMartCity.where(state: session[:state_health_mart], availability: true)
-  end
-
-  def test
-    @states = states_rite_aid
-    @locations = Location
-                 .where(availability: true, state: session[:state_rite_aid])
-                 .where('when_available > ?', DateTime.now - 2.days)
-    @locations_old = Location
-                     .where(availability: true, state: session[:state_rite_aid])
-                     .where('when_available < ?', DateTime.now - 2.days)
+  def walmart
+    @title = 'Walmart'
+    @states = states_walmart.sort { |a, b| a <=> b }
+    @locations = WalmartCity.where(state: session[:state_walmart], availability: true)
   end
 
   def geolocate
     @user_ip = if request.remote_ip == '127.0.0.1' || request.remote_ip == '::1'
-                 '100.14.167.116'
+                 '69.242.71.104'
                else
                  request.remote_ip
                end
@@ -57,6 +59,12 @@ class LocationsController < ApplicationController
     redirect_to walgreens_path
   end
 
+  def set_state_walmart
+    session[:state_walmart] = params[:state_walmart]
+
+    redirect_to walmart_path
+  end
+
   def set_state_cvs
     session[:state_cvs] = params[:state_cvs]
 
@@ -71,7 +79,7 @@ class LocationsController < ApplicationController
 
   def set_zipcode
     session[:zipcode] = params[:zipcode]
-    
+
     redirect_to riteaid_path
   end
 
@@ -81,11 +89,8 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
   end
 
-  def set_dropdowns
-    @states_rite_aid = states_rite_aid.sort { |a, b| a <=> b }
-    @states_walgreens = states_walgreens
-    @states_cvs = states_cvs.sort { |a, b| a <=> b }
-    @states_health_mart = states_health_mart.sort { |a, b| a <=> b }
+  def states_health_mart
+    HealthMartCity.order(:state).distinct.pluck(:state)
   end
 
   def states_rite_aid
@@ -96,8 +101,8 @@ class LocationsController < ApplicationController
     WalgreensCity.order(:state).distinct.pluck(:state)
   end
 
-  def states_health_mart
-    HealthMartCity.order(:state).distinct.pluck(:state)
+  def states_walmart
+    WalmartCity.order(:state).distinct.pluck(:state)
   end
 
   def states_cvs

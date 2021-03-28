@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_21_003241) do
+ActiveRecord::Schema.define(version: 2021_03_24_181614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,11 +78,13 @@ ActiveRecord::Schema.define(version: 2021_03_21_003241) do
     t.boolean "is_cvs"
     t.boolean "is_health_mart"
     t.string "name"
+    t.boolean "is_walmart"
     t.index ["availability"], name: "index_locations_on_availability"
     t.index ["is_cvs"], name: "index_locations_on_is_cvs"
     t.index ["is_health_mart"], name: "index_locations_on_is_health_mart"
     t.index ["is_rite_aid"], name: "index_locations_on_is_rite_aid"
     t.index ["is_walgreens"], name: "index_locations_on_is_walgreens"
+    t.index ["is_walmart"], name: "index_locations_on_is_walmart"
     t.index ["state"], name: "index_locations_on_state"
     t.index ["when_available"], name: "index_locations_on_when_available"
   end
@@ -108,6 +110,21 @@ ActiveRecord::Schema.define(version: 2021_03_21_003241) do
     t.string "name"
     t.string "state"
     t.string "zip"
+    t.string "latitude"
+    t.string "longitude"
+    t.datetime "last_updated"
+    t.datetime "when_available"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "walmart_cities", force: :cascade do |t|
+    t.boolean "availability"
+    t.string "name"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "county"
     t.string "latitude"
     t.string "longitude"
     t.datetime "last_updated"

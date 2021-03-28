@@ -1,65 +1,18 @@
-<%# This will auto-reload the page every 60s %>
-<meta http-equiv="refresh" content="60" />
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
-  <p id="notice"><%= notice %></p>
-
   <header>
-    <div class="blog-header-logo text-dark text-center title-text">National Vaccine Availability</div>
-    <div class="blog-header-logo text-dark text-center title-text">Rite Aid</div>
-    <br>
-    <div class="text-center vaxxmax-logo-text"><%= image_tag("vaccine-logo1-sm.png")%></div>
-    <div class="text-dark text-center" href="#">VaxxMax&nbsp;&nbsp;</div>
-    <div class="text-center" href="#">Notice: Please click <a href="https://www.riteaid.com/content/dam/riteaid-web/campaigns/FY21/holidays-and-events/covid-19/vaccine/Rite-Aid-COVID-19-Eligibility-and-Registration-Guide.pdf" target="_blank" style="color:red">here</a> for Rite Aid's most current vaccine eligibility nationwide. 
-    </div>
-    <br>
-
-    <div class="row justify-content-between align-items-center">
-      <div class="col-12 text-center">
-        <div class="blog-header-small text-dark" href="#">
-          <code class="text-black">This tool is free, but donations to cover hosting & development costs are welcome. Thanks!</code><br>
-          <!-- button row -->
-          <button class=" btn btn-md btn-outline-primary">
-            <a href="https://www.paypal.com/donate?business=9SM3XLXSS9RVN&item_name=Help+pay+for+VaxxMaxx+hosting+and+server+costs.&currency_code=USD" target="_blank">
-              <code class="text-dark">Contribute via PayPal</code>
-            </a>   
-          </button> 
-          <button class="btn btn-md btn-outline-primary" data-toggle="modal">
-            <a href="https://www.facebook.com/vaxxmax" target="_blank">
-              <code class="text-dark">Find us on Facebook</code>
-            </a>   
-          </button>            
-          <button class="btn btn-md btn-outline-primary" id="changelog" data-toggle="modal" data-target="#changelogModal">
-            <code class="text-dark">What's New!</code>
-          </button>               
-          <button class="btn btn-md btn-outline-primary" id="bitcoin" data-toggle="modal" data-target="#bitcoinModal">
-            <code class="text-dark">Contribute via Bitcoin</code>
-          </button>     
-          <!-- button row -->            
-        </div>
-      </div>
-    </div>
-    
+    <%= render "layouts/header" %>
     <div class="row dropdowns">
-      <div class="col-sm">
-        <div class="dropdown">
-          <select name="provider" id="provider" class="form-control">
-            <option value="riteaid">Rite Aid</option>
-            <option value="cvs">CVS</option>
-            <option value="health_mart">Health Mart</option>
-            <option value="walgreens">Walgreens</option>
-          </select>
-        </div> 
+      <%= render "layouts/provider" %>
+      <div class="col-sm text-center">
+        <code class="text-black">Facebook: <a href="https://www.facebook.com/vaxxmax" target="_blank">https://www.facebook.com/vaxxmax</a></code><br>
+        <button class="btn btn-xs btn-outline-primary changelog" id="changelog" data-toggle="modal" data-target="#changelogModal">
+          <code class="text-dark">What's New!</code>
+        </button>
       </div>
       <div class="col-sm">
-      </div>
-
-      <div class="col-sm">
-        <%= select_tag "state-select-rite-aid", options_for_select(@states_rite_aid, session[:state_rite_aid]), prompt: 'Select State', class: "form-control" %>
+        <%= select_tag "state-select-rite-aid", options_for_select(@states, session[:state_rite_aid]), prompt: 'Select State', class: "form-control" %>
       </div>
     </div>
-
-
-    
   </header>
 </div>
 
@@ -197,8 +150,31 @@
 </div>
 <% end %>
 
-<div id="provider_status" value="riteaid" style="visibility: hidden"></div>
+<%# Set Provider dropdown to page value %>
+<div id="provider-status" value="riteaid" style="visibility: hidden"></div>
 <div id="zipcode_status" value="riteaid" style="visibility: hidden"></div>
+
+<style>
+  /* For zipcode entry box */
+  @media only screen and (min-width:769px) {
+    .zip-container {
+      margin-left: -34px;
+    }
+  }
+
+  .zip-container {
+    margin-bottom: 10px !important;
+  }
+
+  .zipcode {
+    margin-right: 5px;
+    height: 30px;
+  }
+
+  .toolbar {
+      float: left;
+  }
+</style>
 
 <script>
   $('#locations').DataTable(
@@ -213,40 +189,19 @@
   );
 
   $(document).ready(function() {
-    // datatables add zip field
-    $("#provider").on('change', function(){
-      console.log("provider onchange riteaid: " + $("#provider").val())
-      if ($("#provider").val() == "health_mart") {
-        localStorage['provider'] = "health_mart";
-        document.location.href = '/health_mart';
-      }
-      
-      if ($("#provider").val() == "walgreens") {
-        localStorage['provider'] = "walgreens";
-        document.location.href = '/walgreens';
-      }
-      if ($("#provider").val() == "riteaid") {
-        localStorage['provider'] = "riteaid";
-        document.location.href = '/riteaid';
-      }
-      if ($("#provider").val() == "cvs") {
-        localStorage['provider'] = "cvs";
-        document.location.href = '/cvs';
-      }
-    });
+    $("#state-select-rite-aid").on('change', function(){
+      var state_dropdown_value = $("#state-select-rite-aid").val();
 
-
+      $.get( "/set_state_rite_aid/" + state_dropdown_value, function( data ) {
+        $( ".result" ).html( data );
+        location.reload();
+      });
+    });    
+ 
+    // zipcode related
     $("div.toolbar").html(
       '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'
       );
-
-    page = document.getElementById('provider_status').getAttribute('value')
-    console.log('-- page: ' + page)
-    if ( localStorage['provider'] == null ) {
-      localStorage['provider'] = "riteaid";
-      document.location.href = '/riteaid';
-    }
-    $("#provider").val(page)
 
     $("#set-zipcode").on('click', function(){
       var zipcode = $("#zipcode").val();
@@ -273,23 +228,4 @@
   });
 </script>
 
-<style>
-  @media only screen and (min-width:769px) {
-    .zip-container {
-      margin-left: -34px;
-    }
-  }
-
-  .zip-container {
-    margin-bottom: 10px !important;
-  }
-
-  .zipcode {
-    margin-right: 5px;
-    height: 30px;
-  }
-
-  .toolbar {
-      float: left;
-  }
-</style>
+<%= render "layouts/provider_js" %>

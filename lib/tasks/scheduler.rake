@@ -154,3 +154,30 @@ task walgreens_vspotter: :environment do
   WalgreensJob.process
   puts "Process Walgreens from vspotter..."
 end
+
+# Walmart
+
+task walmart_1: :environment do
+  WalmartJob.update_zone_1
+  puts "Start Walmart 1!"
+end
+
+task walmart_2: :environment do
+  WalmartJob.update_zone_2
+  puts "Start Walmart 2!"
+end
+
+task walmart_3: :environment do
+  WalmartJob.update_zone_3
+  puts "Start Walmart 3!"
+end
+
+task walmart_4: :environment do
+  WalmartJob.update_zone_4
+  puts "Start Walmart 4!"
+end
+
+task walmart_4: :environment do
+  WalmartJob.update_zone_5
+  puts "Start Walmart 5!"
+end
