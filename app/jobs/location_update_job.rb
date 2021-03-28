@@ -111,9 +111,11 @@ class LocationUpdateJob
         location.slot_1 = !(data['Data']['slots']['1'] == false)
         location.slot_2 = !(data['Data']['slots']['2'] == false)
         location.last_updated = DateTime.now
+
         if location.slot_1 || location.slot_2
+          location.increment!(:appointments) if location.availability.blank?
+
           location.when_available = DateTime.now if location.availability.blank?
-          # location.store_availability_count += 1 if location.availability.blank?
           location.availability = true
         else
           location.availability = false
@@ -231,6 +233,8 @@ class LocationUpdateJob
         next if location.blank?
 
         if site_location['status'] == "Available"
+          location.increment!(:appointments) if location.availability.blank?
+
           location.last_updated = DateTime.now
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true

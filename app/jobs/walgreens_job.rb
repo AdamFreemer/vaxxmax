@@ -21,6 +21,8 @@ class WalgreensJob
         next if location.nil?
 
         if feature['properties']['provider'] == 'walgreens' && feature['properties']['appointments_available'] == true
+          location.increment!(:appointments) if location.availability.blank?
+
           location.last_updated = DateTime.now
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true

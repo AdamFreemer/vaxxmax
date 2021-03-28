@@ -65,6 +65,8 @@ class HealthMartJob
           end
 
           if response.body != "[]"
+            location.increment!(:appointments) if location.availability.blank?
+
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
