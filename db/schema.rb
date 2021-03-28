@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_24_181614) do
+ActiveRecord::Schema.define(version: 2021_03_28_201039) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_181614) do
     t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "appointments"
   end
 
   create_table "health_mart_cities", force: :cascade do |t|
@@ -42,6 +43,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_181614) do
     t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "appointments"
   end
 
   create_table "location_statuses", force: :cascade do |t|
@@ -79,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_181614) do
     t.boolean "is_health_mart"
     t.string "name"
     t.boolean "is_walmart"
+    t.integer "appointments"
     t.index ["availability"], name: "index_locations_on_availability"
     t.index ["is_cvs"], name: "index_locations_on_is_cvs"
     t.index ["is_health_mart"], name: "index_locations_on_is_health_mart"
@@ -116,6 +119,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_181614) do
     t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "appointments"
   end
 
   create_table "walmart_cities", force: :cascade do |t|
@@ -131,6 +135,7 @@ ActiveRecord::Schema.define(version: 2021_03_24_181614) do
     t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "appointments"
   end
 
   create_table "zipcodes", force: :cascade do |t|
