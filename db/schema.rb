@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_28_201039) do
+ActiveRecord::Schema.define(version: 2021_03_29_005918) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_03_28_201039) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "appointments"
+    t.integer "appointments_all"
   end
 
   create_table "health_mart_cities", force: :cascade do |t|
@@ -44,6 +45,27 @@ ActiveRecord::Schema.define(version: 2021_03_28_201039) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "appointments"
+    t.integer "appointments_all"
+  end
+
+  create_table "histories", force: :cascade do |t|
+    t.integer "location_id"
+    t.boolean "status"
+    t.boolean "is_cvs"
+    t.boolean "is_health_mart"
+    t.boolean "is_rite_aid"
+    t.boolean "is_walgreens"
+    t.boolean "is_walmart"
+    t.string "latitude"
+    t.string "longitude"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.string "county"
+    t.datetime "last_updated"
+    t.datetime "when_available"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "location_statuses", force: :cascade do |t|
@@ -82,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_03_28_201039) do
     t.string "name"
     t.boolean "is_walmart"
     t.integer "appointments"
+    t.integer "appointments_all"
     t.index ["availability"], name: "index_locations_on_availability"
     t.index ["is_cvs"], name: "index_locations_on_is_cvs"
     t.index ["is_health_mart"], name: "index_locations_on_is_health_mart"
@@ -120,6 +143,7 @@ ActiveRecord::Schema.define(version: 2021_03_28_201039) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "appointments"
+    t.integer "appointments_all"
   end
 
   create_table "walmart_cities", force: :cascade do |t|
@@ -136,6 +160,7 @@ ActiveRecord::Schema.define(version: 2021_03_28_201039) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "appointments"
+    t.integer "appointments_all"
   end
 
   create_table "zipcodes", force: :cascade do |t|

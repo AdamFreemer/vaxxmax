@@ -113,7 +113,20 @@ class LocationUpdateJob
         location.last_updated = DateTime.now
 
         if location.slot_1 || location.slot_2
+          location.increment!(:appointments_all)
           location.increment!(:appointments) if location.availability.blank?
+          History.create!(
+            location_id: location.id,
+            status: true,
+            is_walgreens: true,
+            latitude: location&.latitude,
+            longitude: location&.longitude,
+            city: location&.city,
+            state: location&.state,
+            zip: location&.zip,
+            last_updated: location&.last_updated,
+            when_available: location&.when_available
+          )
 
           location.when_available = DateTime.now if location.availability.blank?
           location.availability = true
@@ -233,7 +246,20 @@ class LocationUpdateJob
         next if location.blank?
 
         if site_location['status'] == "Available"
+          location.increment!(:appointments_all)
           location.increment!(:appointments) if location.availability.blank?
+          History.create!(
+            location_id: location.id,
+            status: true,
+            is_walgreens: true,
+            latitude: location&.latitude,
+            longitude: location&.longitude,
+            city: location&.name,
+            state: location&.state,
+            zip: location&.zip,
+            last_updated: location&.last_updated,
+            when_available: location&.when_available
+          )
 
           location.last_updated = DateTime.now
           location.when_available = DateTime.now if location.availability.blank?

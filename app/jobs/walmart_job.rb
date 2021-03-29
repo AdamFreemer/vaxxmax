@@ -69,8 +69,20 @@ class WalmartJob
           end
           parsed_response = JSON.parse(response.body)
           if parsed_response['status'] == "1"
+            location.increment!(:appointments_all)
             location.increment!(:appointments) if location.availability.blank?
-
+            History.create!(
+              status: true,
+              is_walgreens: true,
+              latitude: location&.latitude,
+              longitude: location&.longitude,
+              city: location&.name,
+              state: location&.state,
+              zip: location&.zip,
+              last_updated: location&.last_updated,
+              when_available: location&.when_available
+            )
+          
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
