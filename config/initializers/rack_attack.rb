@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class Rack::Attack
-  throttle('requests by ip', limit: 45, period: 900) do |request|
+  throttle('requests by ip', limit: 100, period: 900) do |request|
     request.ip
   end
 
