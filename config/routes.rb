@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'rite_aid', to: 'locations#riteaid'
   get 'walgreens', to: 'locations#walgreens'
   get 'walmart', to: 'locations#walmart'
+  get 'map', to: 'visualizations#main'
 
   # zipcode geolocate set
   get 'set_zipcode/:zipcode', to: 'locations#set_zipcode'
