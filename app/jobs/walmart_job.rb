@@ -73,7 +73,7 @@ class WalmartJob
             location.increment!(:appointments) if location.availability.blank?
             History.create!(
               status: true,
-              is_walgreens: true,
+              is_walmart: true,
               latitude: location&.latitude,
               longitude: location&.longitude,
               city: location&.name,

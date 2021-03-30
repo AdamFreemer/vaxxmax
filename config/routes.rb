@@ -15,8 +15,11 @@ Rails.application.routes.draw do
   # zipcode geolocate set
   get 'set_zipcode/:zipcode', to: 'locations#set_zipcode'
 
+  # CVS api update ingest
   post 'cvs_ingest', to: 'data_collections#cvs_ingest'
-  get 'cvs_data', to: 'data_collections#cvs_data'
+
+
+  get 'api/v1/state_by_zipcode/:state/:provider', to: 'data_collections#state_by_zipcode'
 
 
   # per page select dropdowns

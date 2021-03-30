@@ -7,10 +7,15 @@ class DataCollectionsController < ApplicationController
     head :ok
   end
 
-  def cvs_data
-    cvs = Location.all.pluck(:state, :zip, :last_updated, :when_available, :availability)
+  def state_by_zipcode
+    if params[:provider] == 'all'
+      object = History.where(state: params[:state].upcase).as_json(only: [
+        :id, :zip, :latitude, :longitude, :last_updated, :when_available
+      ], methods: :provider)
+      render json: object, status: 200
+    else
 
-    json_response(cvs)
+    end
   end
 
   def json_response(object, status = :ok)

@@ -118,7 +118,7 @@ class LocationUpdateJob
           History.create!(
             location_id: location.id,
             status: true,
-            is_walgreens: true,
+            is_rite_aid: true,
             latitude: location&.latitude,
             longitude: location&.longitude,
             city: location&.city,
@@ -251,7 +251,7 @@ class LocationUpdateJob
           History.create!(
             location_id: location.id,
             status: true,
-            is_walgreens: true,
+            is_cvs: true,
             latitude: location&.latitude,
             longitude: location&.longitude,
             city: location&.name,

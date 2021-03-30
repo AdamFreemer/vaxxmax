@@ -70,7 +70,7 @@ class HealthMartJob
             History.create!(
               location_id: location.id,
               status: true,
-              is_walgreens: true,
+              is_health_mart: true,
               latitude: location&.latitude,
               longitude: location&.longitude,
               city: location&.name,
