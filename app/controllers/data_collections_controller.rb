@@ -9,7 +9,7 @@ class DataCollectionsController < ApplicationController
 
   def state_by_zipcode
     if params[:provider] == 'all'
-      object = History.where(state: params[:state].upcase).as_json(only: [
+      object = History.where(state: params[:state].upcase).limit(2000).as_json(only: [
         :id, :zip, :latitude, :longitude, :last_updated, :when_available
       ], methods: :provider)
       render json: object, status: 200
