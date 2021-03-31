@@ -71,6 +71,9 @@ class WalmartJob
           if parsed_response['status'] == "1"
             location.increment!(:appointments_all)
             location.increment!(:appointments) if location.availability.blank?
+            location.last_updated = DateTime.now
+            location.when_available = DateTime.now if location.availability.blank?
+            location.availability = true
             History.create!(
               status: true,
               is_walmart: true,
@@ -81,11 +84,7 @@ class WalmartJob
               zip: location&.zip,
               last_updated: location&.last_updated,
               when_available: location&.when_available
-            )
-          
-            location.last_updated = DateTime.now
-            location.when_available = DateTime.now if location.availability.blank?
-            location.availability = true
+            )            
           else
             location.availability = false
             location.last_updated = DateTime.now

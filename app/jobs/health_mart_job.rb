@@ -67,6 +67,9 @@ class HealthMartJob
           if response.body != "[]"
             location.increment!(:appointments_all)
             location.increment!(:appointments) if location.availability.blank?
+            location.last_updated = DateTime.now
+            location.when_available = DateTime.now if location.availability.blank?
+            location.availability = true
             History.create!(
               location_id: location.id,
               status: true,
@@ -78,11 +81,7 @@ class HealthMartJob
               zip: location&.zip,
               last_updated: location&.last_updated,
               when_available: location&.when_available
-            )
-
-            location.last_updated = DateTime.now
-            location.when_available = DateTime.now if location.availability.blank?
-            location.availability = true
+            )            
           else
             location.availability = false
             location.last_updated = DateTime.now
