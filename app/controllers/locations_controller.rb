@@ -36,7 +36,7 @@ class LocationsController < ApplicationController
   def walmart
     @title = 'Walmart'
     @states = states_walmart.sort { |a, b| a <=> b }
-    @locations = WalmartCity.where(state: session[:state_walmart], availability: true)
+    @locations = Location.where(is_walmart: true, availability: true, state: session[:state_walmart])
   end
 
   def geolocate

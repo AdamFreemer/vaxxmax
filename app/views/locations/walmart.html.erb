@@ -19,8 +19,7 @@
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the Walmart vaccine slot finder page.<br>
   You'll want to go here first: <a href="https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes" target="_blank">https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes</a> and create an account.<br>
-    After pre-qualification, refer back to the VaxxMax site for availabilities. Vaxxmax provides you with an availability zip code.<br> 
-    There may be several stores listed on the Walmart website in this zip code.<br>
+    After pre-qualification, refer back to the VaxxMax site for availabilities. Vaxxmax provides you with an availability zip code and available store.<br>
   </p>
 
   <p class="text-center">
@@ -32,6 +31,7 @@
       <thead class="thead-dark">
         <tr>
           <th>Availability</th>
+          <th>Clickable Address (Google Maps)</th>
           <th>Town / City</th>
           <th class="text-center">State</th>      
           <th class="text-center">Zip</th>
@@ -50,6 +50,12 @@
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
               </svg>   
             </td>
+            <td>
+              <%= link_to location.full_address, location.google_search_walmart, id: "full-address-#{location.id}", target: :_blank %>
+              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
+                Copy
+              </button>              
+            </td>            
             <td><%= location.city %></td>
             <td class="text-center"><%= location.state %></td>
             <td class="text-center">

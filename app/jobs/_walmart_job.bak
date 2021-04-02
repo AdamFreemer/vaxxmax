@@ -1,4 +1,4 @@
-class HealthMartJob
+class WalmartJob
   class << self
     def update_zone_1
       states = ['AK', 'AL', 'AR', 'AZ', 'CA', 'CO', 'CT', 'DC', 'DE', 'FL']
@@ -36,42 +36,55 @@ class HealthMartJob
     end
 
     def update(state)
-      locations = HealthMartCity.where(state: state)
+      locations = Location.where(state: state, is_walmart: true)
       locations.each do |location|
         require 'net/http'
         require 'uri'
+  
 
-        uri = URI.parse("https://scrcxp.pdhi.com/ScreeningEvent/fed87cd2-f120-48cc-b098-d72668838d8b/GetLocations/#{location.zip.to_s}?state=#{location.state.to_s}")
+        uri = URI.parse("https://www.walmart.com/pharmacy/v2/clinical-services/inventory/store/#{location.store_number}/f69edd30-1305-4f94-88cd-9a121ed111be?type=imz")
         request = Net::HTTP::Get.new(uri)
-        request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:87.0) Gecko/20100101 Firefox/87.0"
-        request["Accept"] = "application/json, text/javascript, */*; q=0.01"
-        request["Accept-Language"] = "en-US,en;q=0.5"
-        request["X-Requested-With"] = "XMLHttpRequest"
-        request["Connection"] = "keep-alive"
-        request["Referer"] = "https://scrcxp.pdhi.com/Member/Home/Program/39d48d44-9969-4ab4-961e-aa08c9a38f08"
-        request["Cookie"] = "__RequestVerificationToken=TBVxt3WqBIHNEchFts1x9ueEwigR7HlVUGbKhMrF5is1IdvH2Zd1J9R9Ti75nsuvY52d_4FOMo-S4WrE2GZN7MSCr041; XPCookie=2wexWMOBbKt5Xi6YdQPqvcYC3unYaDzhGk7q23q90At6OYK1nb_ZMquP1wFSBGRTpr9uLd5woqk3VLsUCdMusBZ6c50aV834qagik07futu5mWfsjgQbqJp-QOMAc463qj_XFX52kvKUOEVzgHRasdUoVs_HSHGXckRPKR3sh0yncwtnTRJQffYU6FzO2QAlj26kWWCMbxpsOXhjmNVxejlhfHL3GQTLJJSAhuqvbNiRNO37SkX6I92-BAiJrw3GVjS0HblRg4WaLhkctIu25d8PDBVSngG6tVdtUV8LnEuFLE3Bod3G5Otf0DSuBtBajXbs6m0xF9DPmlTAXMH8xv6fVv2pnzjRnZVxSv5mrfH9Vz96jdKOXb4b8XOCxtGM_7LZXpoBAIIq3CwCYspEA4UY8H7XcWwv-oblP1qBxzZ552Es0xu5AQx_XfdFXrRuJE40kllCTjuGDfElJAdItaxbmhW95G6mRFQAY-jcA4o_VNMeEjh9SNGeeQegXFH0wm3WRWuEOboNQtqJIxFO5KbSMTT2KiKNcexFVRFcLOlctrmO8yfZ6rACm-ncPtuxdJ-QszYGYi3JJ82vRqarPO6WHG_7_uihaldI5ivp5uoqu8Da"
-        request["Dnt"] = "1"
-        request["Sec-Gpc"] = "1"
+        request.content_type = "application/json"
+        request["Sec-Ch-Ua"] = '\"Google Chrome\";v=\"89\", \"Chromium\";v=\"89\", \";Not A Brand\";v=\"99\"'
+        request["Sec-Ch-Ua-Mobile"] = "?0"
+        request["User-Agent"] = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36"
+        request["Wpharmacy-Source"] = "web/chrome89.0.4389/OS X 10.15.7/f69edd30-1305-4f94-88cd-9a121ed111be"
+        request["Accept"] = "application/json"
+        request["Referer"] = "https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid"
+        request["Wpharmacy-Trackingid"] = "646d503b-9060-4d11-999b-6582ac4cae04"
+        request["Rx-Electrode"] = "true"
 
         req_options = {
-          use_ssl: uri.scheme == 'https'
+          use_ssl: uri.scheme == "https"
         }
 
         begin
           response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
             http.request(request)
           end
-          
-          if response.body != "[]"
+          parsed_response = JSON.parse(response.body)
+          binding.pry
+          if parsed_response['status'] == "1"
+
+
+            available_inventory = parsed_response['data']['inventory']
+            total_inventory = 0
+            available_inventory.each do |x|
+              puts x['quantity']
+              total = total + x['quantity'].to_i
+            end
+            binding.pry
+
+
+            # binding.pry
             location.increment!(:appointments_all)
             location.increment!(:appointments) if location.availability.blank?
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
             History.create!(
-              location_id: location.id,
               status: true,
-              is_health_mart: true,
+              is_walmart: true,
               latitude: location&.latitude,
               longitude: location&.longitude,
               city: location&.name,
@@ -81,6 +94,7 @@ class HealthMartJob
               when_available: location&.when_available
             )            
           else
+            # binding.pry
             location.availability = false
             location.last_updated = DateTime.now
           end
@@ -89,10 +103,10 @@ class HealthMartJob
           location.availability = false
           location.last_updated = DateTime.now
           location.save
-          puts "-- ERROR HealthMart | #{location.id} | #{state} | #{location.name} \n Message: #{e}"
+          puts "-- ERROR Walmart | #{location.id} | #{state} | #{location.city} \n Message: #{e}"
           next
         end
-        puts "-- SUCCESS HealthMart | #{location.availability} | #{state} | #{location.name} | #{location.zip}"
+        puts "-- SUCCESS Walmart | #{location.availability} | #{state} | #{location.zip} | #{location.city}"
       end
     end
   end
