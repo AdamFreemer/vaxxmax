@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_005918) do
+ActiveRecord::Schema.define(version: 2021_04_03_034253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,12 @@ ActiveRecord::Schema.define(version: 2021_03_29_005918) do
     t.datetime "when_available"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "vaccine_types"
+    t.index ["is_cvs"], name: "index_histories_on_is_cvs"
+    t.index ["is_health_mart"], name: "index_histories_on_is_health_mart"
+    t.index ["is_rite_aid"], name: "index_histories_on_is_rite_aid"
+    t.index ["is_walgreens"], name: "index_histories_on_is_walgreens"
+    t.index ["is_walmart"], name: "index_histories_on_is_walmart"
   end
 
   create_table "location_statuses", force: :cascade do |t|
@@ -105,6 +111,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_005918) do
     t.boolean "is_walmart"
     t.integer "appointments"
     t.integer "appointments_all"
+    t.string "vaccine_types"
     t.index ["availability"], name: "index_locations_on_availability"
     t.index ["is_cvs"], name: "index_locations_on_is_cvs"
     t.index ["is_health_mart"], name: "index_locations_on_is_health_mart"
@@ -144,6 +151,7 @@ ActiveRecord::Schema.define(version: 2021_03_29_005918) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "appointments"
     t.integer "appointments_all"
+    t.string "vaccine_types"
   end
 
   create_table "walmart_cities", force: :cascade do |t|

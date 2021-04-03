@@ -19,25 +19,26 @@
 <div class="shadow-sm p-3 mb-6 bg-white rounded">
   <p class="text-center">Welcome to VaxxMax. This is the Walmart vaccine slot finder page.<br>
   You'll want to go here first: <a href="https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes" target="_blank">https://www.walmart.com/pharmacy/clinical-services/immunization/scheduled?imzType=covid&r=yes</a> and create an account.<br>
-    After pre-qualification, refer back to the VaxxMax site for availabilities. Vaxxmax provides you with an availability zip code.<br> 
-    There may be several stores listed on the Walmart website in this zip code.<br>
+    After pre-qualification, refer back to the VaxxMax site for availabilities. Vaxxmax provides you with an availability zip code and available store.<br>
   </p>
 
   <p class="text-center">
     This page auto-refreshes every 60 seconds.
   </p>
   
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered table-condensed" id="locations">
+  <div class="table-responsive-md">
+    <table class="table table-striped table-bordered table-condensed" id="walmart">
       <thead class="thead-dark">
         <tr>
           <th>Availability</th>
+          <th>Clickable Address (Google Maps)</th>
           <th>Town / City</th>
           <th class="text-center">State</th>      
           <th class="text-center">Zip</th>
           <th class="text-center">County</th>
           <th>Last Updated</th>
           <th>Became Available</th>
+          <th>Brands</th>
           <th class="text-center">Distance (mi)</th>           
         </tr>
       </thead>
@@ -50,6 +51,12 @@
                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
               </svg>   
             </td>
+            <td>
+              <%= link_to location.full_address, location.google_search_walmart, id: "full-address-#{location.id}", target: :_blank %>
+              <button class="btn btn-xs btn-outline-primary" data-clipboard-target="#full-address-<%= location.id %>">
+                Copy
+              </button>              
+            </td>            
             <td><%= location.city %></td>
             <td class="text-center"><%= location.state %></td>
             <td class="text-center">
@@ -67,9 +74,11 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
+            <td><%= location.vaccine_types %></td>
             <td class="text-center">
-              <%= location&.distance(@user_ip, @zipcode, location).to_i %> 
-            </td>             
+              <%= puts session[:zipcode] %>
+              <%= location.distance(@user_ip, session[:zipcode] ||= "", location).to_i %>
+            </td>            
           </tr>
         <% end %>
       </tbody>
@@ -80,6 +89,29 @@
 <%# Set Provider dropdown to page value %>
 <div id="provider-status" value="walmart" style="visibility: hidden"></div>
 
+<style>
+  /* For zipcode entry box */
+  @media only screen and (min-width:769px) {
+    .zip-container {
+      margin-left: -34px;
+    }
+  }
+
+  .zip-container {
+    margin-bottom: 10px !important;
+  }
+
+  .zipcode {
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 30px;
+  }
+
+  .toolbar {
+      float: left;
+  }
+</style>
+
 <script>
   $(document).ready(function() {
     $("#state-select-walmart").on('change', function(){
@@ -89,11 +121,39 @@
         $( ".result" ).html( data );
         location.reload();
       });
-    });    
+    });   
+    
+    // zipcode related
+    $("div.toolbar").html(
+      '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'
+      );
+    $("#set-zipcode").on('click', function(){
+      var zipcode = $("#zipcode").val();
+      var numbers = /^[0-9]+$/;
+
+      if (!zipcode.match(numbers)) {
+        alert("Zipcode must be numerical and 5 digits.")
+      } 
+
+      if (zipcode != "" && zipcode.match(numbers)) {
+        localStorage['zipcode'] = zipcode
+        $.get( "/set_zipcode/" + zipcode, function( data ) {
+          $( ".result" ).html( data );
+          location.reload();
+        });
+      }
+    });
+
+    if (localStorage['zipcode'] == null || localStorage['provider'] == null) {
+      $("#zipcode").attr("placeholder", "Enter Zipcode");
+    } else {
+      $("#zipcode").attr("value", localStorage['zipcode']);
+    }
   });
 
-  $('#locations').DataTable(
+  $('#walmart').DataTable(
     {
+      "dom": '<"toolbar">frtip',
       "iDisplayLength": 25,
       "order": [[ 5, "desc" ]],
       "oLanguage": {
@@ -102,6 +162,8 @@
       }
     }
   );
+
+
 </script>
 
 <%= render "layouts/provider_js" %>

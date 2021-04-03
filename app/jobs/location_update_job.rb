@@ -115,10 +115,12 @@ class LocationUpdateJob
         if location.slot_1 || location.slot_2
           location.increment!(:appointments_all)
           location.increment!(:appointments) if location.availability.blank?
+          location.when_available = DateTime.now if location.availability.blank?
+          location.availability = true
           History.create!(
             location_id: location.id,
             status: true,
-            is_walgreens: true,
+            is_rite_aid: true,
             latitude: location&.latitude,
             longitude: location&.longitude,
             city: location&.city,
@@ -126,10 +128,7 @@ class LocationUpdateJob
             zip: location&.zip,
             last_updated: location&.last_updated,
             when_available: location&.when_available
-          )
-
-          location.when_available = DateTime.now if location.availability.blank?
-          location.availability = true
+          )          
         else
           location.availability = false
         end
@@ -248,10 +247,13 @@ class LocationUpdateJob
         if site_location['status'] == "Available"
           location.increment!(:appointments_all)
           location.increment!(:appointments) if location.availability.blank?
+          location.last_updated = DateTime.now
+          location.when_available = DateTime.now if location.availability.blank?
+          location.availability = true
           History.create!(
             location_id: location.id,
             status: true,
-            is_walgreens: true,
+            is_cvs: true,
             latitude: location&.latitude,
             longitude: location&.longitude,
             city: location&.name,
@@ -259,11 +261,7 @@ class LocationUpdateJob
             zip: location&.zip,
             last_updated: location&.last_updated,
             when_available: location&.when_available
-          )
-
-          location.last_updated = DateTime.now
-          location.when_available = DateTime.now if location.availability.blank?
-          location.availability = true
+          )          
         else
           location.availability = false
           location.last_updated = DateTime.now

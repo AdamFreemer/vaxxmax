@@ -15,14 +15,19 @@ Rails.application.routes.draw do
   # zipcode geolocate set
   get 'set_zipcode/:zipcode', to: 'locations#set_zipcode'
 
+  # CVS api update ingest
   post 'cvs_ingest', to: 'data_collections#cvs_ingest'
+
+
+  get 'api/v1/state_by_zipcode/:state/:provider', to: 'data_collections#state_by_zipcode'
+
 
   # per page select dropdowns
   get 'set_state_cvs/:state_cvs', to: 'locations#set_state_cvs'
   get 'set_state_health_mart/:state_health_mart', to: 'locations#set_state_health_mart'
   get 'set_state_rite_aid/:state_rite_aid/:zipcode', to: 'locations#set_state_rite_aid'
   get 'set_state_walgreens/:state_walgreens', to: 'locations#set_state_walgreens'
-  get 'set_state_walmart/:state_walmart', to: 'locations#set_state_walmart'
+  get 'set_state_walmart/:state_walmart/:zipcode', to: 'locations#set_state_walmart'
 
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
     ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV["SIDEKIQ_USERNAME"])) &
