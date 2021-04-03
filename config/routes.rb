@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get 'set_state_health_mart/:state_health_mart', to: 'locations#set_state_health_mart'
   get 'set_state_rite_aid/:state_rite_aid/:zipcode', to: 'locations#set_state_rite_aid'
   get 'set_state_walgreens/:state_walgreens', to: 'locations#set_state_walgreens'
-  get 'set_state_walmart/:state_walmart', to: 'locations#set_state_walmart'
+  get 'set_state_walmart/:state_walmart/:zipcode', to: 'locations#set_state_walmart'
 
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
     ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV["SIDEKIQ_USERNAME"])) &

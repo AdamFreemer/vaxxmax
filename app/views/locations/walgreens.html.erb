@@ -36,6 +36,7 @@
           <th class="text-center">Zip</th>
           <th>Last Updated</th>
           <th>Became Available</th>
+          <th>Brands</th>
           <th class="text-center">Distance (mi)</th>           
         </tr>
       </thead>
@@ -71,6 +72,7 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
+            <td><%= location.vaccine_types %></td>
             <td class="text-center">
               <%= location.distance(@user_ip, @zipcode, location).to_i %> 
             </td>             

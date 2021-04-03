@@ -26,8 +26,8 @@
     This page auto-refreshes every 60 seconds.
   </p>
   
-  <div class="table-responsive">
-    <table class="table table-striped table-bordered table-condensed" id="locations">
+  <div class="table-responsive-md">
+    <table class="table table-striped table-bordered table-condensed" id="walmart">
       <thead class="thead-dark">
         <tr>
           <th>Availability</th>
@@ -38,6 +38,7 @@
           <th class="text-center">County</th>
           <th>Last Updated</th>
           <th>Became Available</th>
+          <th>Brands</th>
           <th class="text-center">Distance (mi)</th>           
         </tr>
       </thead>
@@ -73,9 +74,11 @@
               <%= content_tag(:span, location.when_available&.strftime('%m-%e-%Y, %H:%M:%S'), style: 'display:none') %>
               <%= time_ago_in_words(location.when_available) %> ago
             </td>
+            <td><%= location.vaccine_types %></td>
             <td class="text-center">
-              <%= location&.distance(@user_ip, @zipcode, location).to_i %> 
-            </td>             
+              <%= puts session[:zipcode] %>
+              <%= location.distance(@user_ip, session[:zipcode] ||= "", location).to_i %>
+            </td>            
           </tr>
         <% end %>
       </tbody>
@@ -86,6 +89,29 @@
 <%# Set Provider dropdown to page value %>
 <div id="provider-status" value="walmart" style="visibility: hidden"></div>
 
+<style>
+  /* For zipcode entry box */
+  @media only screen and (min-width:769px) {
+    .zip-container {
+      margin-left: -34px;
+    }
+  }
+
+  .zip-container {
+    margin-bottom: 10px !important;
+  }
+
+  .zipcode {
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 30px;
+  }
+
+  .toolbar {
+      float: left;
+  }
+</style>
+
 <script>
   $(document).ready(function() {
     $("#state-select-walmart").on('change', function(){
@@ -95,11 +121,39 @@
         $( ".result" ).html( data );
         location.reload();
       });
-    });    
+    });   
+    
+    // zipcode related
+    $("div.toolbar").html(
+      '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'
+      );
+    $("#set-zipcode").on('click', function(){
+      var zipcode = $("#zipcode").val();
+      var numbers = /^[0-9]+$/;
+
+      if (!zipcode.match(numbers)) {
+        alert("Zipcode must be numerical and 5 digits.")
+      } 
+
+      if (zipcode != "" && zipcode.match(numbers)) {
+        localStorage['zipcode'] = zipcode
+        $.get( "/set_zipcode/" + zipcode, function( data ) {
+          $( ".result" ).html( data );
+          location.reload();
+        });
+      }
+    });
+
+    if (localStorage['zipcode'] == null || localStorage['provider'] == null) {
+      $("#zipcode").attr("placeholder", "Enter Zipcode");
+    } else {
+      $("#zipcode").attr("value", localStorage['zipcode']);
+    }
   });
 
-  $('#locations').DataTable(
+  $('#walmart').DataTable(
     {
+      "dom": '<"toolbar">frtip',
       "iDisplayLength": 25,
       "order": [[ 5, "desc" ]],
       "oLanguage": {
@@ -108,6 +162,8 @@
       }
     }
   );
+
+
 </script>
 
 <%= render "layouts/provider_js" %>

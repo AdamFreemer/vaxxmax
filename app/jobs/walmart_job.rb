@@ -23,11 +23,15 @@ class WalmartJob
           next if location.blank?
 
           if feature['properties']['appointments_available'] == true
+            vaccine_types = feature['properties']['appointment_vaccine_types'].keys.join(', ').titleize
+            vaccine_types.gsub!('Jj', 'J&J')
+
             location.increment!(:appointments_all)
             location.increment!(:appointments) if location.availability.blank?
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
+            location.vaccine_types = vaccine_types
             History.create!(
               location_id: location.id,
               status: true,
@@ -38,7 +42,8 @@ class WalmartJob
               state: location&.state,
               zip: location&.zip,
               last_updated: location&.last_updated,
-              when_available: location&.when_available
+              when_available: location&.when_available,
+              vaccine_types: vaccine_types
             )
           else
             next if location.blank?
