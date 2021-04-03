@@ -55,13 +55,13 @@ class LocationsController < ApplicationController
 
   def set_state_walgreens
     session[:state_walgreens] = params[:state_walgreens]
-    session[:zipcode] = params[:zipcode]
+    # session[:zipcode] = params[:zipcode]
     redirect_to walgreens_path
   end
 
   def set_state_walmart
     session[:state_walmart] = params[:state_walmart]
-
+    session[:zipcode] = params[:zipcode]
     redirect_to walmart_path
   end
 

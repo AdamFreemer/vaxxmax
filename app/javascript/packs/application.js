@@ -14,30 +14,5 @@ Turbolinks.start()
 ActiveStorage.start()
 
 $(document).ready(function() {
-  $("#state-select-rite-aid").on('change', function(){
-    var state_dropdown_value = $("#state-select-rite-aid").val();
-
-    $.get( "/set_state_rite_aid/" + state_dropdown_value +  "/" + localStorage['zipcode'], function( data ) {
-      $( ".result" ).html( data );
-      location.reload();
-    });
-  });
-
-  $("#state-select-walgreens").on('change', function(){
-    var state_dropdown_value = $("#state-select-walgreens").val();
-
-    $.get( "/set_state_walgreens/" + state_dropdown_value, function( data ) {
-      $( ".result" ).html( data );
-      location.reload();
-    });
-  });
-
-  $("#state-select-cvs").on('change', function(){
-    var state_dropdown_value = $("#state-select-cvs").val();
-
-    $.get( "/set_state_cvs/" + state_dropdown_value, function( data ) {
-      $( ".result" ).html( data );
-      location.reload();
-    });
-  });
+  console.log('-- Page loaded')
 });

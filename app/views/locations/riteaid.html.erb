@@ -194,15 +194,16 @@
   );
 
   $(document).ready(function() {
+    // state dropdown
     $("#state-select-rite-aid").on('change', function(){
       var state_dropdown_value = $("#state-select-rite-aid").val();
 
-      $.get( "/set_state_rite_aid/" + state_dropdown_value, function( data ) {
+      $.get( "/set_state_rite_aid/" + state_dropdown_value +  "/" + localStorage['zipcode'], function( data ) {
         $( ".result" ).html( data );
         location.reload();
       });
-    });    
- 
+    });
+
     // zipcode related
     $("div.toolbar").html(
       '<div class="d-inline-flex justify-content-center zip-container"><input type="zipcode" maxlength="5" class="col-6 form-control zipcode" id="zipcode" aria-describedby="zipcode"><button type="button" id="set-zipcode">Set Zip Code</button></div><br>'

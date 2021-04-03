@@ -88,6 +88,7 @@
 
 <%# Set Provider dropdown to page value %>
 <div id="provider-status" value="walmart" style="visibility: hidden"></div>
+<div id="zipcode_status" value="walmart" style="visibility: hidden"></div>
 
 <style>
   /* For zipcode entry box */
@@ -114,14 +115,15 @@
 
 <script>
   $(document).ready(function() {
+    // State Dropdown
     $("#state-select-walmart").on('change', function(){
       var state_dropdown_value = $("#state-select-walmart").val();
 
-      $.get( "/set_state_walmart/" + state_dropdown_value, function( data ) {
+      $.get( "/set_state_walmart/" + state_dropdown_value +  "/" + localStorage['zipcode'], function( data ) {
         $( ".result" ).html( data );
         location.reload();
       });
-    });   
+    });
     
     // zipcode related
     $("div.toolbar").html(
@@ -162,8 +164,6 @@
       }
     }
   );
-
-
 </script>
 
 <%= render "layouts/provider_js" %>
