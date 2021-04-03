@@ -1,4 +1,4 @@
-# Ads.txt last updated on: 2021/03/23 20-05-593250 by MONUMETRIC
+# Ads.txt last updated on: 2021/04/01 21-11-350162 by MONUMETRIC
 spotxchange.com, 114948, RESELLER, 7842df1d2fe2db34  #SpotX
 spotx.tv, 114948, RESELLER, 7842df1d2fe2db34         #SpotX
 monumetric.com, e84ce5d2-26a2-492b-acc7-53a0d8e0a5e2, DIRECT, 032969285
@@ -77,11 +77,13 @@ video.unrulymedia.com, 2338962694, RESELLER
 yahoo.com, 55029, RESELLER, e1a5b5b6e3255540
 yahoo.com, 57424, DIRECT #verizon
 yldbt.com, 5b522cc167f6b300b89dc6d3, RESELLER, cd184cb30abaabb5 #for UAM
+adingo.jp, 24531, DIRECT
 advertising.com, 28488, DIRECT #EBDA
 aol.com, 55756, DIRECT #EBDA
 beachfront.com, 14544, DIRECT, e2541279e8e2ca4d
 chocolateplatform.com, 14546,  DIRECT, 49a66ce31a704197
 google.com, pub-1956856209985681, DIRECT, f08c47fec0942fa0
+google.com, pub-2024690810381654, RESELLER, f08c47fec0942fa0
 google.com, pub-5717092533913515, RESELLER, f08c47fec0942fa0
 improvedigital.com, 1530,  DIRECT
 indexexchange.com, 185192, RESELLER
@@ -96,6 +98,7 @@ pubmatic.com, 158541, DIRECT, 5d62403b186f2ace
 rhythmone.com, 203808374,  DIRECT, a670c89d4a324e47
 rubiconproject.com, 17346, RESELLER, 0bfd66d529a55807
 rubiconproject.com, 22114, DIRECT, 0bfd66d529a55807
+rubiconproject.com, 22114, RESELLER, 0bfd66d529a55807
 sonobi.com, f22036b5f1,  DIRECT, d1a215d9eb5aee9e
 sovrn.com, 264726, DIRECT, fafdf38b16bf6b2b
 spotxchange.com, 108706, RESELLER, 7842df1d2fe2db34
