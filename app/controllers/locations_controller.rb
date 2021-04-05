@@ -18,13 +18,7 @@ class LocationsController < ApplicationController
   def riteaid
     @title = 'Rite Aid'
     @states = states_rite_aid.sort { |a, b| a <=> b }
-    @locations = Location
-                 .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
-                 .where('when_available > ?', DateTime.now - 2.days)
-
-    @locations_old = Location
-                     .where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
-                     .where('when_available < ?', DateTime.now - 2.days)
+    @locations = Location.where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
   end
 
   def walgreens

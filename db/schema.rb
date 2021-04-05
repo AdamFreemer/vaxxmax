@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_03_034253) do
+ActiveRecord::Schema.define(version: 2021_04_05_035800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,11 +67,13 @@ ActiveRecord::Schema.define(version: 2021_04_03_034253) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "vaccine_types"
+    t.index ["created_at"], name: "index_histories_on_created_at"
     t.index ["is_cvs"], name: "index_histories_on_is_cvs"
     t.index ["is_health_mart"], name: "index_histories_on_is_health_mart"
     t.index ["is_rite_aid"], name: "index_histories_on_is_rite_aid"
     t.index ["is_walgreens"], name: "index_histories_on_is_walgreens"
     t.index ["is_walmart"], name: "index_histories_on_is_walmart"
+    t.index ["state"], name: "index_histories_on_state"
   end
 
   create_table "location_statuses", force: :cascade do |t|
