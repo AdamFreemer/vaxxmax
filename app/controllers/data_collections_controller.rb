@@ -53,4 +53,38 @@ class DataCollectionsController < ApplicationController
 
     render json: final_object, status: 200
   end
+
+  def daily_by_state_count
+    # params :state/:provider/:day_of_year
+    case params[:provider]
+    when 'all'
+      object = History.where(state: params[:state].upcase)
+    when 'cvs'
+      object = History.where(state: params[:state].upcase, is_cvs: true)
+    when 'healthmart'
+      object = History.where(state: params[:state].upcase, is_health_mart: true)
+    when 'riteaid'
+      object = History.where(state: params[:state].upcase, is_rite_aid: true)
+    when 'walgreens'
+      object = History.where(state: params[:state].upcase, is_walgreens: true)
+    when 'walmart'
+      object = History.where(state: params[:state].upcase, is_walmart: true)
+    end
+
+    today_day_of_year = Date.today.yday
+    query_day = today_day_of_year - params[:day_of_year].to_i
+    record_count = object.where(created_at: query_day.day.ago.beginning_of_day..query_day.day.ago.end_of_day).count
+    final_object = {
+      state: params[:state],
+      provider: params[:provider],
+      day_of_year: params[:day_of_year],
+      records: record_count
+    }
+
+    render json: final_object, status: 200
+  end
+
+
+
+
 end

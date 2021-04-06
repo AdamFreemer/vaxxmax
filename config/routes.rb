@@ -18,9 +18,10 @@ Rails.application.routes.draw do
   # CVS api update ingest
   post 'cvs_ingest', to: 'data_collections#cvs_ingest'
 
-
+  # api
   get 'api/v1/state_by_zipcode/:state/:provider', to: 'data_collections#state_by_zipcode'
   get 'api/v1/daily_by_state/:state/:provider/:day_of_year', to: 'data_collections#daily_by_state'
+  get 'api/v1/daily_by_state_count/:state/:provider/:day_of_year', to: 'data_collections#daily_by_state_count'
 
   # per page select dropdowns
   get 'set_state_cvs/:state_cvs', to: 'locations#set_state_cvs'
