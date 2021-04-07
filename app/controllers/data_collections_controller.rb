@@ -84,7 +84,27 @@ class DataCollectionsController < ApplicationController
     render json: final_object, status: 200
   end
 
+  def by_zipcode
+    # params :state/:provider/:start_day/:end_day
+    case params[:provider]
+    when 'all'
+      object = History.where(state: params[:state].upcase)
+    when 'cvs'
+      object = History.where(state: params[:state].upcase, is_cvs: true)
+    when 'healthmart'
+      object = History.where(state: params[:state].upcase, is_health_mart: true)
+    when 'riteaid'
+      object = History.where(state: params[:state].upcase, is_rite_aid: true)
+    when 'walgreens'
+      object = History.where(state: params[:state].upcase, is_walgreens: true)
+    when 'walmart'
+      object = History.where(state: params[:state].upcase, is_walmart: true)
+    end
 
-
-
+    start_date = Date.ordinal(2021, params[:start_day].to_i).beginning_of_day
+    end_date = Date.ordinal(2021, params[:end_day].to_i).end_of_day
+    final_object = object.where(created_at: start_date..end_date).group(:zip).order(:zip).count
+    
+    render json: final_object, status: 200
+  end
 end
