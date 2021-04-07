@@ -43,6 +43,11 @@
   color: #555;
 }
 
+.text-black-drb {
+  color: #555;
+  font-style: oblique;
+}
+
 .contact-info {
   margin-bottom: 60px;
 }
