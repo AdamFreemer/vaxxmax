@@ -1,4 +1,4 @@
-# Ads.txt last updated on: 2021/04/06 16-08-297942 by MONUMETRIC
+# Ads.txt last updated on: 2021/04/08 01-09-400665 by MONUMETRIC
 spotxchange.com, 114948, RESELLER, 7842df1d2fe2db34  #SpotX
 spotx.tv, 114948, RESELLER, 7842df1d2fe2db34         #SpotX
 monumetric.com, e84ce5d2-26a2-492b-acc7-53a0d8e0a5e2, DIRECT, 032969285
@@ -14,6 +14,7 @@ appnexus.com, 3663, RESELLER, f5ab79cb980f11d1
 aps.amazon.com, 76b6d1d8-9f58-4ac7-a92e-f3232afccc8a, DIRECT
 districtm.io, 100962, RESELLER, 3fd707be9c4527c3
 emxdgt.com, 1854, DIRECT, 1e1d41537f7cad7f
+emxdgt.com, 40, DIRECT, 1e1d41537f7cad7f
 indexexchange.com, 194111, RESELLER
 lijit.com, 231887, DIRECT, fafdf38b16bf6b2b
 openx.com, 540191398, RESELLER, 6a698e2ec38604c6

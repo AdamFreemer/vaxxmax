@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.tribune {
+  padding-right: 30px;
+} 
+
+.press {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.in-the-press {
+  padding-top: 15px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 400px) {
+  #press-section { display: none; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #press-content { display: block; }   /* hide it elsewhere */
+}
