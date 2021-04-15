@@ -36,6 +36,11 @@
         localStorage['provider'] = "walmart";
         document.location.href = '/walmart';
       }
+      if ($("#provider").val() == "all") {
+              console.log("-- provider onchange: " + $("#provider").val())
+        localStorage['provider'] = "all";
+        document.location.href = '/all';
+      }      
     });
   });
 </script>
