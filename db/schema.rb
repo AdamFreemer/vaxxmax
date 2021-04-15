@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_05_035800) do
+ActiveRecord::Schema.define(version: 2021_04_13_004314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -187,4 +187,71 @@ ActiveRecord::Schema.define(version: 2021_04_05_035800) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+
+  create_view "all_providers", sql_definition: <<-SQL
+      SELECT locations.address,
+      locations.city,
+      locations.state,
+      locations.zip,
+      locations.latitude,
+      locations.longitude,
+      locations.last_updated,
+      locations.when_available,
+      'Rite Aid'::text AS provider,
+      '-'::character varying AS vaccine_types
+     FROM locations
+    WHERE ((locations.is_rite_aid = true) AND (locations.availability = true))
+  UNION ALL
+   SELECT locations.address,
+      locations.city,
+      locations.state,
+      locations.zip,
+      locations.latitude,
+      locations.longitude,
+      locations.last_updated,
+      locations.when_available,
+      'Walmart'::text AS provider,
+      locations.vaccine_types
+     FROM locations
+    WHERE ((locations.is_walmart = true) AND (locations.availability = true))
+  UNION ALL
+   SELECT '-'::character varying AS address,
+      cvs_cities.name AS city,
+      cvs_cities.state,
+      cvs_cities.zip,
+      cvs_cities.latitude,
+      cvs_cities.longitude,
+      cvs_cities.last_updated,
+      cvs_cities.when_available,
+      'CVS'::text AS provider,
+      '-'::character varying AS vaccine_types
+     FROM cvs_cities
+    WHERE (cvs_cities.availability = true)
+  UNION ALL
+   SELECT '-'::character varying AS address,
+      health_mart_cities.name AS city,
+      health_mart_cities.state,
+      health_mart_cities.zip,
+      health_mart_cities.latitude,
+      health_mart_cities.longitude,
+      health_mart_cities.last_updated,
+      health_mart_cities.when_available,
+      'Health Mart'::text AS provider,
+      '-'::character varying AS vaccine_types
+     FROM health_mart_cities
+    WHERE (health_mart_cities.availability = true)
+  UNION ALL
+   SELECT '-'::character varying AS address,
+      walgreens_cities.name AS city,
+      walgreens_cities.state,
+      walgreens_cities.zip,
+      walgreens_cities.latitude,
+      walgreens_cities.longitude,
+      walgreens_cities.last_updated,
+      walgreens_cities.when_available,
+      'Walgreens'::text AS provider,
+      walgreens_cities.vaccine_types
+     FROM walgreens_cities
+    WHERE (walgreens_cities.availability = true);
+  SQL
 end

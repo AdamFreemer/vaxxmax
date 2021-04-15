@@ -33,6 +33,12 @@ class LocationsController < ApplicationController
     @locations = Location.where(is_walmart: true, availability: true, state: session[:state_walmart])
   end
 
+  def all
+    @title = 'All Providers'
+    @states = states_cvs.sort { |a, b| a <=> b }
+    @locations = Aggregate.where(state: session[:state_all])
+  end
+
   def geolocate
     @user_ip = if request.remote_ip == '127.0.0.1' || request.remote_ip == '::1'
                  '69.242.71.104'
@@ -69,6 +75,12 @@ class LocationsController < ApplicationController
     session[:state_health_mart] = params[:state_health_mart]
 
     redirect_to health_mart_path
+  end
+
+  def set_state_all
+    session[:state_all] = params[:state_all]
+
+    redirect_to all_path
   end
 
   def set_zipcode

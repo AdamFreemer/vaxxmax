@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'rite_aid', to: 'locations#riteaid'
   get 'walgreens', to: 'locations#walgreens'
   get 'walmart', to: 'locations#walmart'
+  get 'all', to: 'locations#all'
   get 'map', to: 'visualizations#main'
 
   # zipcode geolocate set
@@ -30,6 +31,7 @@ Rails.application.routes.draw do
   get 'set_state_rite_aid/:state_rite_aid/:zipcode', to: 'locations#set_state_rite_aid'
   get 'set_state_walgreens/:state_walgreens', to: 'locations#set_state_walgreens'
   get 'set_state_walmart/:state_walmart/:zipcode', to: 'locations#set_state_walmart'
+  get 'set_state_all/:state_all/:zipcode', to: 'locations#set_state_all'
 
   Sidekiq::Web.use Rack::Auth::Basic do |username, password|
     ActiveSupport::SecurityUtils.secure_compare(::Digest::SHA256.hexdigest(username), ::Digest::SHA256.hexdigest(ENV["SIDEKIQ_USERNAME"])) &
