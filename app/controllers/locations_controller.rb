@@ -19,7 +19,7 @@ class LocationsController < ApplicationController
     @title = 'Rite Aid'
     @states = states_rite_aid.sort { |a, b| a <=> b }
     @locations = Location.where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
-    fresh_when last_modified: @locations.first.updated_at.utc, strong_etag: @locations
+    fresh_when(@locations)
   end
 
   def walgreens
