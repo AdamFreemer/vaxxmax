@@ -38,6 +38,7 @@ class LocationsController < ApplicationController
     @title = 'All Providers'
     @states = states_cvs.sort { |a, b| a <=> b }
     @locations = Aggregate.where(state: session[:state_all])
+    fresh_when(@locations)
   end
 
   def geolocate
