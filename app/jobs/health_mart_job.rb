@@ -68,18 +68,18 @@ class HealthMartJob
             location.last_updated = DateTime.now
             location.when_available = DateTime.now if location.availability.blank?
             location.availability = true
-            History.create!(
-              location_id: location.id,
-              status: true,
-              is_health_mart: true,
-              latitude: location&.latitude,
-              longitude: location&.longitude,
-              city: location&.name,
-              state: location&.state,
-              zip: location&.zip,
-              last_updated: location&.last_updated,
-              when_available: location&.when_available
-            )            
+            # History.create!(
+            #   location_id: location.id,
+            #   status: true,
+            #   is_health_mart: true,
+            #   latitude: location&.latitude,
+            #   longitude: location&.longitude,
+            #   city: location&.name,
+            #   state: location&.state,
+            #   zip: location&.zip,
+            #   last_updated: location&.last_updated,
+            #   when_available: location&.when_available
+            # )            
           else
             location.availability = false
             location.last_updated = DateTime.now
