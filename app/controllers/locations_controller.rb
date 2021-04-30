@@ -5,40 +5,26 @@ class LocationsController < ApplicationController
 
   def cvs
     @title = 'CVS'
-    @states = states_cvs.sort { |a, b| a <=> b }
-    @locations = CvsCity.where(state: session[:state_cvs], availability: true)
   end
 
   def health_mart
     @title = 'Health Mart'
-    @states = states_health_mart.sort { |a, b| a <=> b }
-    @locations = HealthMartCity.where(state: session[:state_health_mart], availability: true)
   end
 
   def riteaid
     @title = 'Rite Aid'
-    @states = states_rite_aid.sort { |a, b| a <=> b }
-    @locations = Location.where(is_rite_aid: true, availability: true, state: session[:state_rite_aid])
-    fresh_when(@locations)
   end
 
   def walgreens
     @title = 'Walgreens'
-    @states = states_walgreens.sort { |a, b| a <=> b }
-    @locations = WalgreensCity.where(state: session[:state_walgreens], availability: true)
   end
 
   def walmart
     @title = 'Walmart'
-    @states = states_walmart.sort { |a, b| a <=> b }
-    @locations = Location.where(is_walmart: true, availability: true, state: session[:state_walmart])
   end
 
   def all
     @title = 'All Providers'
-    @states = states_cvs.sort { |a, b| a <=> b }
-    @locations = Aggregate.where(state: session[:state_all])
-    # fresh_when(@locations, last_modified: @locations.last.last_updated)
   end
 
   def geolocate
