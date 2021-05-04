@@ -8,3 +8,6 @@ class Rack::Attack
     @remote_ip ||= (env['action_dispatch.remote_ip'] || ip).to_s
   end
 end
+
+Rack::Attack.blocklist_ip("73.81.227.104")
+Rack::Attack.blocklist_ip("72.76.33.75")
